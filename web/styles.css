@@ -24,10 +24,15 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
   background: var(--bg);
   color: var(--ink);
 }
@@ -47,7 +52,8 @@ button {
   display: grid;
   grid-template-columns: minmax(230px, 280px) minmax(480px, 1fr) minmax(300px, 380px);
   gap: 14px;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 0;
   padding: 14px;
 }
 
@@ -176,23 +182,58 @@ h3 {
 .workspace {
   display: grid;
   grid-template-rows: auto auto auto;
+  align-content: start;
   gap: 14px;
   min-height: 0;
+  overflow: auto;
   background: transparent;
   box-shadow: none;
   border: 0;
 }
 
 .ship-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto minmax(70px, auto);
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px;
+  gap: 12px;
+  padding: 12px 14px;
+}
+
+.ship-title {
+  min-width: 0;
+}
+
+.header-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(76px, auto));
+  gap: 8px;
+}
+
+.header-stat {
+  min-width: 76px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel-strong);
+}
+
+.header-stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.header-stat strong {
+  display: block;
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+  font-size: 0.86rem;
+  line-height: 1.1;
 }
 
 .status {
-  min-width: 150px;
+  min-width: 70px;
   color: var(--teal);
   font-weight: 800;
   text-align: right;
@@ -202,7 +243,7 @@ h3 {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   gap: 10px;
-  height: clamp(260px, 34vh, 360px);
+  height: clamp(300px, 36vh, 380px);
   min-height: 0;
   padding: 14px;
 }
@@ -402,6 +443,79 @@ h3 {
   padding: 0 14px;
 }
 
+.socket-list {
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px 0;
+}
+
+.socket-list__group {
+  display: grid;
+  gap: 6px;
+}
+
+.socket-list__title {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.socket-list__rows {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+  gap: 6px;
+}
+
+.socket-list__item {
+  min-width: 0;
+  min-height: 44px;
+  padding: 6px 7px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+}
+
+.socket-list__item span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.socket-list__item small {
+  display: block;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.66rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.socket-list__item--mount {
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+
+.socket-list__item--compartment {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+.socket-list__item--module {
+  border-color: var(--violet);
+  background: var(--violet-soft);
+}
+
+.socket-list__item.is-selected {
+  box-shadow: 0 0 0 3px rgb(31 37 40 / 0.16);
+}
+
+.socket-list__item.is-filled span {
+  color: var(--ink);
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -491,6 +605,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
+  padding-top: 8px;
 }
 
 input,
@@ -523,6 +638,7 @@ select {
 .component-list {
   display: grid;
   align-content: start;
+  flex: 1 1 auto;
   gap: 7px;
   grid-auto-rows: min-content;
   min-height: 260px;
@@ -538,6 +654,14 @@ select {
 .design-panel {
   margin: 8px;
   box-shadow: none;
+}
+
+.design-panel summary {
+  padding: 10px 14px;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 900;
 }
 
 .design-actions {
@@ -576,8 +700,19 @@ textarea {
 }
 
 @media (max-width: 1320px) {
+  body {
+    min-height: 100vh;
+    overflow: auto;
+  }
+
   .app-shell {
     grid-template-columns: minmax(210px, 250px) minmax(420px, 1fr);
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .workspace {
+    overflow: visible;
   }
 
   .lower-grid {
@@ -615,7 +750,11 @@ textarea {
 
   .ship-header {
     align-items: flex-start;
-    flex-direction: column;
+  }
+
+  .header-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
   }
 
   .status {

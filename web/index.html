@@ -18,11 +18,12 @@
 
       <section class="workspace">
         <header class="ship-header">
-          <div>
+          <div class="ship-title">
             <p class="eyebrow">Selected Hull</p>
             <h2 id="hull-name">Loading</h2>
             <p id="hull-meta" class="muted"></p>
           </div>
+          <div id="header-stats" class="header-stats"></div>
           <div id="status" class="status" aria-live="polite"></div>
         </header>
 
@@ -49,6 +50,7 @@
               <p id="installed-meta" class="muted"></p>
             </div>
             <button id="clear-slot" class="command-button" type="button">Clear Slot</button>
+            <div id="socket-list" class="socket-list" aria-label="Socket list"></div>
           </div>
 
           <div class="stats-panel">
@@ -67,6 +69,11 @@
       </section>
 
       <aside class="parts-panel">
+        <div class="panel-heading panel-heading--compact parts-context">
+          <p class="eyebrow">Components</p>
+          <h3 id="parts-title">-</h3>
+          <p id="parts-meta" class="muted"></p>
+        </div>
         <div class="parts-toolbar">
           <input id="component-search" type="search" placeholder="Search components" />
           <select id="category-filter"></select>
@@ -76,7 +83,8 @@
         </div>
         <div id="component-list" class="component-list"></div>
 
-        <div class="design-panel">
+        <details class="design-panel">
+          <summary>Design JSON</summary>
           <div class="design-actions">
             <button id="reset-defaults" class="command-button" type="button">Defaults</button>
             <button id="save-local" class="command-button" type="button">Save</button>
@@ -84,7 +92,7 @@
             <button id="load-design" class="command-button" type="button">Apply JSON</button>
           </div>
           <textarea id="design-json" spellcheck="false"></textarea>
-        </div>
+        </details>
       </aside>
     </main>
     <div id="app-error" class="app-error"></div>

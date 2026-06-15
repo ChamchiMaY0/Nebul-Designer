@@ -197,6 +197,19 @@ function renderHeader(summary) {
   const { hull } = summary;
   els.hullName.textContent = hull.name;
   els.hullMeta.textContent = `${hull.hullClassification} | ${hull.factionKey} | ${formatNumber(hull.mass)} t`;
+  const stats = [
+    ["Points", formatNumber(summary.totals.pointCost)],
+    ["Power", formatNumber(summary.totals.powerBalance)],
+    ["Installed", `${summary.totals.installedCount}/${summary.totals.socketCount}`],
+    ["Crew", `${formatNumber(summary.totals.crewRequired)}/${formatNumber(summary.totals.crewComplement)}`],
+  ];
+  els.headerStats.innerHTML = "";
+  for (const [label, value] of stats) {
+    const chip = document.createElement("div");
+    chip.className = "header-stat";
+    chip.innerHTML = `<span>${label}</span><strong>${value}</strong>`;
+    els.headerStats.append(chip);
+  }
 }
 
 function renderSocketMap() {
@@ -262,6 +275,45 @@ function renderSocketDetails() {
   els.clearSlot.disabled = !installed;
 }
 
+function renderSocketList() {
+  const hull = selectedHull();
+  els.socketList.innerHTML = "";
+  for (const typeName of ["mount", "compartment", "module"]) {
+    const sockets = hull.sockets.filter((socket) => socket.typeName === typeName);
+    if (!sockets.length) continue;
+    const group = document.createElement("div");
+    group.className = "socket-list__group";
+    const title = document.createElement("div");
+    title.className = "socket-list__title";
+    title.textContent = SLOT_TYPE_LABELS[typeName] ?? typeName;
+    group.append(title);
+
+    const rows = document.createElement("div");
+    rows.className = "socket-list__rows";
+    for (const socket of sockets) {
+      const installed = componentForSlot(state.design, socket, state.indexes);
+      const button = document.createElement("button");
+      button.className = [
+        "socket-list__item",
+        `socket-list__item--${socket.typeName}`,
+        socket.shortName === state.selectedSocketName ? "is-selected" : "",
+        installed ? "is-filled" : "",
+      ].join(" ");
+      button.type = "button";
+      button.innerHTML = `<span>${socket.shortName}</span><small>${installed ? componentDisplayName(installed.name) : sizeLabel(socket.size)}</small>`;
+      button.addEventListener("click", () => {
+        state.selectedSocketName = socket.shortName;
+        state.componentSearch = "";
+        state.componentCategory = "all";
+        render();
+      });
+      rows.append(button);
+    }
+    group.append(rows);
+    els.socketList.append(group);
+  }
+}
+
 function renderStats(summary) {
   const stats = [
     ["Points", formatNumber(summary.totals.pointCost)],
@@ -315,6 +367,9 @@ function renderComponentList() {
   const installed = componentForSlot(state.design, socket, state.indexes);
   const hull = selectedHull();
   const search = state.componentSearch.trim().toLowerCase();
+  const equipmentFaction = hull.overrideEquipmentFactionKey || hull.factionKey || "Common";
+  els.partsTitle.textContent = `${socket.shortName} | ${socket.name}`;
+  els.partsMeta.textContent = `${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName} | ${sizeLabel(socket.size)} | ${equipmentFaction}`;
   els.componentSearch.value = state.componentSearch;
   els.categoryFilter.value = state.componentCategory;
   const compatible = compatibleComponents(socket, state.indexes.components, hull).filter((component) => {
@@ -430,6 +485,7 @@ function render() {
   renderHullSelector();
   renderSocketMap();
   renderSocketDetails();
+  renderSocketList();
   renderStats(summary);
   renderHullSpecs(summary);
   renderComponentFilters();
@@ -443,11 +499,13 @@ function bindElements() {
     hullList: $("#hull-list"),
     hullName: $("#hull-name"),
     hullMeta: $("#hull-meta"),
+    headerStats: $("#header-stats"),
     socketMap: $("#socket-map"),
     viewButtons: [...document.querySelectorAll("[data-view-mode]")],
     viewAxisLabel: $("#view-axis-label"),
     socketTitle: $("#socket-title"),
     socketMeta: $("#socket-meta"),
+    socketList: $("#socket-list"),
     installedName: $("#installed-name"),
     installedMeta: $("#installed-meta"),
     clearSlot: $("#clear-slot"),
@@ -458,6 +516,8 @@ function bindElements() {
     categoryFilter: $("#category-filter"),
     componentCount: $("#component-count"),
     componentList: $("#component-list"),
+    partsTitle: $("#parts-title"),
+    partsMeta: $("#parts-meta"),
     designJson: $("#design-json"),
     loadDesign: $("#load-design"),
     resetDefaults: $("#reset-defaults"),
