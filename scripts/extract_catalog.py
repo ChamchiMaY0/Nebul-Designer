@@ -319,6 +319,53 @@ def extract_sockets(hull_component: Any) -> list[dict[str, Any]]:
     return sockets
 
 
+def box_record(box: Any) -> dict[str, Any]:
+    if not isinstance(box, dict):
+        return {}
+    return {
+        "center": simple(box.get("m_Center")),
+        "extent": simple(box.get("m_Extent")),
+    }
+
+
+def extract_hull_geometry(hull_component: Any) -> dict[str, Any]:
+    geometry: dict[str, Any] = {"volumes": []}
+    try:
+        volume = hull_component._randomPointVolume.read()
+        volume_tree = read_tree(volume)
+        geometry["lineBackZ"] = volume_tree.get("_lineBackZ")
+        geometry["lineForwardZ"] = volume_tree.get("_lineForwardZ")
+        for item in volume_tree.get("_subVolumes") or []:
+            if isinstance(item, dict):
+                geometry["volumes"].append(
+                    {
+                        **box_record(item.get("Box")),
+                        "weight": item.get("Weight"),
+                    }
+                )
+    except Exception:
+        pass
+
+    try:
+        radar = hull_component._radarSignature.read()
+        radar_tree = read_tree(radar)
+        geometry["radarSignature"] = box_record(radar_tree.get("_sigSize"))
+    except Exception:
+        pass
+
+    try:
+        select_volume = hull_component._selectVolume.read()
+        select_tree = read_tree(select_volume)
+        geometry["selectVolume"] = {
+            "center": simple(select_tree.get("m_Center")),
+            "size": simple(select_tree.get("m_Size")),
+        }
+    except Exception:
+        pass
+
+    return geometry
+
+
 def extract_hull(path: str, game_object: Any, hull_component: Any, tree: dict[str, Any]) -> dict[str, Any]:
     sockets = extract_sockets(hull_component)
     socket_counts = Counter(socket.get("typeName") for socket in sockets)
@@ -356,6 +403,7 @@ def extract_hull(path: str, game_object: Any, hull_component: Any, tree: dict[st
         "storageTransferRate": tree.get("_storageTransferRate"),
         "sockets": sockets,
         "socketSummary": dict(socket_counts),
+        "geometry": extract_hull_geometry(hull_component),
     }
     try:
         structure = hull_component._structure.read()

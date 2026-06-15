@@ -85,9 +85,53 @@ function activeViewMode() {
   return VIEW_MODES[state.viewMode] ?? VIEW_MODES.top;
 }
 
-function socketBounds(sockets, viewMode) {
-  const xs = sockets.map((socket) => socket.position?.[viewMode.xAxis] ?? 0);
-  const ys = sockets.map((socket) => socket.position?.[viewMode.yAxis] ?? 0);
+function projectedBoxEdges(box, viewMode) {
+  const center = box?.center;
+  const extent = box?.extent;
+  if (!center || !extent) return [];
+  return [
+    {
+      x: Number(center[viewMode.xAxis] ?? 0) - Number(extent[viewMode.xAxis] ?? 0),
+      y: Number(center[viewMode.yAxis] ?? 0) - Number(extent[viewMode.yAxis] ?? 0),
+    },
+    {
+      x: Number(center[viewMode.xAxis] ?? 0) + Number(extent[viewMode.xAxis] ?? 0),
+      y: Number(center[viewMode.yAxis] ?? 0) + Number(extent[viewMode.yAxis] ?? 0),
+    },
+  ];
+}
+
+function selectVolumeBox(hull) {
+  const selectVolume = hull.geometry?.selectVolume;
+  if (!selectVolume?.center || !selectVolume?.size) return null;
+  return {
+    center: selectVolume.center,
+    extent: {
+      x: Number(selectVolume.size.x ?? 0) / 2,
+      y: Number(selectVolume.size.y ?? 0) / 2,
+      z: Number(selectVolume.size.z ?? 0) / 2,
+    },
+  };
+}
+
+function socketBounds(hull, viewMode) {
+  const points = [];
+  for (const socket of hull.sockets ?? []) {
+    points.push({
+      x: socket.position?.[viewMode.xAxis] ?? 0,
+      y: socket.position?.[viewMode.yAxis] ?? 0,
+    });
+  }
+  for (const volume of hull.geometry?.volumes ?? []) {
+    points.push(...projectedBoxEdges(volume, viewMode));
+  }
+  points.push(...projectedBoxEdges(selectVolumeBox(hull), viewMode));
+  points.push(...projectedBoxEdges(hull.geometry?.radarSignature, viewMode));
+  if (!points.length) {
+    return { minX: -1, maxX: 1, minY: -1, maxY: 1 };
+  }
+  const xs = points.map((point) => Number(point.x ?? 0));
+  const ys = points.map((point) => Number(point.y ?? 0));
   return {
     minX: Math.min(...xs),
     maxX: Math.max(...xs),
@@ -96,19 +140,36 @@ function socketBounds(sockets, viewMode) {
   };
 }
 
-function socketStyle(socket, bounds, viewMode) {
-  const x = socket.position?.[viewMode.xAxis] ?? 0;
-  const y = socket.position?.[viewMode.yAxis] ?? 0;
+function projectToMap(x, y, bounds, viewMode) {
   const xRange = Math.max(bounds.maxX - bounds.minX, 1);
   const yRange = Math.max(bounds.maxY - bounds.minY, 1);
   const left = 8 + ((x - bounds.minX) / xRange) * 84;
   const yRatio = (y - bounds.minY) / yRange;
   const top = 8 + (viewMode.invertY ? 1 - yRatio : yRatio) * 84;
+  return { left, top };
+}
+
+function socketStyle(socket, bounds, viewMode) {
+  const x = socket.position?.[viewMode.xAxis] ?? 0;
+  const y = socket.position?.[viewMode.yAxis] ?? 0;
+  const { left, top } = projectToMap(x, y, bounds, viewMode);
   const sx = Number(socket.size?.[viewMode.xSize] ?? 2);
   const sy = Number(socket.size?.[viewMode.ySize] ?? 2);
   const width = Math.max(18, Math.min(58, 12 + sx * 4));
   const height = Math.max(18, Math.min(58, 12 + sy * 4));
   return `left:${left}%;top:${top}%;width:${width}px;height:${height}px`;
+}
+
+function projectedBoxStyle(box, bounds, viewMode) {
+  const edges = projectedBoxEdges(box, viewMode);
+  if (edges.length !== 2) return "";
+  const a = projectToMap(edges[0].x, edges[0].y, bounds, viewMode);
+  const b = projectToMap(edges[1].x, edges[1].y, bounds, viewMode);
+  const left = Math.min(a.left, b.left);
+  const top = Math.min(a.top, b.top);
+  const width = Math.max(2, Math.abs(a.left - b.left));
+  const height = Math.max(2, Math.abs(a.top - b.top));
+  return `left:${left}%;top:${top}%;width:${width}%;height:${height}%`;
 }
 
 function renderHullSelector() {
@@ -124,6 +185,8 @@ function renderHullSelector() {
     button.addEventListener("click", () => {
       state.design = createDefaultDesign(hull, state.indexes);
       state.selectedSocketName = hull.sockets[0]?.shortName ?? "";
+      state.componentSearch = "";
+      state.componentCategory = "all";
       render();
     });
     els.hullList.append(button);
@@ -139,10 +202,11 @@ function renderHeader(summary) {
 function renderSocketMap() {
   const hull = selectedHull();
   const viewMode = activeViewMode();
-  const bounds = socketBounds(hull.sockets, viewMode);
+  const bounds = socketBounds(hull, viewMode);
   els.socketMap.innerHTML = "";
   els.socketMap.className = `socket-map ${viewMode.hullClass}`;
   els.viewAxisLabel.textContent = viewMode.label;
+  renderHullGeometry(hull, bounds, viewMode);
   for (const socket of hull.sockets) {
     const installed = componentForSlot(state.design, socket, state.indexes);
     const button = document.createElement("button");
@@ -161,9 +225,28 @@ function renderSocketMap() {
     `;
     button.addEventListener("click", () => {
       state.selectedSocketName = socket.shortName;
+      state.componentSearch = "";
+      state.componentCategory = "all";
       render();
     });
     els.socketMap.append(button);
+  }
+}
+
+function renderHullGeometry(hull, bounds, viewMode) {
+  const outerBox = selectVolumeBox(hull);
+  if (outerBox) {
+    const outer = document.createElement("div");
+    outer.className = "hull-volume hull-volume--outer";
+    outer.style.cssText = projectedBoxStyle(outerBox, bounds, viewMode);
+    els.socketMap.append(outer);
+  }
+
+  for (const volume of hull.geometry?.volumes ?? []) {
+    const shape = document.createElement("div");
+    shape.className = "hull-volume";
+    shape.style.cssText = projectedBoxStyle(volume, bounds, viewMode);
+    els.socketMap.append(shape);
   }
 }
 
@@ -230,8 +313,11 @@ function renderComponentFilters() {
 function renderComponentList() {
   const socket = selectedSocket();
   const installed = componentForSlot(state.design, socket, state.indexes);
+  const hull = selectedHull();
   const search = state.componentSearch.trim().toLowerCase();
-  const compatible = compatibleComponents(socket, state.indexes.components).filter((component) => {
+  els.componentSearch.value = state.componentSearch;
+  els.categoryFilter.value = state.componentCategory;
+  const compatible = compatibleComponents(socket, state.indexes.components, hull).filter((component) => {
     const matchesSearch =
       !search ||
       component.name.toLowerCase().includes(search) ||
@@ -241,7 +327,7 @@ function renderComponentList() {
     return matchesSearch && matchesCategory;
   });
 
-  els.componentCount.textContent = `${compatible.length} compatible`;
+  els.componentCount.textContent = `${compatible.length} selectable for ${socket.shortName}`;
   els.componentList.innerHTML = "";
   for (const component of compatible) {
     const button = document.createElement("button");
@@ -260,6 +346,79 @@ function renderComponentList() {
   }
 }
 
+function vectorLabel(vector, digits = 2) {
+  if (!vector) return "-";
+  return `x ${formatNumber(vector.x, digits)}, y ${formatNumber(vector.y, digits)}, z ${formatNumber(vector.z, digits)}`;
+}
+
+function boxLabel(box) {
+  if (!box) return "-";
+  return `center ${vectorLabel(box.center)} / extent ${vectorLabel(box.extent)}`;
+}
+
+function scalarSpecRows(hull) {
+  const structure = hull.structure ?? {};
+  const armor = hull.armorAspect ?? {};
+  const geometry = hull.geometry ?? {};
+  return [
+    ["Faction", hull.factionKey],
+    ["Equipment", hull.overrideEquipmentFactionKey || hull.factionKey],
+    ["Class name", hull.className],
+    ["Hull class", hull.hullClassification],
+    ["Intel class", hull.typeClassification],
+    ["Point cost", formatNumber(hull.pointCost)],
+    ["Mass", `${formatNumber(hull.mass, 1)} t`],
+    ["Weight class", hull.weightClass],
+    ["Base integrity", formatNumber(structure.baseIntegrity, 1)],
+    ["Min damage count", formatNumber(structure.minDamageToCount, 1)],
+    ["Max speed", formatNumber(hull.maxSpeed, 2)],
+    ["Max turn speed", formatNumber(hull.maxTurnSpeed, 3)],
+    ["Linear motor force", formatNumber(hull.linearMotorForce, 1)],
+    ["Angular motor force", formatNumber(hull.angularMotorForce, 1)],
+    ["Crew complement", formatNumber(hull.crewComplement)],
+    ["Crew vulnerability", formatNumber(hull.crewVulnerability, 3)],
+    ["Component DR", formatNumber(hull.componentDamageReduction, 3)],
+    ["Interior armor eq.", formatNumber(hull.interiorDensityArmorEquivalent, 3)],
+    ["Vision distance", formatNumber(hull.visionDistance, 1)],
+    ["Identity work", formatNumber(hull.identityWorkRequired, 1)],
+    ["Wake signature", formatNumber(hull.wakeSignatureStrength, 1)],
+    ["Fuel capacity", formatNumber(hull.fuelUnitCapacity, 1)],
+    ["Storage transfer", formatNumber(hull.storageTransferRate, 3)],
+    ["Craft repair slots", formatNumber(hull.baseCraftRepairSlots)],
+    ["Tank facing", hull.tankFacing],
+    ["Sockets", Object.entries(hull.socketSummary ?? {}).map(([key, value]) => `${key} ${value}`).join(" / ")],
+    ["Armor front angle", formatNumber(armor.FrontAngle, 1)],
+    ["Armor rear angle", formatNumber(armor.RearAngle, 1)],
+    ["Armor top angle", formatNumber(armor.TopAngle, 1)],
+    ["Armor front mult", formatNumber(armor.FrontArmorMult, 3)],
+    ["Armor side mult", formatNumber(armor.SideArmorMult, 3)],
+    ["Armor rear mult", formatNumber(armor.RearArmorMult, 3)],
+    ["Armor top mult", formatNumber(armor.TopArmorMult, 3)],
+    ["Hull volume boxes", formatNumber(geometry.volumes?.length)],
+    ["Hull line Z", `${formatNumber(geometry.lineBackZ, 2)} to ${formatNumber(geometry.lineForwardZ, 2)}`],
+    ["Radar signature", boxLabel(geometry.radarSignature)],
+    ["Select volume center", vectorLabel(geometry.selectVolume?.center)],
+    ["Select volume size", vectorLabel(geometry.selectVolume?.size)],
+  ];
+}
+
+function renderHullSpecs(summary) {
+  const hull = summary.hull;
+  els.hullSpecs.innerHTML = "";
+  for (const [label, value] of scalarSpecRows(hull)) {
+    const row = document.createElement("div");
+    row.className = "spec-row";
+    row.innerHTML = `<span>${label}</span><strong>${value ?? "-"}</strong>`;
+    els.hullSpecs.append(row);
+  }
+  for (const modifier of hull.baseModifiers ?? []) {
+    const row = document.createElement("div");
+    row.className = "spec-row spec-row--modifier";
+    row.innerHTML = `<span>${modifier._statName ?? "Modifier"}</span><strong>${formatNumber(modifier._modifier, 3)} / ${formatNumber(modifier._literal, 3)}</strong>`;
+    els.hullSpecs.append(row);
+  }
+}
+
 function renderDesignJson() {
   els.designJson.value = serializeDesign(state.design);
 }
@@ -272,6 +431,7 @@ function render() {
   renderSocketMap();
   renderSocketDetails();
   renderStats(summary);
+  renderHullSpecs(summary);
   renderComponentFilters();
   renderComponentList();
   renderDesignJson();
@@ -292,6 +452,7 @@ function bindElements() {
     installedMeta: $("#installed-meta"),
     clearSlot: $("#clear-slot"),
     statsGrid: $("#stats-grid"),
+    hullSpecs: $("#hull-specs"),
     warningList: $("#warning-list"),
     componentSearch: $("#component-search"),
     categoryFilter: $("#category-filter"),

@@ -15,6 +15,9 @@ const indexes = createIndexes(catalog);
 const keystone = indexes.hullByName.get("Keystone Destroyer");
 
 assert.ok(keystone, "Keystone Destroyer should exist");
+assert.ok(!indexes.hullByName.has("Worden Fleet Carrier"), "Worden should be hidden from editor hulls");
+assert.ok(!indexes.hullByName.has("Ore Carrier"), "Ore Carrier should be hidden from editor hulls");
+assert.ok(indexes.hullByName.has("Ocello Cruiser"), "Ocello should remain available");
 
 const design = createDefaultDesign(keystone, indexes);
 const summary = summarizeDesign(design, indexes);
@@ -28,8 +31,9 @@ assert.equal(summary.totals.pointCost, 240);
 assert.equal(summary.totals.powerBalance, 2700);
 
 const mount7 = keystone.sockets.find((socket) => socket.shortName === "MT7");
-const mountOptions = compatibleComponents(mount7, indexes.components);
+const mountOptions = compatibleComponents(mount7, indexes.components, keystone);
 assert.ok(mountOptions.some((component) => component.name === "Mk550 Railgun"));
+assert.ok(!mountOptions.some((component) => component.name === "C30 Cannon"));
 
 const withCannon = setSlotComponent(
   design,

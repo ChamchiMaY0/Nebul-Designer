@@ -63,6 +63,7 @@ button {
 .schematic-area,
 .slot-panel,
 .stats-panel,
+.specs-panel,
 .design-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -201,7 +202,7 @@ h3 {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   gap: 10px;
-  height: clamp(300px, 42vh, 460px);
+  height: clamp(260px, 34vh, 360px);
   min-height: 0;
   padding: 14px;
 }
@@ -268,8 +269,24 @@ h3 {
   border-radius: 50%;
 }
 
+.hull-volume {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgb(36 117 109 / 0.45);
+  border-radius: 999px;
+  background: rgb(36 117 109 / 0.12);
+  pointer-events: none;
+}
+
+.hull-volume--outer {
+  z-index: 0;
+  border-color: rgb(31 37 40 / 0.22);
+  background: rgb(31 37 40 / 0.035);
+}
+
 .socket-node {
   position: absolute;
+  z-index: 2;
   display: grid;
   place-items: center;
   transform: translate(-50%, -50%);
@@ -325,14 +342,19 @@ h3 {
 
 .lower-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 0.85fr) minmax(360px, 1.15fr);
+  grid-template-columns: minmax(220px, 0.7fr) minmax(330px, 0.9fr) minmax(300px, 1fr);
   gap: 14px;
 }
 
 .slot-panel,
-.stats-panel {
+.stats-panel,
+.specs-panel {
   min-height: 178px;
   padding-bottom: 14px;
+}
+
+.specs-panel {
+  min-height: 0;
 }
 
 .installed {
@@ -433,6 +455,38 @@ h3 {
   color: var(--teal);
 }
 
+.spec-list {
+  display: grid;
+  gap: 6px;
+  max-height: 260px;
+  overflow: auto;
+  padding: 0 14px 14px;
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.85fr) minmax(90px, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-row span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.spec-row strong {
+  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+}
+
+.spec-row--modifier strong {
+  color: var(--teal);
+}
+
 .parts-toolbar {
   display: grid;
   grid-template-columns: 1fr;
@@ -526,6 +580,14 @@ textarea {
     grid-template-columns: minmax(210px, 250px) minmax(420px, 1fr);
   }
 
+  .lower-grid {
+    grid-template-columns: minmax(220px, 0.85fr) minmax(300px, 1.15fr);
+  }
+
+  .specs-panel {
+    grid-column: 1 / -1;
+  }
+
   .parts-panel {
     grid-column: 1 / -1;
     min-height: 520px;
@@ -543,7 +605,7 @@ textarea {
   }
 
   .schematic-area {
-    height: clamp(300px, 46vh, 400px);
+    height: clamp(280px, 42vh, 360px);
   }
 
   .ship-header,

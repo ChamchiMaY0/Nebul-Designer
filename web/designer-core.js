@@ -4,12 +4,24 @@ export const SLOT_TYPE_LABELS = {
   module: "Module",
 };
 
+export const NON_EDITOR_HULL_NAMES = new Set([
+  "Mercator Oiler",
+  "Ore Carrier",
+  "Worden Fleet Carrier",
+]);
+
 const SIZE_AXES = ["x", "y", "z"];
 
+export function isEditableHull(hull) {
+  return Boolean(hull) && !hull.hideInFleetEditor && !NON_EDITOR_HULL_NAMES.has(hull.name);
+}
+
 export function createIndexes(catalog) {
-  const hulls = catalog.hulls ?? [];
+  const allHulls = catalog.hulls ?? [];
+  const hulls = allHulls.filter(isEditableHull);
   const components = catalog.components ?? [];
   return {
+    allHulls,
     hulls,
     components,
     hullByName: new Map(hulls.map((hull) => [hull.name, hull])),
@@ -39,11 +51,21 @@ export function resolveDefaultComponentName(defaultComponent, indexes) {
   return hit?.name ?? "";
 }
 
+export function hullEquipmentFaction(hull) {
+  return hull?.overrideEquipmentFactionKey || hull?.factionKey || "";
+}
+
+export function isComponentAvailableForHull(component, hull) {
+  const factionKey = component?.factionKey ?? "";
+  return !factionKey || factionKey === hullEquipmentFaction(hull);
+}
+
 export function createDefaultDesign(hull, indexes) {
   const design = createEmptyDesign(hull);
   for (const socket of hull.sockets ?? []) {
     const componentName = resolveDefaultComponentName(socket.defaultComponent, indexes);
-    if (componentName) {
+    const component = indexes.componentByName.get(componentName);
+    if (component && isCompatible(socket, component, hull)) {
       design.slots[socket.shortName] = componentName;
     }
   }
@@ -77,17 +99,18 @@ export function canFitSize(socketSize, componentSize, rotateToFit = 0) {
   );
 }
 
-export function isCompatible(socket, component) {
+export function isCompatible(socket, component, hull = null) {
   if (!socket || !component) return false;
+  if (hull && !isComponentAvailableForHull(component, hull)) return false;
   return (
     socket.typeName === component.typeName &&
     canFitSize(socket.size, component.size, component.rotateToFit)
   );
 }
 
-export function compatibleComponents(socket, components) {
+export function compatibleComponents(socket, components, hull = null) {
   return components
-    .filter((component) => isCompatible(socket, component))
+    .filter((component) => isCompatible(socket, component, hull))
     .sort((a, b) => {
       const category = String(a.category ?? "").localeCompare(String(b.category ?? ""));
       if (category) return category;
@@ -195,10 +218,9 @@ export function parseDesign(text, indexes) {
     if (!socketNames.has(shortName)) continue;
     const component = indexes.componentByName.get(componentName);
     const socket = hull.sockets.find((item) => item.shortName === shortName);
-    if (component && isCompatible(socket, component)) {
+    if (component && isCompatible(socket, component, hull)) {
       slots[shortName] = component.name;
     }
   }
   return { hullName, slots };
 }
-
