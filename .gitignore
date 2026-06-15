@@ -3,9 +3,10 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+node_modules/
+dist/
 
 # Original game asset bundles are required locally for extraction, but should not
 # be redistributed through this repository.
 Asset/
 AssetBundles/
-

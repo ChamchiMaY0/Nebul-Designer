@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nebul Designer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="hulls-panel">
+        <div class="panel-heading">
+          <p class="eyebrow">Nebul Designer</p>
+          <h1>Ship Workspace</h1>
+        </div>
+        <div id="hull-list" class="hull-list"></div>
+      </aside>
+
+      <section class="workspace">
+        <header class="ship-header">
+          <div>
+            <p class="eyebrow">Selected Hull</p>
+            <h2 id="hull-name">Loading</h2>
+            <p id="hull-meta" class="muted"></p>
+          </div>
+          <div id="status" class="status" aria-live="polite"></div>
+        </header>
+
+        <section class="schematic-area">
+          <div id="socket-map" class="socket-map" aria-label="Socket map"></div>
+        </section>
+
+        <section class="lower-grid">
+          <div class="slot-panel">
+            <div class="panel-heading panel-heading--compact">
+              <p class="eyebrow">Socket</p>
+              <h3 id="socket-title">-</h3>
+              <p id="socket-meta" class="muted"></p>
+            </div>
+            <div class="installed">
+              <span>Installed</span>
+              <strong id="installed-name">-</strong>
+              <p id="installed-meta" class="muted"></p>
+            </div>
+            <button id="clear-slot" class="command-button" type="button">Clear Slot</button>
+          </div>
+
+          <div class="stats-panel">
+            <div id="stats-grid" class="stats-grid"></div>
+            <ul id="warning-list" class="warning-list"></ul>
+          </div>
+        </section>
+      </section>
+
+      <aside class="parts-panel">
+        <div class="parts-toolbar">
+          <input id="component-search" type="search" placeholder="Search components" />
+          <select id="category-filter"></select>
+        </div>
+        <div class="panel-line">
+          <span id="component-count">0 compatible</span>
+        </div>
+        <div id="component-list" class="component-list"></div>
+
+        <div class="design-panel">
+          <div class="design-actions">
+            <button id="reset-defaults" class="command-button" type="button">Defaults</button>
+            <button id="save-local" class="command-button" type="button">Save</button>
+            <button id="load-local" class="command-button" type="button">Load</button>
+            <button id="load-design" class="command-button" type="button">Apply JSON</button>
+          </div>
+          <textarea id="design-json" spellcheck="false"></textarea>
+        </div>
+      </aside>
+    </main>
+    <div id="app-error" class="app-error"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+

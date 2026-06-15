@@ -42,3 +42,32 @@ Generated files are written to `data/generated/`:
 - `munitions.json`
 - `missiles.json`
 - `metadata.json`
+
+## Web Designer Prototype
+
+Run the local static server:
+
+```sh
+npm start
+```
+
+Open the designer at:
+
+```text
+http://localhost:4173/web/
+```
+
+The prototype reads `data/generated/catalog.json` and supports:
+
+- hull selection
+- socket map selection
+- compatible component filtering
+- component install and clear actions
+- point, mass, crew, and power summaries
+- design JSON save, load, and edit flow
+
+Run the current checks:
+
+```sh
+npm test
+```
