@@ -1,0 +1,8 @@
+<Locale Name="English" Code="en-US">
+	<Tables>
+		<string>en_ui.json</string>
+		<string>en_assets.json</string>
+		<string>en_tut.json</string>
+		<string>en_tbr.json</string>
+	</Tables>
+</Locale>
