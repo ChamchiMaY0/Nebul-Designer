@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<MissileTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AssociatedTemplateName>SDM-274 DDAK</AssociatedTemplateName>
+  <SaveKey>$MODMIS$/hjXG6mfswUGGNdQxF41KuA</SaveKey>
+  <Designation>SDM-274</Designation>
+  <Nickname>DDAK</Nickname>
+  <Description>$MISSILEGUIDANCE_MODE_DIRECT - &lt;color=#D3D11F&gt;$MISSILESEEKER_MODE_COMMAND_ABBREV&lt;/color&gt; - $MISSILEWARHEAD_SHORT_BLASTFRAG</Description>
+  <LongDescription>&lt;noparse&gt;SDM-274 DDAK&lt;/noparse&gt;은(는) 2호 .  이는 SDM-2 동체를 기반으로 하며, 이는 .  이 미사일은 근접 신관, 고폭발성, 파편 폭발형 탄두을(를) 탑재합니다.  이는 (를) 사용하여 목표물을 정확히 조준합니다.
+
+$MISSILESTAT_CONTROLMETHOD: $MISSILEGUIDANCE_MODE_DIRECT
+$MISSILESTAT_TARGETINGMODE: &lt;b&gt;&lt;color=#D4211D&gt;$MISSILESTAT_TARGETINGMODE_POS&lt;/color&gt;	&lt;color=#3BC81E&gt;$MISSILESTAT_TARGETINGMODE_TRACK&lt;/color&gt;&lt;/b&gt;
+
+$MISSILESTAT_PRIMARYSEEKER: $MISSILESEEKER_MODE_COMMAND_CAPS (&lt;color=#D3D11F&gt;$MISSILESEEKER_COMMAND_COMMSNOTE&lt;/color&gt;)
+
+&lt;b&gt;$MISSILEENGINE_STAGE_BOOST|Boost|&lt;/b&gt;
+$MISSILESTAT_SPEED: 650 $UNIT_METERSPERSEC
+$MISSILESTAT_DISTANCE: 8,098 $UNIT_METERS
+$MISSILESTAT_TOPSPEEDTIME: 1.1 $UNIT_SECONDS
+$MISSILESTAT_TURNRATE: 4.4 $UNIT_GS
+
+&lt;b&gt;$MISSILEENGINE_STAGE_MAIN|Main|&lt;/b&gt;
+$MISSILESTAT_SPEED: 166 $UNIT_METERSPERSEC
+$MISSILESTAT_DISTANCE: 2,331 $UNIT_METERS
+$MISSILESTAT_TOPSPEEDTIME: 0.7 $UNIT_SECONDS
+$MISSILESTAT_TURNRATE: 6.2 $UNIT_GS
+
+: 목표물로부터 1,540m에서 단계 트리거 또는 연료 소진으로 트리거
+
+$MISSILESTAT_TERMINALS: $MISSILESTAT_TERMINALS_NONE|None|
+
+$MISSILESTAT_WARHEAD: $MISSILEWARHEAD_DETAIL_BLASTFRAG
+$MISSILESTAT_ARMORDAMAGE: 0.40$UNIT_CENTIMETERS
+$MISSILESTAT_COMPONENTDAMAGE: 127.16$UNIT_HP
+$MISSILESTAT_BLASTRADIUS: 91 $UNIT_METERS
+
+$MISSILESTAT_HEALTH: 25 
+$MISSILESTAT_WALLTHICKNESS: 0.05
+$MISSILESTAT_PROGTIME: 10 $UNIT_SECONDS
+$MISSILESTAT_RADARSIG: 100 %
+$MISSILESTAT_BOOSTTIME: 3 $UNIT_SECONDS
+$MISSILESTAT_BOOSTSTRAFE: 100 %
+$MISSILESTAT_BOOSTTURN: 100 %
+$MISSILESTAT_FAILRATE: 0 %</LongDescription>
+  <Cost>7</Cost>
+  <BodyKey>Stock/SDM-2 Body</BodyKey>
+  <TemplateKey>eac63586-ec67-41c1-8635-d431178d4ab8</TemplateKey>
+  <BaseColor>
+    <r>1</r>
+    <g>1</g>
+    <b>1</b>
+    <a>1</a>
+  </BaseColor>
+  <StripeColor>
+    <r>0.274509817</r>
+    <g>0.129411772</g>
+    <b>0.7058824</b>
+    <a>1</a>
+  </StripeColor>
+  <Sockets>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="CommandSeekerSettings">
+        <ComponentKey>Stock/Command Receiver</ComponentKey>
+        <Mode>Targeting</Mode>
+        <RejectUnvalidated>false</RejectUnvalidated>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="DirectGuidanceSettings">
+        <ComponentKey>Stock/Direct Guidance</ComponentKey>
+        <Role>Defensive</Role>
+        <HotLaunch>true</HotLaunch>
+        <SelfDestructOnLost>false</SelfDestructOnLost>
+        <Maneuvers>None</Maneuvers>
+        <DefensiveDoctrine>
+          <Mode>Matrix</Mode>
+          <TargetSizeMask>12</TargetSizeMask>
+          <TargetType>SmallCraft</TargetType>
+          <TargetSizeOrdering>Descending</TargetSizeOrdering>
+          <SalvoSize>0</SalvoSize>
+          <ConvSalvo>16777216</ConvSalvo>
+          <HybridSalvo>16777216</HybridSalvo>
+          <CraftSalvo>16843008</CraftSalvo>
+          <FarthestFirst>false</FarthestFirst>
+        </DefensiveDoctrine>
+        <ApproachAngleControl>true</ApproachAngleControl>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>4</Size>
+      <InstalledComponent>
+        <ComponentKey>Stock/Blast Fragmentation</ComponentKey>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>3</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0.21382539</A>
+          <B>0.197128549</B>
+          <C>0.589046061</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+    <MissileSocket>
+      <Size>1</Size>
+      <InstalledComponent xsi:type="MissileEngineSettings">
+        <ComponentKey />
+        <BalanceValues>
+          <A>0</A>
+          <B>1</B>
+          <C>0</C>
+        </BalanceValues>
+      </InstalledComponent>
+    </MissileSocket>
+  </Sockets>
+  <ModDependencies />
+</MissileTemplate>

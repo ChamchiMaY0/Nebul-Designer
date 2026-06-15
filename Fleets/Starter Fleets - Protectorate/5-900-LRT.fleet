@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Fleet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>5-900-LRT</Name>
+  <Version>3</Version>
+  <TotalPoints>3000</TotalPoints>
+  <FactionKey>Stock/Protectorate</FactionKey>
+  <Ships>
+    <Ship>
+      <Key>63040e02-840c-4a4a-a06b-bd95563f85c1</Key>
+      <Name>Pure Gap</Name>
+      <Cost>750</Cost>
+      <Number>375</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Bulk Feeder</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>4V6twrIUcEKE11tom-tDXQ</Key>
+          <ComponentName>Stock/R400 Radar</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>yN7f-9tEXEKlBNskqP6EbA</Key>
+          <ComponentName>Stock/L50 Laser Dazzler</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>Z2uDs34J-ESu64-i9YGnxQ</Key>
+          <ComponentName>Stock/VLS-1-23 Launcher</ComponentName>
+          <ComponentData p2:type="CellLauncherData" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+            <MissileLoad>
+              <MagSaveData>
+                <MagazineKey>tCFLDbAN_E-UEZ29hzo16A</MagazineKey>
+                <MunitionKey>Stock/EA12 Chaff Decoy</MunitionKey>
+                <Quantity>5</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>mw_vB-l45EOV2m-uqIxpqA</MagazineKey>
+                <MunitionKey>Stock/EA20 Flare Decoy</MunitionKey>
+                <Quantity>5</Quantity>
+              </MagSaveData>
+            </MissileLoad>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>gb6_3kWBY0KlEWeex3ruDg</Key>
+          <ComponentName>Stock/J360 Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>_y-Bd-EWjUeMIrmzG3UxvQ</Key>
+          <ComponentName>Stock/J75 Jammer</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gDQghm5iik2syYcoJqUPFg</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>vtme83CXg0qDA4_YK6NqwA</Key>
+          <ComponentName>Stock/Jury-Rigged Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rGVFgJ8GyUePoRkz33c1sw</Key>
+          <ComponentName>Stock/Small DC Locker</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>_hUvj899GkWP0bnjDN1ODw</Key>
+          <ComponentName>Stock/Intelligence Center</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
+          <ComponentName>Stock/Boosted Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HNv6B-78FEuhV8YT9A6uZw</Key>
+          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HvdEBsnpUUypPN4uW67paQ</Key>
+          <ComponentName>Stock/Track Correlator</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>iDdlfFwKkUO9HbumzymceA</Key>
+          <ComponentName>Stock/Track Correlator</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DaqWEX-8gEeIzYrhp8NIMw</Key>
+          <ComponentName>Stock/Track Correlator</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>EvZ6JN5xV0aUlKEeeKxFTQ</Key>
+          <ComponentName>Stock/Bulwark Huntress</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>CU_oraqJxEaB3dTzZW2MkA</Key>
+          <ComponentName>Stock/Track Correlator</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="RAD">
+          <MemberKeys>
+            <string>gb6_3kWBY0KlEWeex3ruDg</string>
+            <string>_y-Bd-EWjUeMIrmzG3UxvQ</string>
+          </MemberKeys>
+        </WepGroup>
+        <WepGroup Name="2">
+          <MemberKeys>
+            <string>yN7f-9tEXEKlBNskqP6EbA</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <Key>dc204cca-29f5-4c3e-8352-d35f5ac732f6</Key>
+      <Name>Acute Nerve</Name>
+      <Cost>450</Cost>
+      <Number>1255</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Bulk Feeder</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>4V6twrIUcEKE11tom-tDXQ</Key>
+          <ComponentName>Stock/C90 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gDQghm5iik2syYcoJqUPFg</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rGVFgJ8GyUePoRkz33c1sw</Key>
+          <ComponentName>Stock/Bulk Magazine</ComponentName>
+          <ComponentData p2:type="BulkMagazineData" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>AvRynm7rpkaou-K-zr5zlQ</MagazineKey>
+                <MunitionKey>Stock/600mm HE Shell</MunitionKey>
+                <Quantity>80</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>g9AYt3t62ke70Bo8O9fQ2A</MagazineKey>
+                <MunitionKey>Stock/600mm Bomb Shell</MunitionKey>
+                <Quantity>20</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
+          <ComponentName>Stock/Civilian Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HNv6B-78FEuhV8YT9A6uZw</Key>
+          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HvdEBsnpUUypPN4uW67paQ</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>iDdlfFwKkUO9HbumzymceA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DaqWEX-8gEeIzYrhp8NIMw</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>EvZ6JN5xV0aUlKEeeKxFTQ</Key>
+          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>CU_oraqJxEaB3dTzZW2MkA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="1">
+          <MemberKeys>
+            <string>4V6twrIUcEKE11tom-tDXQ</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>63040e02-840c-4a4a-a06b-bd95563f85c1</GuideKey>
+        <RelativePosition>
+          <x>-24.96683</x>
+          <y>0</y>
+          <z>0.143508911</z>
+        </RelativePosition>
+      </InitialFormation>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <Key>2c8ca4dd-eb3e-4440-b9a4-e55d67375967</Key>
+      <Name>Piano Stark</Name>
+      <Cost>450</Cost>
+      <Number>916</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Bulk Feeder</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>4V6twrIUcEKE11tom-tDXQ</Key>
+          <ComponentName>Stock/C90 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gDQghm5iik2syYcoJqUPFg</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rGVFgJ8GyUePoRkz33c1sw</Key>
+          <ComponentName>Stock/Bulk Magazine</ComponentName>
+          <ComponentData p2:type="BulkMagazineData" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>AvRynm7rpkaou-K-zr5zlQ</MagazineKey>
+                <MunitionKey>Stock/600mm HE Shell</MunitionKey>
+                <Quantity>80</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>g9AYt3t62ke70Bo8O9fQ2A</MagazineKey>
+                <MunitionKey>Stock/600mm Bomb Shell</MunitionKey>
+                <Quantity>20</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
+          <ComponentName>Stock/Civilian Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HNv6B-78FEuhV8YT9A6uZw</Key>
+          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HvdEBsnpUUypPN4uW67paQ</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>iDdlfFwKkUO9HbumzymceA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DaqWEX-8gEeIzYrhp8NIMw</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>EvZ6JN5xV0aUlKEeeKxFTQ</Key>
+          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>CU_oraqJxEaB3dTzZW2MkA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="1">
+          <MemberKeys>
+            <string>4V6twrIUcEKE11tom-tDXQ</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>63040e02-840c-4a4a-a06b-bd95563f85c1</GuideKey>
+        <RelativePosition>
+          <x>24.9470787</x>
+          <y>0</y>
+          <z>1.20681763</z>
+        </RelativePosition>
+      </InitialFormation>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <Key>f4b0355b-3123-49ca-a59d-c1a35be2f211</Key>
+      <Name>Mare and City</Name>
+      <Cost>450</Cost>
+      <Number>733</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Bulk Feeder</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>4V6twrIUcEKE11tom-tDXQ</Key>
+          <ComponentName>Stock/C90 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gDQghm5iik2syYcoJqUPFg</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rGVFgJ8GyUePoRkz33c1sw</Key>
+          <ComponentName>Stock/Bulk Magazine</ComponentName>
+          <ComponentData p2:type="BulkMagazineData" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>AvRynm7rpkaou-K-zr5zlQ</MagazineKey>
+                <MunitionKey>Stock/600mm HE Shell</MunitionKey>
+                <Quantity>80</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>g9AYt3t62ke70Bo8O9fQ2A</MagazineKey>
+                <MunitionKey>Stock/600mm Bomb Shell</MunitionKey>
+                <Quantity>20</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
+          <ComponentName>Stock/Civilian Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HNv6B-78FEuhV8YT9A6uZw</Key>
+          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HvdEBsnpUUypPN4uW67paQ</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>iDdlfFwKkUO9HbumzymceA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DaqWEX-8gEeIzYrhp8NIMw</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>EvZ6JN5xV0aUlKEeeKxFTQ</Key>
+          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>CU_oraqJxEaB3dTzZW2MkA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="1">
+          <MemberKeys>
+            <string>4V6twrIUcEKE11tom-tDXQ</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>63040e02-840c-4a4a-a06b-bd95563f85c1</GuideKey>
+        <RelativePosition>
+          <x>-16.0563831</x>
+          <y>24.9872131</y>
+          <z>-0.171325684</z>
+        </RelativePosition>
+      </InitialFormation>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <Key>026d0a7f-7e33-45a3-9752-ba378573c1ea</Key>
+      <Name>Serum of Phylys</Name>
+      <Cost>450</Cost>
+      <Number>940</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Bulk Feeder</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>4V6twrIUcEKE11tom-tDXQ</Key>
+          <ComponentName>Stock/C90 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gDQghm5iik2syYcoJqUPFg</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rGVFgJ8GyUePoRkz33c1sw</Key>
+          <ComponentName>Stock/Bulk Magazine</ComponentName>
+          <ComponentData p2:type="BulkMagazineData" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>AvRynm7rpkaou-K-zr5zlQ</MagazineKey>
+                <MunitionKey>Stock/600mm HE Shell</MunitionKey>
+                <Quantity>80</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>g9AYt3t62ke70Bo8O9fQ2A</MagazineKey>
+                <MunitionKey>Stock/600mm Bomb Shell</MunitionKey>
+                <Quantity>20</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
+          <ComponentName>Stock/Civilian Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HNv6B-78FEuhV8YT9A6uZw</Key>
+          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HvdEBsnpUUypPN4uW67paQ</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>iDdlfFwKkUO9HbumzymceA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DaqWEX-8gEeIzYrhp8NIMw</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>EvZ6JN5xV0aUlKEeeKxFTQ</Key>
+          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>CU_oraqJxEaB3dTzZW2MkA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="1">
+          <MemberKeys>
+            <string>4V6twrIUcEKE11tom-tDXQ</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>63040e02-840c-4a4a-a06b-bd95563f85c1</GuideKey>
+        <RelativePosition>
+          <x>-0.205522537</x>
+          <y>-24.93837</y>
+          <z>-2.27148438</z>
+        </RelativePosition>
+      </InitialFormation>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+    <Ship>
+      <Key>1f2daa57-45cd-4793-b2fc-cd3fe1c2447a</Key>
+      <Name>The Near Tax</Name>
+      <Cost>450</Cost>
+      <Number>1167</Number>
+      <SymbolOption>0</SymbolOption>
+      <HullType>Stock/Bulk Feeder</HullType>
+      <SocketMap>
+        <HullSocket>
+          <Key>4V6twrIUcEKE11tom-tDXQ</Key>
+          <ComponentName>Stock/C90 Cannon</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>gDQghm5iik2syYcoJqUPFg</Key>
+          <ComponentName>Stock/Basic CIC</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>rGVFgJ8GyUePoRkz33c1sw</Key>
+          <ComponentName>Stock/Bulk Magazine</ComponentName>
+          <ComponentData p2:type="BulkMagazineData" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+            <Load>
+              <MagSaveData>
+                <MagazineKey>AvRynm7rpkaou-K-zr5zlQ</MagazineKey>
+                <MunitionKey>Stock/600mm HE Shell</MunitionKey>
+                <Quantity>80</Quantity>
+              </MagSaveData>
+              <MagSaveData>
+                <MagazineKey>g9AYt3t62ke70Bo8O9fQ2A</MagazineKey>
+                <MunitionKey>Stock/600mm Bomb Shell</MunitionKey>
+                <Quantity>20</Quantity>
+              </MagSaveData>
+            </Load>
+          </ComponentData>
+        </HullSocket>
+        <HullSocket>
+          <Key>N4KIOsNqeUGVAUrx5OW3DQ</Key>
+          <ComponentName>Stock/Damage Control Complex</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>9K_1ZNCgFESrvaoQMOH3yw</Key>
+          <ComponentName>Stock/Civilian Reactor</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HNv6B-78FEuhV8YT9A6uZw</Key>
+          <ComponentName>Stock/CHI-777 Yard Drive</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>HvdEBsnpUUypPN4uW67paQ</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>iDdlfFwKkUO9HbumzymceA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>DaqWEX-8gEeIzYrhp8NIMw</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>EvZ6JN5xV0aUlKEeeKxFTQ</Key>
+          <ComponentName>Stock/Ithaca Bridgemaster</ComponentName>
+        </HullSocket>
+        <HullSocket>
+          <Key>CU_oraqJxEaB3dTzZW2MkA</Key>
+          <ComponentName>Stock/Ammunition Elevators</ComponentName>
+        </HullSocket>
+      </SocketMap>
+      <WeaponGroups>
+        <WepGroup Name="1">
+          <MemberKeys>
+            <string>4V6twrIUcEKE11tom-tDXQ</string>
+          </MemberKeys>
+        </WepGroup>
+      </WeaponGroups>
+      <InitialFormation>
+        <GuideKey>63040e02-840c-4a4a-a06b-bd95563f85c1</GuideKey>
+        <RelativePosition>
+          <x>16.4811211</x>
+          <y>24.51448</y>
+          <z>0.670074463</z>
+        </RelativePosition>
+      </InitialFormation>
+      <TemplateMissileTypes />
+      <TemplateSpacecraftTypes />
+    </Ship>
+  </Ships>
+</Fleet>
