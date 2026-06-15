@@ -18,9 +18,40 @@ const state = {
   selectedSocketName: "",
   componentSearch: "",
   componentCategory: "all",
+  viewMode: "top",
 };
 
 const els = {};
+
+const VIEW_MODES = {
+  top: {
+    label: "X / Z",
+    xAxis: "x",
+    yAxis: "z",
+    xSize: "x",
+    ySize: "z",
+    invertY: true,
+    hullClass: "socket-map--top",
+  },
+  side: {
+    label: "Z / Y",
+    xAxis: "z",
+    yAxis: "y",
+    xSize: "z",
+    ySize: "y",
+    invertY: true,
+    hullClass: "socket-map--side",
+  },
+  front: {
+    label: "X / Y",
+    xAxis: "x",
+    yAxis: "y",
+    xSize: "x",
+    ySize: "y",
+    invertY: true,
+    hullClass: "socket-map--front",
+  },
+};
 
 function $(selector) {
   return document.querySelector(selector);
@@ -50,28 +81,33 @@ function componentCategories(components) {
   return [...new Set(components.map((component) => component.category).filter(Boolean))].sort();
 }
 
-function socketBounds(sockets) {
-  const xs = sockets.map((socket) => socket.position?.x ?? 0);
-  const zs = sockets.map((socket) => socket.position?.z ?? 0);
+function activeViewMode() {
+  return VIEW_MODES[state.viewMode] ?? VIEW_MODES.top;
+}
+
+function socketBounds(sockets, viewMode) {
+  const xs = sockets.map((socket) => socket.position?.[viewMode.xAxis] ?? 0);
+  const ys = sockets.map((socket) => socket.position?.[viewMode.yAxis] ?? 0);
   return {
     minX: Math.min(...xs),
     maxX: Math.max(...xs),
-    minZ: Math.min(...zs),
-    maxZ: Math.max(...zs),
+    minY: Math.min(...ys),
+    maxY: Math.max(...ys),
   };
 }
 
-function socketStyle(socket, bounds) {
-  const x = socket.position?.x ?? 0;
-  const z = socket.position?.z ?? 0;
+function socketStyle(socket, bounds, viewMode) {
+  const x = socket.position?.[viewMode.xAxis] ?? 0;
+  const y = socket.position?.[viewMode.yAxis] ?? 0;
   const xRange = Math.max(bounds.maxX - bounds.minX, 1);
-  const zRange = Math.max(bounds.maxZ - bounds.minZ, 1);
+  const yRange = Math.max(bounds.maxY - bounds.minY, 1);
   const left = 8 + ((x - bounds.minX) / xRange) * 84;
-  const top = 8 + (1 - (z - bounds.minZ) / zRange) * 84;
-  const sx = Number(socket.size?.x ?? 2);
-  const sz = Number(socket.size?.z ?? 2);
+  const yRatio = (y - bounds.minY) / yRange;
+  const top = 8 + (viewMode.invertY ? 1 - yRatio : yRatio) * 84;
+  const sx = Number(socket.size?.[viewMode.xSize] ?? 2);
+  const sy = Number(socket.size?.[viewMode.ySize] ?? 2);
   const width = Math.max(18, Math.min(58, 12 + sx * 4));
-  const height = Math.max(18, Math.min(58, 12 + sz * 4));
+  const height = Math.max(18, Math.min(58, 12 + sy * 4));
   return `left:${left}%;top:${top}%;width:${width}px;height:${height}px`;
 }
 
@@ -102,8 +138,11 @@ function renderHeader(summary) {
 
 function renderSocketMap() {
   const hull = selectedHull();
-  const bounds = socketBounds(hull.sockets);
+  const viewMode = activeViewMode();
+  const bounds = socketBounds(hull.sockets, viewMode);
   els.socketMap.innerHTML = "";
+  els.socketMap.className = `socket-map ${viewMode.hullClass}`;
+  els.viewAxisLabel.textContent = viewMode.label;
   for (const socket of hull.sockets) {
     const installed = componentForSlot(state.design, socket, state.indexes);
     const button = document.createElement("button");
@@ -114,8 +153,8 @@ function renderSocketMap() {
       installed ? "is-filled" : "",
     ].join(" ");
     button.type = "button";
-    button.style.cssText = socketStyle(socket, bounds);
-    button.title = `${socket.shortName} ${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName}`;
+    button.style.cssText = socketStyle(socket, bounds, viewMode);
+    button.title = `${socket.shortName} ${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName} ${viewMode.label}`;
     button.innerHTML = `
       <span>${socket.shortName}</span>
       <small>${installed ? installed.name : ""}</small>
@@ -132,7 +171,7 @@ function renderSocketDetails() {
   const socket = selectedSocket();
   const installed = componentForSlot(state.design, socket, state.indexes);
   els.socketTitle.textContent = `${socket.shortName} | ${socket.name}`;
-  els.socketMeta.textContent = `${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName} | ${sizeLabel(socket.size)}`;
+  els.socketMeta.textContent = `${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName} | ${sizeLabel(socket.size)} | pos ${formatNumber(socket.position?.x, 2)}, ${formatNumber(socket.position?.y, 2)}, ${formatNumber(socket.position?.z, 2)}`;
   els.installedName.textContent = componentDisplayName(installed?.name);
   els.installedMeta.textContent = installed
     ? `${installed.category} | ${formatNumber(installed.pointCost)} pts | ${formatNumber(installed.mass, 1)} t`
@@ -236,6 +275,7 @@ function render() {
   renderComponentFilters();
   renderComponentList();
   renderDesignJson();
+  renderViewToolbar();
 }
 
 function bindElements() {
@@ -244,6 +284,8 @@ function bindElements() {
     hullName: $("#hull-name"),
     hullMeta: $("#hull-meta"),
     socketMap: $("#socket-map"),
+    viewButtons: [...document.querySelectorAll("[data-view-mode]")],
+    viewAxisLabel: $("#view-axis-label"),
     socketTitle: $("#socket-title"),
     socketMeta: $("#socket-meta"),
     installedName: $("#installed-name"),
@@ -262,6 +304,12 @@ function bindElements() {
     loadLocal: $("#load-local"),
     status: $("#status"),
   });
+}
+
+function renderViewToolbar() {
+  for (const button of els.viewButtons) {
+    button.classList.toggle("is-active", button.dataset.viewMode === state.viewMode);
+  }
 }
 
 function showStatus(message) {
@@ -316,6 +364,12 @@ function bindEvents() {
       showStatus(error.message);
     }
   });
+  for (const button of els.viewButtons) {
+    button.addEventListener("click", () => {
+      state.viewMode = button.dataset.viewMode;
+      render();
+    });
+  }
 }
 
 async function loadCatalog() {
@@ -340,4 +394,3 @@ async function main() {
 }
 
 main();
-

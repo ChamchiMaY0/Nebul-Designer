@@ -174,7 +174,7 @@ h3 {
 
 .workspace {
   display: grid;
-  grid-template-rows: auto minmax(360px, 1fr) auto;
+  grid-template-rows: auto auto auto;
   gap: 14px;
   min-height: 0;
   background: transparent;
@@ -198,15 +198,48 @@ h3 {
 }
 
 .schematic-area {
-  min-height: 360px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 10px;
+  height: clamp(300px, 42vh, 460px);
+  min-height: 0;
   padding: 14px;
+}
+
+.view-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-button {
+  min-width: 64px;
+  height: 34px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.view-button:hover,
+.view-button.is-active {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+.axis-label {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
 }
 
 .socket-map {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 330px;
+  min-height: 0;
   border: 1px solid var(--line);
   border-radius: 6px;
   background:
@@ -223,6 +256,16 @@ h3 {
   border: 1px solid rgb(36 117 109 / 0.25);
   border-radius: 50%;
   content: "";
+}
+
+.socket-map--side::before {
+  inset: 36% 8%;
+  border-radius: 48%;
+}
+
+.socket-map--front::before {
+  inset: 18% 36%;
+  border-radius: 50%;
 }
 
 .socket-node {
@@ -496,7 +539,11 @@ textarea {
   }
 
   .workspace {
-    grid-template-rows: auto minmax(330px, 48vh) auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .schematic-area {
+    height: clamp(300px, 46vh, 400px);
   }
 
   .ship-header,

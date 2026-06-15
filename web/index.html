@@ -27,6 +27,12 @@
         </header>
 
         <section class="schematic-area">
+          <div class="view-toolbar" aria-label="Schematic view">
+            <button class="view-button is-active" type="button" data-view-mode="top">Top</button>
+            <button class="view-button" type="button" data-view-mode="side">Side</button>
+            <button class="view-button" type="button" data-view-mode="front">Front</button>
+            <span id="view-axis-label" class="axis-label">X / Z</span>
+          </div>
           <div id="socket-map" class="socket-map" aria-label="Socket map"></div>
         </section>
 
@@ -77,4 +83,3 @@
     <script type="module" src="./app.js"></script>
   </body>
 </html>
-
