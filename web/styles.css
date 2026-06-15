@@ -139,6 +139,39 @@ h3 {
   padding: 0 8px 10px;
 }
 
+.hull-group {
+  display: grid;
+  gap: 6px;
+  padding: 4px 0 10px;
+}
+
+.hull-group + .hull-group {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.hull-group__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hull-group__heading span {
+  color: var(--teal);
+  letter-spacing: 0;
+}
+
+.hull-group__heading small {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: none;
+}
+
 .hull-row,
 .component-row {
   display: grid;

@@ -6,7 +6,6 @@ export const SLOT_TYPE_LABELS = {
 
 export const NON_EDITOR_HULL_NAMES = new Set([
   "Mercator Oiler",
-  "Ore Carrier",
   "Worden Fleet Carrier",
 ]);
 

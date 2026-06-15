@@ -16,7 +16,7 @@ const keystone = indexes.hullByName.get("Keystone Destroyer");
 
 assert.ok(keystone, "Keystone Destroyer should exist");
 assert.ok(!indexes.hullByName.has("Worden Fleet Carrier"), "Worden should be hidden from editor hulls");
-assert.ok(!indexes.hullByName.has("Ore Carrier"), "Ore Carrier should be hidden from editor hulls");
+assert.ok(indexes.hullByName.has("Ore Carrier"), "Ore Carrier should remain available as an OSP hull");
 assert.ok(indexes.hullByName.has("Ocello Cruiser"), "Ocello should remain available");
 
 const design = createDefaultDesign(keystone, indexes);

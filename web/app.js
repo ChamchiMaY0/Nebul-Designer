@@ -53,6 +53,15 @@ const VIEW_MODES = {
   },
 };
 
+const FACTION_GROUPS = [
+  { key: "Stock/Alliance", label: "ANS", name: "Alliance Navy" },
+  { key: "Stock/Protectorate", label: "OSP", name: "Outer Systems Protectorate" },
+];
+
+function factionLabel(factionKey) {
+  return FACTION_GROUPS.find((group) => group.key === factionKey)?.label ?? factionKey ?? "Other";
+}
+
 function $(selector) {
   return document.querySelector(selector);
 }
@@ -174,29 +183,51 @@ function projectedBoxStyle(box, bounds, viewMode) {
 
 function renderHullSelector() {
   els.hullList.innerHTML = "";
-  for (const hull of state.indexes.hulls) {
-    const button = document.createElement("button");
-    button.className = `hull-row ${hull.name === state.design.hullName ? "is-active" : ""}`;
-    button.type = "button";
-    button.innerHTML = `
-      <span class="hull-row__main">${hull.name}</span>
-      <span class="hull-row__meta">${hull.hullClassification} | ${formatNumber(hull.pointCost)} pts</span>
+  const orderedGroups = [
+    ...FACTION_GROUPS,
+    ...[...new Set(state.indexes.hulls.map((hull) => hull.factionKey))]
+      .filter((key) => !FACTION_GROUPS.some((group) => group.key === key))
+      .map((key) => ({ key, label: factionLabel(key), name: key || "Unassigned" })),
+  ];
+
+  for (const group of orderedGroups) {
+    const hulls = state.indexes.hulls.filter((hull) => hull.factionKey === group.key);
+    if (!hulls.length) continue;
+    const section = document.createElement("section");
+    section.className = "hull-group";
+    const heading = document.createElement("div");
+    heading.className = "hull-group__heading";
+    heading.innerHTML = `
+      <span>${group.label}</span>
+      <small>${hulls.length} hulls</small>
     `;
-    button.addEventListener("click", () => {
-      state.design = createDefaultDesign(hull, state.indexes);
-      state.selectedSocketName = hull.sockets[0]?.shortName ?? "";
-      state.componentSearch = "";
-      state.componentCategory = "all";
-      render();
-    });
-    els.hullList.append(button);
+    section.append(heading);
+
+    for (const hull of hulls) {
+      const button = document.createElement("button");
+      button.className = `hull-row ${hull.name === state.design.hullName ? "is-active" : ""}`;
+      button.type = "button";
+      button.innerHTML = `
+        <span class="hull-row__main">${hull.name}</span>
+        <span class="hull-row__meta">${hull.hullClassification} | ${formatNumber(hull.pointCost)} pts</span>
+      `;
+      button.addEventListener("click", () => {
+        state.design = createDefaultDesign(hull, state.indexes);
+        state.selectedSocketName = hull.sockets[0]?.shortName ?? "";
+        state.componentSearch = "";
+        state.componentCategory = "all";
+        render();
+      });
+      section.append(button);
+    }
+    els.hullList.append(section);
   }
 }
 
 function renderHeader(summary) {
   const { hull } = summary;
   els.hullName.textContent = hull.name;
-  els.hullMeta.textContent = `${hull.hullClassification} | ${hull.factionKey} | ${formatNumber(hull.mass)} t`;
+  els.hullMeta.textContent = `${factionLabel(hull.factionKey)} | ${hull.hullClassification} | ${formatNumber(hull.mass)} t`;
   const stats = [
     ["Points", formatNumber(summary.totals.pointCost)],
     ["Power", formatNumber(summary.totals.powerBalance)],
@@ -369,7 +400,7 @@ function renderComponentList() {
   const search = state.componentSearch.trim().toLowerCase();
   const equipmentFaction = hull.overrideEquipmentFactionKey || hull.factionKey || "Common";
   els.partsTitle.textContent = `${socket.shortName} | ${socket.name}`;
-  els.partsMeta.textContent = `${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName} | ${sizeLabel(socket.size)} | ${equipmentFaction}`;
+  els.partsMeta.textContent = `${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName} | ${sizeLabel(socket.size)} | ${factionLabel(equipmentFaction)}`;
   els.componentSearch.value = state.componentSearch;
   els.categoryFilter.value = state.componentCategory;
   const compatible = compatibleComponents(socket, state.indexes.components, hull).filter((component) => {
