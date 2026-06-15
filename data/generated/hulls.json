@@ -130,6 +130,7 @@
     "mass": 13000.0,
     "maxSpeed": 1.7999999523162842,
     "maxTurnSpeed": 0.07999999821186066,
+    "modular": false,
     "name": "Axford Heavy Cruiser",
     "overrideEquipmentFactionKey": "",
     "pointCost": 600,
@@ -2310,6 +2311,7 @@
     "mass": 8000.0,
     "maxSpeed": 2.0,
     "maxTurnSpeed": 0.07999999821186066,
+    "modular": false,
     "name": "Keystone Destroyer",
     "overrideEquipmentFactionKey": "",
     "pointCost": 200,
@@ -3711,6 +3713,7 @@
     "mass": 12000.0,
     "maxSpeed": 2.0999999046325684,
     "maxTurnSpeed": 0.07999999821186066,
+    "modular": false,
     "name": "Levy Escort Carrier",
     "overrideEquipmentFactionKey": "",
     "pointCost": 500,
@@ -5152,6 +5155,7 @@
     "mass": 18000.0,
     "maxSpeed": 1.7999999523162842,
     "maxTurnSpeed": 0.07999999821186066,
+    "modular": false,
     "name": "Mercator Oiler",
     "overrideEquipmentFactionKey": "",
     "pointCost": 3000,
@@ -6173,6 +6177,7 @@
     "mass": 5000.0,
     "maxSpeed": 2.200000047683716,
     "maxTurnSpeed": 0.07999999821186066,
+    "modular": false,
     "name": "Raines Frigate",
     "overrideEquipmentFactionKey": "",
     "pointCost": 125,
@@ -7173,6 +7178,7 @@
     "mass": 21000.0,
     "maxSpeed": 1.600000023841858,
     "maxTurnSpeed": 0.07999999821186066,
+    "modular": false,
     "name": "Solomon Battleship",
     "overrideEquipmentFactionKey": "",
     "pointCost": 1000,
@@ -10000,6 +10006,7 @@
     "mass": 3000.0,
     "maxSpeed": 3.5,
     "maxTurnSpeed": 0.10000000149011612,
+    "modular": false,
     "name": "Sprinter Corvette",
     "overrideEquipmentFactionKey": "",
     "pointCost": 75,
@@ -10848,6 +10855,7 @@
     "mass": 10000.0,
     "maxSpeed": 2.5999999046325684,
     "maxTurnSpeed": 0.07999999821186066,
+    "modular": false,
     "name": "Vauxhall Light Cruiser",
     "overrideEquipmentFactionKey": "",
     "pointCost": 350,
@@ -12682,6 +12690,7 @@
     "mass": 19000.0,
     "maxSpeed": 1.7999999523162842,
     "maxTurnSpeed": 0.10000000149011612,
+    "modular": false,
     "name": "Worden Fleet Carrier",
     "overrideEquipmentFactionKey": "",
     "pointCost": 3000,
@@ -15525,6 +15534,293 @@
     "weightClass": 1
   },
   {
+    "angularMotorForce": 750.0,
+    "armorAspect": {
+      "FrontAngle": 30.0,
+      "FrontArmorMult": 1.0,
+      "RearAngle": 155.0,
+      "RearArmorMult": 1.0,
+      "SideArmorMult": 1.0,
+      "TopAngle": 45.0,
+      "TopArmorMult": 1.0
+    },
+    "assetPath": "assets/#bundles/stock-f2/civ/hulls/bulk hauler.prefab",
+    "baseCraftRepairSlots": 0,
+    "baseModifiers": [
+      {
+        "_literal": 0.0,
+        "_modifier": 0.20000000298023224,
+        "_permanent": 0,
+        "_statName": "damagecontrol-movespeed"
+      },
+      {
+        "_literal": 0.0,
+        "_modifier": -0.8999999761581421,
+        "_permanent": 0,
+        "_statName": "hull-identificationwork"
+      }
+    ],
+    "className": "Bulk Hauler",
+    "componentDamageReduction": 0.3499999940395355,
+    "crewComplement": 100,
+    "crewVulnerability": 0.75,
+    "factionKey": "Stock/Civilian",
+    "fuelUnitCapacity": 5,
+    "geometry": {
+      "lineBackZ": -2.0,
+      "lineForwardZ": 2.0,
+      "radarSignature": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "extent": {
+          "x": 2.635000228881836,
+          "y": 3.740001678466797,
+          "z": 10.524999618530273
+        }
+      },
+      "selectVolume": {
+        "center": {
+          "x": 0.0,
+          "y": 1.0499999523162842,
+          "z": 1.7999999523162842
+        },
+        "size": {
+          "x": 5.269999980926514,
+          "y": 7.480000019073486,
+          "z": 21.049999237060547
+        }
+      },
+      "volumes": []
+    },
+    "hideInFleetEditor": true,
+    "hullClassification": "Freighter",
+    "id": "Bulk Hauler",
+    "identityWorkRequired": 300.0,
+    "interiorDensityArmorEquivalent": 0.25,
+    "layoutMode": "representative-first-variant",
+    "linearMotorForce": 3200.0,
+    "longDescriptionKey": "A large bulk cargo carrier with no weapons.",
+    "mass": 15000.0,
+    "maxSpeed": 2.299999952316284,
+    "maxTurnSpeed": 0.12999999523162842,
+    "modular": true,
+    "modularPartCounts": {
+      "bows": 3,
+      "cores": 3,
+      "sterns": 3,
+      "superstructures": 4
+    },
+    "name": "Bulk Hauler",
+    "overrideEquipmentFactionKey": "",
+    "pointCost": 300,
+    "script": "RandomModularHull",
+    "socketSummary": {
+      "compartment": 1,
+      "module": 2
+    },
+    "sockets": [
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Basic CIC",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "fYoX2amTl0KrZurPKjU9gg",
+        "name": "CXL C1",
+        "position": {
+          "x": 0.0,
+          "y": 2.059999942779541,
+          "z": 0.8600000143051147
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP1",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Civilian Reactor",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "6evWdeLGT0uALe075-nhgw",
+        "name": "ML S1",
+        "position": {
+          "x": 0.0,
+          "y": 0.029999999329447746,
+          "z": -11.069999694824219
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD1",
+        "size": {
+          "x": 6,
+          "y": 6,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 78d72a9a-893c-41c6-bddd-f198dfcf77ee",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/BW1500 Drive",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "vOzzHo4KfE60wZ3Q1s38GA",
+        "name": "ME S1",
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -14.170000076293945
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD2",
+        "size": {
+          "x": 12,
+          "y": 12,
+          "z": 12
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 78d72a9a-893c-41c6-bddd-f198dfcf77ee",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      }
+    ],
+    "storageTransferRate": 0.10000000149011612,
+    "structure": {
+      "baseIntegrity": 4000.0,
+      "minDamageToCount": 20.0
+    },
+    "tankFacing": 2,
+    "typeClassification": "$UI_INTEL_CONTACTCLASS_MERCHANT",
+    "visionDistance": 5,
+    "wakeSignatureStrength": 600.0,
+    "weightClass": 2
+  },
+  {
     "angularMotorForce": 100.0,
     "armorAspect": {
       "FrontAngle": 30.0,
@@ -15604,6 +15900,7 @@
     "mass": 5000.0,
     "maxSpeed": 1.7999999523162842,
     "maxTurnSpeed": 0.10000000149011612,
+    "modular": false,
     "name": "Bulk Clipper",
     "overrideEquipmentFactionKey": "",
     "pointCost": 200,
@@ -16707,6 +17004,5570 @@
     "weightClass": 2
   },
   {
+    "angularMotorForce": 750.0,
+    "armorAspect": {
+      "FrontAngle": 30.0,
+      "FrontArmorMult": 1.0,
+      "RearAngle": 155.0,
+      "RearArmorMult": 1.0,
+      "SideArmorMult": 1.0,
+      "TopAngle": 45.0,
+      "TopArmorMult": 1.0
+    },
+    "assetPath": "assets/#bundles/stock-f2/f2/hulls/bulker line ship.prefab",
+    "baseCraftRepairSlots": 0,
+    "baseModifiers": [
+      {
+        "_literal": 0.0,
+        "_modifier": 0.20000000298023224,
+        "_permanent": 0,
+        "_statName": "damagecontrol-movespeed"
+      },
+      {
+        "_literal": 1.0,
+        "_modifier": 0.0,
+        "_permanent": 0,
+        "_statName": "hull-missilechannels"
+      }
+    ],
+    "className": "Marauder",
+    "componentDamageReduction": 0.3499999940395355,
+    "crewComplement": 100,
+    "crewVulnerability": 0.75,
+    "factionKey": "Stock/Protectorate",
+    "fuelUnitCapacity": 5,
+    "geometry": {
+      "lineBackZ": -2.0,
+      "lineForwardZ": 2.0,
+      "radarSignature": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "extent": {
+          "x": 2.635000228881836,
+          "y": 3.740001678466797,
+          "z": 10.524999618530273
+        }
+      },
+      "selectVolume": {
+        "center": {
+          "x": 0.0,
+          "y": 1.0499999523162842,
+          "z": 1.7999999523162842
+        },
+        "size": {
+          "x": 5.269999980926514,
+          "y": 7.480000019073486,
+          "z": 21.049999237060547
+        }
+      },
+      "volumes": []
+    },
+    "hideInFleetEditor": false,
+    "hullClassification": "Line Ship",
+    "id": "Marauder",
+    "identityWorkRequired": 300.0,
+    "interiorDensityArmorEquivalent": 0.25,
+    "layoutMode": "representative-first-variant",
+    "linearMotorForce": 3200.0,
+    "longDescriptionKey": "$HULL_MARAUDER_DESC",
+    "mass": 15000.0,
+    "maxSpeed": 2.299999952316284,
+    "maxTurnSpeed": 0.12999999523162842,
+    "modular": true,
+    "modularPartCounts": {
+      "bows": 3,
+      "cores": 3,
+      "sterns": 3,
+      "superstructures": 4
+    },
+    "name": "Bulker Line Ship",
+    "overrideEquipmentFactionKey": "",
+    "pointCost": 375,
+    "script": "RandomModularHull",
+    "socketSummary": {
+      "compartment": 9,
+      "module": 8,
+      "mount": 17
+    },
+    "sockets": [
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 10.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 181.0,
+          "LeftAngle": 30.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 30.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "E9IMUD_Uz0661-nYgJh4Mg",
+        "name": "C4 B1",
+        "position": {
+          "x": -1.7660000324249268,
+          "y": 0.0,
+          "z": 10.444000244140625
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT1",
+        "size": {
+          "x": 6,
+          "y": 10,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 10.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 181.0,
+          "LeftAngle": 30.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 30.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "d3N-B_JnDUKAdVRBJ6nvFQ",
+        "name": "C4 B2",
+        "position": {
+          "x": -1.7660000324249268,
+          "y": 0.0,
+          "z": 6.8480000495910645
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT2",
+        "size": {
+          "x": 6,
+          "y": 10,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 10.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 181.0,
+          "LeftAngle": 30.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 30.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "auQ7ijGeX0evdikZQeBxTg",
+        "name": "C4 B3",
+        "position": {
+          "x": 1.7660000324249268,
+          "y": 0.0,
+          "z": 10.443998336791992
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT3",
+        "size": {
+          "x": 6,
+          "y": 10,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 10.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 181.0,
+          "LeftAngle": 30.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 30.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "xvNT1_DYcUuSpU6rrmL_4A",
+        "name": "C4 B4",
+        "position": {
+          "x": 1.7660000324249268,
+          "y": 0.0,
+          "z": 6.848005294799805
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT4",
+        "size": {
+          "x": 6,
+          "y": 10,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "bxvsvg5znk6TqiIKq8H0kg",
+        "name": "C2 B1",
+        "position": {
+          "x": -0.0,
+          "y": 1.9609999656677246,
+          "z": 20.03700065612793
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.9285125136375427,
+          "x": 0.37130114436149597,
+          "y": 1.1076510542107343e-10,
+          "z": 3.387953251277054e-10
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT5",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "9EF9u0V1eUetleBnkQhHkA",
+        "name": "C2 B2",
+        "position": {
+          "x": -0.0,
+          "y": -2.369999885559082,
+          "z": 17.690000534057617
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT6",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "PRLtjo7PfECpLy8CGW9T8A",
+        "name": "C1 B1",
+        "position": {
+          "x": 0.0,
+          "y": 3.568000078201294,
+          "z": 11.890000343322754
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT7",
+        "size": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 160.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 160.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "sTr26YTLmkOZTo_rNevp-g",
+        "name": "C1 B2",
+        "position": {
+          "x": 0.0,
+          "y": -1.9010000228881836,
+          "z": 19.516000747680664
+        },
+        "rawShortName": "MT5",
+        "rotation": {
+          "w": 6.705522537231445e-08,
+          "x": 2.1718038567541953e-07,
+          "y": 0.26433464884757996,
+          "z": 0.9644310474395752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT8",
+        "size": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 160.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 160.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "JVCLf3RKKUOBEXaWWkVLMw",
+        "name": "MM B1",
+        "position": {
+          "x": 0.0,
+          "y": 0.05999999865889549,
+          "z": 12.420000076293945
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD1",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "JHJi2y5Xskytpw5-Qbu95A",
+        "name": "MM B2",
+        "position": {
+          "x": 0.0,
+          "y": 1.600000023841858,
+          "z": 8.5600004196167
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD2",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "yryHYXgMWEy969gRuaDO6w",
+        "name": "MM B3",
+        "position": {
+          "x": 0.0,
+          "y": -1.6200000047683716,
+          "z": 8.559999465942383
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD3",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "y1Cs8LR0KUyCKUAJBIOyOg",
+        "name": "CXL B1",
+        "position": {
+          "x": 0.0,
+          "y": 0.8499995470046997,
+          "z": 14.550000190734863
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP1",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "T9TN0ZYumUaCxcSRjO_qTw",
+        "name": "CL B1",
+        "position": {
+          "x": 0.0,
+          "y": -0.17000000178813934,
+          "z": 14.550000190734863
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP2",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "T4d-8WnA_UiHSJh6PXiXpA",
+        "name": "CL B2",
+        "position": {
+          "x": 0.0,
+          "y": -0.8299999833106995,
+          "z": 14.550000190734863
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP3",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 38e7a28f-1b06-4b73-98ee-f03d1d8a81fe",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 10.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 181.0,
+          "LeftAngle": 30.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 30.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "grYBjxIS3E--lmrqenuK8A",
+        "name": "C4 C1",
+        "position": {
+          "x": -1.7660000324249268,
+          "y": 0.0,
+          "z": -4.118000030517578
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT9",
+        "size": {
+          "x": 6,
+          "y": 10,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 10.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 181.0,
+          "LeftAngle": 30.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 30.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "8pltGexHAEyFL2ljOe0oMQ",
+        "name": "C4 C2",
+        "position": {
+          "x": -1.7660000324249268,
+          "y": 0.0,
+          "z": -7.708000183105469
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT10",
+        "size": {
+          "x": 6,
+          "y": 10,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 10.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 181.0,
+          "LeftAngle": 30.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 30.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "t0T4CSAPnEq4rvHAVl84-Q",
+        "name": "C4 C3",
+        "position": {
+          "x": 1.7660000324249268,
+          "y": 0.0,
+          "z": -4.117992401123047
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT11",
+        "size": {
+          "x": 6,
+          "y": 10,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 10.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 181.0,
+          "LeftAngle": 30.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 30.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "tcQfj6XOHUWFSAx_W0cc1A",
+        "name": "C4 C4",
+        "position": {
+          "x": 1.7660000324249268,
+          "y": 0.0,
+          "z": -7.707995891571045
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT12",
+        "size": {
+          "x": 6,
+          "y": 10,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 15.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "6ZiODnoXqkaNWvaqyGjnwg",
+        "name": "C2 C1",
+        "position": {
+          "x": -1.8899999856948853,
+          "y": 2.390000104904175,
+          "z": 1.0700000524520874
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.6532813906669617,
+          "x": 0.27059826254844666,
+          "y": -0.6532814502716064,
+          "z": 0.27059823274612427
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT13",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 30.0,
+          "LeftAngle": 120.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 120.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 2
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "Sb5-VSuwlkWpT6ViRiJ3vg",
+        "name": "C2 C2",
+        "position": {
+          "x": 1.8899999856948853,
+          "y": 2.390000104904175,
+          "z": 1.0700000524520874
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.6532815098762512,
+          "x": 0.27059805393218994,
+          "y": 0.6532815098762512,
+          "z": -0.27059805393218994
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT14",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 30.0,
+          "LeftAngle": 120.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 120.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 1
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "I68tNng-K0yG-AoUx0HcSw",
+        "name": "C2 C3",
+        "position": {
+          "x": -0.0,
+          "y": -5.495999813079834,
+          "z": 1.1920000314712524
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT15",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Ithaca Bridgemaster",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "M3mc7A4WOU-2fq5XgRSECA",
+        "name": "MM C1",
+        "position": {
+          "x": 0.0,
+          "y": 1.600000023841858,
+          "z": -5.929999828338623
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD4",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "S-rQo19r20K0L0PRer3yMw",
+        "name": "MM C2",
+        "position": {
+          "x": 0.0,
+          "y": -1.600000023841858,
+          "z": -5.929999828338623
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD5",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "MQyTgOLGCkyeljdvbkkFDA",
+        "name": "MM C3",
+        "position": {
+          "x": 0.0,
+          "y": -3.740000009536743,
+          "z": 1.2300000190734863
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD6",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Basic CIC",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "fYoX2amTl0KrZurPKjU9gg",
+        "name": "CXL C1",
+        "position": {
+          "x": 0.0,
+          "y": 1.059999942779541,
+          "z": 1.25
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP4",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "3Ky8PvdxqUKMRXZa0xLF2A",
+        "name": "CXL C2",
+        "position": {
+          "x": 0.0,
+          "y": -1.0,
+          "z": 1.25
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP5",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "6LpDL27QuEW0PZCm35Nx5w",
+        "name": "CL C1",
+        "position": {
+          "x": 0.0,
+          "y": 0.3700000047683716,
+          "z": 3.450000047683716
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP6",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "FVcPIcV_00eu62NQQK3oLg",
+        "name": "CL C2",
+        "position": {
+          "x": 0.0,
+          "y": 0.3700000047683716,
+          "z": -0.9399999976158142
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP7",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "QIOFQpQSKESIdNzf_JEFyA",
+        "name": "CL C3",
+        "position": {
+          "x": 0.0,
+          "y": -0.24999892711639404,
+          "z": 3.450000047683716
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP8",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "1FrTJ5o850ynlq4dRDmMbA",
+        "name": "CL C4",
+        "position": {
+          "x": 0.0,
+          "y": -0.25,
+          "z": -0.9399999976158142
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP9",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: d4c9a66d-81e6-49ee-9b33-82d7a1522bbf",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "VDQhZPo-rkWkzwozat27fw",
+        "name": "C2 S1",
+        "position": {
+          "x": -3.1740000247955322,
+          "y": 0.08900000154972076,
+          "z": -13.649999618530273
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT16",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 78d72a9a-893c-41c6-bddd-f198dfcf77ee",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 2
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "87PSgg9GREmGU9MIRAXXhg",
+        "name": "C2 S2",
+        "position": {
+          "x": 3.1740000247955322,
+          "y": 0.08900000154972076,
+          "z": -13.649999618530273
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT17",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 78d72a9a-893c-41c6-bddd-f198dfcf77ee",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 1
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Civilian Reactor",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "6evWdeLGT0uALe075-nhgw",
+        "name": "ML S1",
+        "position": {
+          "x": 0.0,
+          "y": 0.029999999329447746,
+          "z": -11.069999694824219
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD7",
+        "size": {
+          "x": 6,
+          "y": 6,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 78d72a9a-893c-41c6-bddd-f198dfcf77ee",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/BW1500 Drive",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "vOzzHo4KfE60wZ3Q1s38GA",
+        "name": "ME S1",
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -14.170000076293945
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD8",
+        "size": {
+          "x": 12,
+          "y": 12,
+          "z": 12
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 78d72a9a-893c-41c6-bddd-f198dfcf77ee",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      }
+    ],
+    "storageTransferRate": 0.10000000149011612,
+    "structure": {
+      "baseIntegrity": 4000.0,
+      "minDamageToCount": 20.0
+    },
+    "tankFacing": 2,
+    "typeClassification": "$UI_INTEL_CONTACTCLASS_WARSHIP",
+    "visionDistance": 5,
+    "wakeSignatureStrength": 600.0,
+    "weightClass": 2
+  },
+  {
+    "angularMotorForce": 600.0,
+    "armorAspect": {
+      "FrontAngle": 30.0,
+      "FrontArmorMult": 1.0,
+      "RearAngle": 155.0,
+      "RearArmorMult": 1.0,
+      "SideArmorMult": 1.0,
+      "TopAngle": 45.0,
+      "TopArmorMult": 1.0
+    },
+    "assetPath": "assets/#bundles/stock-f2/f2/hulls/container line ship.prefab",
+    "baseCraftRepairSlots": 1,
+    "baseModifiers": [
+      {
+        "_literal": 1.0,
+        "_modifier": 0.0,
+        "_permanent": 0,
+        "_statName": "hull-missilechannels"
+      }
+    ],
+    "className": "Moorline",
+    "componentDamageReduction": 0.20000000298023224,
+    "crewComplement": 100,
+    "crewVulnerability": 0.75,
+    "factionKey": "Stock/Protectorate",
+    "fuelUnitCapacity": 5,
+    "geometry": {
+      "lineBackZ": -2.0,
+      "lineForwardZ": 2.0,
+      "radarSignature": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "extent": {
+          "x": 2.635000228881836,
+          "y": 3.740001678466797,
+          "z": 10.524999618530273
+        }
+      },
+      "selectVolume": {
+        "center": {
+          "x": 0.0,
+          "y": 1.0499999523162842,
+          "z": 1.7999999523162842
+        },
+        "size": {
+          "x": 5.269999980926514,
+          "y": 7.480000019073486,
+          "z": 21.049999237060547
+        }
+      },
+      "volumes": []
+    },
+    "hideInFleetEditor": true,
+    "hullClassification": "Line Ship",
+    "id": "Moorline",
+    "identityWorkRequired": 300.0,
+    "interiorDensityArmorEquivalent": 0.25,
+    "layoutMode": "representative-first-variant",
+    "linearMotorForce": 3200.0,
+    "longDescriptionKey": "$HULL_MOORLINE_DESC",
+    "mass": 15000.0,
+    "maxSpeed": 2.0,
+    "maxTurnSpeed": 0.07000000029802322,
+    "modular": true,
+    "modularPartCounts": {
+      "bows": 3,
+      "cores": 3,
+      "sterns": 3,
+      "superstructures": 4
+    },
+    "name": "Container Line Ship",
+    "overrideEquipmentFactionKey": "",
+    "pointCost": 600,
+    "script": "RandomModularHull",
+    "socketSummary": {
+      "compartment": 9,
+      "module": 6,
+      "mount": 11
+    },
+    "sockets": [
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 5.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 140.0,
+          "LeftAngle": 40.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 40.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "VkODw--0zk-K4FkajpPjwQ",
+        "name": "Container B1",
+        "position": {
+          "x": 0.0,
+          "y": 1.0199999809265137,
+          "z": 11.657999992370605
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 1.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT1",
+        "size": {
+          "x": 20,
+          "y": 5,
+          "z": 20
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 130.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 130.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 5.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 140.0,
+          "LeftAngle": 40.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 40.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "F-nHNZm4Z0WZMJakJAwlPw",
+        "name": "Container B2",
+        "position": {
+          "x": 0.0,
+          "y": -1.1699999570846558,
+          "z": 11.658000946044922
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT2",
+        "size": {
+          "x": 20,
+          "y": 5,
+          "z": 20
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 130.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 130.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "y70HHuLWd0uphO2H-hvZGQ",
+        "name": "C2 B1",
+        "position": {
+          "x": -0.0,
+          "y": 3.0250000953674316,
+          "z": 16.88800048828125
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 1.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT3",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "NjfVPFfJqUmkw-AR_2KBjg",
+        "name": "C2 B2",
+        "position": {
+          "x": -0.0,
+          "y": -3.180000066757202,
+          "z": 15.819999694824219
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT4",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "M0ewvimLKU2vXoznZNDoYQ",
+        "name": "MM B1",
+        "position": {
+          "x": 0.0,
+          "y": 2.240000009536743,
+          "z": 15.09000015258789
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD1",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "cXpBal32p0-R2pA6hN056w",
+        "name": "MM B2",
+        "position": {
+          "x": 0.0,
+          "y": -2.369999885559082,
+          "z": 15.09000015258789
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD2",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "y1Cs8LR0KUyCKUAJBIOyOg",
+        "name": "CXL B1",
+        "position": {
+          "x": 0.0,
+          "y": 0.7699977159500122,
+          "z": 15.879999160766602
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP1",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "T9TN0ZYumUaCxcSRjO_qTw",
+        "name": "CL B1",
+        "position": {
+          "x": 0.0,
+          "y": -0.27000001072883606,
+          "z": 15.880000114440918
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP2",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "T4d-8WnA_UiHSJh6PXiXpA",
+        "name": "CL B2",
+        "position": {
+          "x": 0.0,
+          "y": -1.000002145767212,
+          "z": 15.879999160766602
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP3",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 5.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 145.0,
+          "LeftAngle": 40.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 40.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "uLHDwjLFekuYaY3h0JwZoQ",
+        "name": "Container C1",
+        "position": {
+          "x": 0.0,
+          "y": 1.0199999809265137,
+          "z": -6.079999923706055
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 1.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT5",
+        "size": {
+          "x": 20,
+          "y": 5,
+          "z": 30
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 130.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 130.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 5.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 165.0,
+          "LeftAngle": 40.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 40.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "44SMwZSbRkOQyQmJ458Y1Q",
+        "name": "Container C2",
+        "position": {
+          "x": 0.0,
+          "y": -2.066999912261963,
+          "z": -6.079998016357422
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT6",
+        "size": {
+          "x": 20,
+          "y": 5,
+          "z": 30
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 130.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 130.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "3WEnDKibY0-WJvtq9-tmuA",
+        "name": "C2 C1",
+        "position": {
+          "x": -3.559999942779541,
+          "y": 0.0,
+          "z": -4.590000152587891
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT7",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 22.0,
+          "LeftAngle": 160.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 160.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "6HbbAtLFGUOi-kq06ErQdA",
+        "name": "C2 C2",
+        "position": {
+          "x": 3.559999942779541,
+          "y": 0.0,
+          "z": -4.590003967285156
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.7071068286895752,
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.7071068286895752
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT8",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 22.0,
+          "LeftAngle": 160.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 160.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 2,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "TcS59cU8X0aEm3ds7Nqixg",
+        "name": "C2 C3",
+        "position": {
+          "x": -0.0,
+          "y": -3.1700000762939453,
+          "z": 5.980000019073486
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT9",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 10.0,
+          "LeftAngle": 150.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 150.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Ithaca Bridgemaster",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "OY726V7rAUKDR92MQM7gnQ",
+        "name": "MM C1",
+        "position": {
+          "x": 0.0,
+          "y": -1.309999942779541,
+          "z": 5.779998779296875
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD3",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "SmUC0Jc9FEuCeKc_ZJMxIg",
+        "name": "MM C2",
+        "position": {
+          "x": 0.0,
+          "y": -1.3100025653839111,
+          "z": 2.7799999713897705
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD4",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Basic CIC",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "QhdtovcTk0WSpMAUsBIF6Q",
+        "name": "CXL C1",
+        "position": {
+          "x": 0.0,
+          "y": 1.9499993324279785,
+          "z": 4.150001525878906
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP4",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "iWiBr9uCyUCBub-IIW2bZg",
+        "name": "CXXL C2",
+        "position": {
+          "x": 0.0,
+          "y": -0.1100006103515625,
+          "z": 4.150001525878906
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP5",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 16
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "hs-SaPpehUu8ZbwsuJSvXw",
+        "name": "CL C1",
+        "position": {
+          "x": 0.0,
+          "y": 1.259999394416809,
+          "z": 6.350001335144043
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP6",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "jhY0RlqxLkW69clFCGXELA",
+        "name": "CL C2",
+        "position": {
+          "x": 0.0,
+          "y": 1.259999394416809,
+          "z": 1.9600014686584473
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP7",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "OE8qVccIYEGwfvJXsiFgoA",
+        "name": "CL C3",
+        "position": {
+          "x": 0.0,
+          "y": 0.6400004625320435,
+          "z": 6.350001335144043
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP8",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "UAmAj39M3E2zPnVXF46kZA",
+        "name": "CL C4",
+        "position": {
+          "x": 0.0,
+          "y": 0.6399999856948853,
+          "z": 1.9600000381469727
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP9",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "KuKTAiCM50uIV7XV1S8wrw",
+        "name": "C2 S1",
+        "position": {
+          "x": 0.0,
+          "y": 2.9149999618530273,
+          "z": -18.450000762939453
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT10",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 674e0528-3e0c-48e4-8e5e-d3a559869104",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "bF4isjieO0m0PsOlE-zgkQ",
+        "name": "C2 S2",
+        "position": {
+          "x": 0.0,
+          "y": -2.8499996662139893,
+          "z": -18.439998626708984
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 1.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT11",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 674e0528-3e0c-48e4-8e5e-d3a559869104",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Civilian Reactor",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "_uEQzHKRzEqqIqa1c8wJcw",
+        "name": "ML S1",
+        "position": {
+          "x": 0.0,
+          "y": 0.029999999329447746,
+          "z": -13.09000015258789
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD5",
+        "size": {
+          "x": 6,
+          "y": 6,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 674e0528-3e0c-48e4-8e5e-d3a559869104",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/BW1500 Drive",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "yxnQxeuUHUO22pm-LQu4Cg",
+        "name": "ME S1",
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -16.190000534057617
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD6",
+        "size": {
+          "x": 12,
+          "y": 12,
+          "z": 12
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 674e0528-3e0c-48e4-8e5e-d3a559869104",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      }
+    ],
+    "storageTransferRate": 0.10000000149011612,
+    "structure": {
+      "baseIntegrity": 3000.0,
+      "minDamageToCount": 20.0
+    },
+    "tankFacing": 0,
+    "typeClassification": "$UI_INTEL_CONTACTCLASS_WARSHIP",
+    "visionDistance": 5,
+    "wakeSignatureStrength": 600.0,
+    "weightClass": 1
+  },
+  {
+    "angularMotorForce": 600.0,
+    "armorAspect": {
+      "FrontAngle": 30.0,
+      "FrontArmorMult": 1.0,
+      "RearAngle": 155.0,
+      "RearArmorMult": 1.0,
+      "SideArmorMult": 1.0,
+      "TopAngle": 45.0,
+      "TopArmorMult": 1.0
+    },
+    "assetPath": "assets/#bundles/stock-f2/f2/hulls/container line ship refit.prefab",
+    "baseCraftRepairSlots": 1,
+    "baseModifiers": [
+      {
+        "_literal": 1.0,
+        "_modifier": 0.0,
+        "_permanent": 0,
+        "_statName": "hull-missilechannels"
+      }
+    ],
+    "className": "Moorline",
+    "componentDamageReduction": 0.20000000298023224,
+    "crewComplement": 100,
+    "crewVulnerability": 0.75,
+    "factionKey": "Stock/Protectorate",
+    "fuelUnitCapacity": 5,
+    "geometry": {
+      "lineBackZ": -2.0,
+      "lineForwardZ": 2.0,
+      "radarSignature": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "extent": {
+          "x": 2.635000228881836,
+          "y": 3.740001678466797,
+          "z": 10.524999618530273
+        }
+      },
+      "selectVolume": {
+        "center": {
+          "x": 0.0,
+          "y": 1.0499999523162842,
+          "z": 1.7999999523162842
+        },
+        "size": {
+          "x": 5.269999980926514,
+          "y": 7.480000019073486,
+          "z": 21.049999237060547
+        }
+      },
+      "volumes": []
+    },
+    "hideInFleetEditor": false,
+    "hullClassification": "Line Ship",
+    "id": "Moorline",
+    "identityWorkRequired": 300.0,
+    "interiorDensityArmorEquivalent": 0.25,
+    "layoutMode": "representative-first-variant",
+    "linearMotorForce": 3200.0,
+    "longDescriptionKey": "$HULL_MOORLINE_DESC",
+    "mass": 15000.0,
+    "maxSpeed": 2.0,
+    "maxTurnSpeed": 0.07000000029802322,
+    "modular": true,
+    "modularPartCounts": {
+      "bows": 3,
+      "cores": 3,
+      "sterns": 3,
+      "superstructures": 4
+    },
+    "name": "Container Line Ship Refit",
+    "overrideEquipmentFactionKey": "",
+    "pointCost": 600,
+    "script": "RandomModularHull",
+    "socketSummary": {
+      "compartment": 9,
+      "module": 6,
+      "mount": 10
+    },
+    "sockets": [
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 5.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 140.0,
+          "LeftAngle": 40.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 40.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "VkODw--0zk-K4FkajpPjwQ",
+        "name": "Container B1",
+        "position": {
+          "x": 0.0,
+          "y": 1.0199999809265137,
+          "z": 11.657999992370605
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 1.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT1",
+        "size": {
+          "x": 20,
+          "y": 5,
+          "z": 20
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 130.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 130.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 5.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 140.0,
+          "LeftAngle": 40.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 40.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "F-nHNZm4Z0WZMJakJAwlPw",
+        "name": "Container B2",
+        "position": {
+          "x": 0.0,
+          "y": -1.1699999570846558,
+          "z": 11.658000946044922
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT2",
+        "size": {
+          "x": 20,
+          "y": 5,
+          "z": 20
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 130.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 130.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "y70HHuLWd0uphO2H-hvZGQ",
+        "name": "C3 B1",
+        "position": {
+          "x": -0.0,
+          "y": 3.0250000953674316,
+          "z": 16.579999923706055
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 1.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT3",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 5
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "NjfVPFfJqUmkw-AR_2KBjg",
+        "name": "C2 B1",
+        "position": {
+          "x": -0.0,
+          "y": -3.180000066757202,
+          "z": 15.819999694824219
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT4",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "M0ewvimLKU2vXoznZNDoYQ",
+        "name": "MM B1",
+        "position": {
+          "x": 0.0,
+          "y": 2.240000009536743,
+          "z": 15.09000015258789
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD1",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "cXpBal32p0-R2pA6hN056w",
+        "name": "MM B2",
+        "position": {
+          "x": 0.0,
+          "y": -2.369999885559082,
+          "z": 15.09000015258789
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD2",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "y1Cs8LR0KUyCKUAJBIOyOg",
+        "name": "CXL B1",
+        "position": {
+          "x": 0.0,
+          "y": 0.7699977159500122,
+          "z": 15.879999160766602
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP1",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "T9TN0ZYumUaCxcSRjO_qTw",
+        "name": "CL B1",
+        "position": {
+          "x": 0.0,
+          "y": -0.27000001072883606,
+          "z": 15.880000114440918
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP2",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "T4d-8WnA_UiHSJh6PXiXpA",
+        "name": "CL B2",
+        "position": {
+          "x": 0.0,
+          "y": -1.000002145767212,
+          "z": 15.879999160766602
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP3",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Bow: 2d7c228c-cbd6-425e-9590-a2f8ae8d5915",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 5.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 145.0,
+          "LeftAngle": 40.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 40.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "uLHDwjLFekuYaY3h0JwZoQ",
+        "name": "Container C1",
+        "position": {
+          "x": 0.0,
+          "y": 1.0199999809265137,
+          "z": -6.079999923706055
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 1.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT5",
+        "size": {
+          "x": 20,
+          "y": 5,
+          "z": 30
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 130.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 130.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 5.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 165.0,
+          "LeftAngle": 40.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 40.0,
+          "UseElevationLimit": 1
+        },
+        "interiorOverhangSpace": 62,
+        "key": "44SMwZSbRkOQyQmJ458Y1Q",
+        "name": "Container C2",
+        "position": {
+          "x": 0.0,
+          "y": -2.066999912261963,
+          "z": -6.079998016357422
+        },
+        "rawShortName": "MT1",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT6",
+        "size": {
+          "x": 20,
+          "y": 5,
+          "z": 30
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 130.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 130.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "3WEnDKibY0-WJvtq9-tmuA",
+        "name": "C4 C1",
+        "position": {
+          "x": 0.0,
+          "y": 3.270000457763672,
+          "z": 5.711999893188477
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 1.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT7",
+        "size": {
+          "x": 6,
+          "y": 4,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 22.0,
+          "LeftAngle": 160.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 160.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "6HbbAtLFGUOi-kq06ErQdA",
+        "name": "C4 C2",
+        "position": {
+          "x": 0.0,
+          "y": -3.1600000858306885,
+          "z": 5.711999893188477
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT8",
+        "size": {
+          "x": 6,
+          "y": 4,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 22.0,
+          "LeftAngle": 160.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 160.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Ithaca Bridgemaster",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "OY726V7rAUKDR92MQM7gnQ",
+        "name": "MM C1",
+        "position": {
+          "x": 0.0,
+          "y": -1.309999942779541,
+          "z": 5.779998779296875
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD3",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "SmUC0Jc9FEuCeKc_ZJMxIg",
+        "name": "MM C2",
+        "position": {
+          "x": 0.0,
+          "y": -1.3100025653839111,
+          "z": 2.7799999713897705
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD4",
+        "size": {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Basic CIC",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "QhdtovcTk0WSpMAUsBIF6Q",
+        "name": "CXL C1",
+        "position": {
+          "x": 0.0,
+          "y": 1.9499993324279785,
+          "z": 4.150001525878906
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP4",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "iWiBr9uCyUCBub-IIW2bZg",
+        "name": "CXXL C2",
+        "position": {
+          "x": 0.0,
+          "y": -0.1100006103515625,
+          "z": 4.150001525878906
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP5",
+        "size": {
+          "x": 8,
+          "y": 3,
+          "z": 16
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "hs-SaPpehUu8ZbwsuJSvXw",
+        "name": "CL C1",
+        "position": {
+          "x": 0.0,
+          "y": 1.259999394416809,
+          "z": 6.350001335144043
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP6",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "jhY0RlqxLkW69clFCGXELA",
+        "name": "CL C2",
+        "position": {
+          "x": 0.0,
+          "y": 1.259999394416809,
+          "z": 1.9600014686584473
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP7",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "OE8qVccIYEGwfvJXsiFgoA",
+        "name": "CL C3",
+        "position": {
+          "x": 0.0,
+          "y": 0.6400004625320435,
+          "z": 6.350001335144043
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP8",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "UAmAj39M3E2zPnVXF46kZA",
+        "name": "CL C4",
+        "position": {
+          "x": 0.0,
+          "y": 0.6399999856948853,
+          "z": 1.9600000381469727
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "CMP9",
+        "size": {
+          "x": 8,
+          "y": 1,
+          "z": 8
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Core: 18a6bc15-58b0-479c-82c3-1722768f033d",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 1,
+        "typeName": "compartment",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "KuKTAiCM50uIV7XV1S8wrw",
+        "name": "C2 S1",
+        "position": {
+          "x": 0.0,
+          "y": 2.9149999618530273,
+          "z": -18.450000762939453
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT9",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 674e0528-3e0c-48e4-8e5e-d3a559869104",
+        "traverseLimits": {
+          "ElevationAngle": 50.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 4.0,
+          "z": 0.0
+        },
+        "defaultComponent": "",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "bF4isjieO0m0PsOlE-zgkQ",
+        "name": "C2 S2",
+        "position": {
+          "x": 0.0,
+          "y": -2.8499996662139893,
+          "z": -18.439998626708984
+        },
+        "rawShortName": "MT6",
+        "rotation": {
+          "w": 0.0,
+          "x": 1.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MT10",
+        "size": {
+          "x": 3,
+          "y": 4,
+          "z": 3
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 674e0528-3e0c-48e4-8e5e-d3a559869104",
+        "traverseLimits": {
+          "ElevationAngle": 25.0,
+          "LeftAngle": 140.0,
+          "LimitFiringOnly": 1,
+          "RightAngle": 140.0,
+          "UseElevationLimit": 1
+        },
+        "type": 0,
+        "typeName": "mount",
+        "unmaskAxis": 1,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/Civilian Reactor",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "_uEQzHKRzEqqIqa1c8wJcw",
+        "name": "ML S1",
+        "position": {
+          "x": 0.0,
+          "y": 0.029999999329447746,
+          "z": -13.09000015258789
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD5",
+        "size": {
+          "x": 6,
+          "y": 6,
+          "z": 6
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 674e0528-3e0c-48e4-8e5e-d3a559869104",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      },
+      {
+        "attachPoint": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "defaultComponent": "Stock/BW1500 Drive",
+        "forwardLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "interiorOverhangSpace": 63,
+        "key": "yxnQxeuUHUO22pm-LQu4Cg",
+        "name": "ME S1",
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -16.190000534057617
+        },
+        "rawShortName": "",
+        "rotation": {
+          "w": 1.0,
+          "x": -0.0,
+          "y": -0.0,
+          "z": -0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "shortName": "MOD6",
+        "size": {
+          "x": 12,
+          "y": 12,
+          "z": 12
+        },
+        "socketUVMax": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVMin": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "socketUVRot": 0.0,
+        "sourcePart": "Stern: 674e0528-3e0c-48e4-8e5e-d3a559869104",
+        "traverseLimits": {
+          "ElevationAngle": 0.0,
+          "LeftAngle": 0.0,
+          "LimitFiringOnly": 0,
+          "RightAngle": 0.0,
+          "UseElevationLimit": 0
+        },
+        "type": 2,
+        "typeName": "module",
+        "unmaskAxis": 0,
+        "unmaskSide": 0
+      }
+    ],
+    "storageTransferRate": 0.10000000149011612,
+    "structure": {
+      "baseIntegrity": 3000.0,
+      "minDamageToCount": 20.0
+    },
+    "tankFacing": 0,
+    "typeClassification": "$UI_INTEL_CONTACTCLASS_WARSHIP",
+    "visionDistance": 5,
+    "wakeSignatureStrength": 600.0,
+    "weightClass": 1
+  },
+  {
     "angularMotorForce": 220.0,
     "armorAspect": {
       "FrontAngle": 30.0,
@@ -16837,6 +22698,7 @@
     "mass": 12000.0,
     "maxSpeed": 2.0,
     "maxTurnSpeed": 0.10000000149011612,
+    "modular": false,
     "name": "Ocello Cruiser",
     "overrideEquipmentFactionKey": "Stock/Alliance",
     "pointCost": 575,
@@ -18771,6 +24633,7 @@
     "mass": 3000.0,
     "maxSpeed": 2.200000047683716,
     "maxTurnSpeed": 0.10000000149011612,
+    "modular": false,
     "name": "Ore Carrier",
     "overrideEquipmentFactionKey": "",
     "pointCost": 300,
@@ -19893,6 +25756,7 @@
     "mass": 1500.0,
     "maxSpeed": 3.5,
     "maxTurnSpeed": 0.10000000149011612,
+    "modular": false,
     "name": "Shuttle Clipper",
     "overrideEquipmentFactionKey": "",
     "pointCost": 50,
@@ -20608,6 +26472,7 @@
     "mass": 3500.0,
     "maxSpeed": 2.5999999046325684,
     "maxTurnSpeed": 0.10000000149011612,
+    "modular": false,
     "name": "Tug Clipper",
     "overrideEquipmentFactionKey": "",
     "pointCost": 100,

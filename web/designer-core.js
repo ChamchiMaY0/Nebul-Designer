@@ -10,6 +10,13 @@ export const NON_EDITOR_HULL_NAMES = new Set([
 ]);
 
 const SIZE_AXES = ["x", "y", "z"];
+const MOBILITY_STATS = {
+  maxSpeed: "hull-maxspeed",
+  turnRate: "hull-turnrate",
+  linearMotor: "hull-linearmotor",
+  angularMotor: "hull-angularmotor",
+  wakeSignature: "hull-sigpower-wake",
+};
 
 export function isEditableHull(hull) {
   return Boolean(hull) && !hull.hideInFleetEditor && !NON_EDITOR_HULL_NAMES.has(hull.name);
@@ -128,6 +135,76 @@ function resourceTotal(resources, name) {
     .reduce((sum, resource) => sum + Number(resource.amount ?? 0), 0);
 }
 
+function normalizeModifier(modifier) {
+  return {
+    statName: modifier?.statName ?? modifier?._statName ?? "",
+    literal: Number(modifier?.literal ?? modifier?._literal ?? 0),
+    modifier: Number(modifier?.modifier ?? modifier?._modifier ?? 0),
+    permanent: Boolean(modifier?.permanent ?? modifier?._permanent),
+  };
+}
+
+function statModifiers(modifiers, statName) {
+  return (modifiers ?? [])
+    .map(normalizeModifier)
+    .filter((modifier) => modifier.statName === statName);
+}
+
+function applyStatModifiers(baseValue, modifiers, statName) {
+  const matches = statModifiers(modifiers, statName);
+  const literal = matches.reduce((sum, modifier) => sum + modifier.literal, 0);
+  const multiplier = matches.reduce((sum, modifier) => sum + modifier.modifier, 1);
+  const base = Number(baseValue ?? 0);
+  return {
+    base,
+    literal,
+    modifier: multiplier - 1,
+    value: (base + literal) * multiplier,
+  };
+}
+
+function componentResourceTotal(installed, resourceKey, resourceName) {
+  return installed.reduce(
+    (sum, item) => sum + resourceTotal(item.component[resourceKey] ?? [], resourceName),
+    0,
+  );
+}
+
+function mobilitySummary(hull, installed, totalMass) {
+  const modifiers = [
+    ...(hull.baseModifiers ?? []).map(normalizeModifier),
+    ...installed.flatMap((item) => (item.component.modifiers ?? []).map(normalizeModifier)),
+  ];
+  const propulsion = installed.filter(
+    (item) =>
+      item.component.category === "Propulsion" ||
+      item.component.bindToTag === "Thruster" ||
+      (item.component.modifiers ?? []).some((modifier) =>
+        String(modifier.statName ?? modifier._statName ?? "").startsWith("hull-"),
+      ),
+  );
+  const linearMotor = applyStatModifiers(hull.linearMotorForce, modifiers, MOBILITY_STATS.linearMotor);
+  const angularMotor = applyStatModifiers(hull.angularMotorForce, modifiers, MOBILITY_STATS.angularMotor);
+  const mass = Math.max(Number(totalMass ?? 0), 1);
+  return {
+    modifiers,
+    driveCount: propulsion.length,
+    drivePower: componentResourceTotal(propulsion, "resourcesProvided", "Power"),
+    driveNames: propulsion.map((item) => item.component.name),
+    maxSpeed: applyStatModifiers(hull.maxSpeed, modifiers, MOBILITY_STATS.maxSpeed),
+    turnRate: applyStatModifiers(hull.maxTurnSpeed, modifiers, MOBILITY_STATS.turnRate),
+    linearMotor,
+    angularMotor,
+    wakeSignature: applyStatModifiers(
+      hull.wakeSignatureStrength,
+      modifiers,
+      MOBILITY_STATS.wakeSignature,
+    ),
+    accelerationIndex: linearMotor.value / mass,
+    turnIndex: angularMotor.value / mass,
+  };
+}
+
 export function summarizeDesign(design, indexes) {
   const hull = indexes.hullByName.get(design.hullName) ?? indexes.hulls[0];
   const installed = [];
@@ -147,6 +224,7 @@ export function summarizeDesign(design, indexes) {
     (sum, item) => sum + resourceTotal(item.component.resourcesRequired ?? [], "Power"),
     0,
   );
+  const totalMass = Number(hull.mass ?? 0) + componentMass;
 
   const warnings = [];
   const commandInstalled = installed.some((item) => item.component.category === "Command");
@@ -165,7 +243,7 @@ export function summarizeDesign(design, indexes) {
       pointCost: Number(hull.pointCost ?? 0) + componentCost,
       hullPointCost: Number(hull.pointCost ?? 0),
       componentPointCost: componentCost,
-      mass: Number(hull.mass ?? 0) + componentMass,
+      mass: totalMass,
       hullMass: Number(hull.mass ?? 0),
       componentMass,
       crewComplement: Number(hull.crewComplement ?? 0),
@@ -176,6 +254,7 @@ export function summarizeDesign(design, indexes) {
       installedCount: installed.length,
       socketCount: hull.sockets?.length ?? 0,
     },
+    mobility: mobilitySummary(hull, installed, totalMass),
     warnings,
   };
 }

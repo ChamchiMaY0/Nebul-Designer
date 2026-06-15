@@ -21,6 +21,13 @@ except ImportError as exc:  # pragma: no cover - exercised by users without deps
 DEFAULT_BUNDLES = ("stock", "stock-f1", "stock-f2")
 SOCKET_TYPES = {0: "mount", 1: "compartment", 2: "module"}
 COMPONENT_TYPES = {0: "mount", 1: "compartment", 2: "module"}
+SOCKET_PREFIXES = {"mount": "MT", "compartment": "CMP", "module": "MOD"}
+HULL_SCRIPTS = {"Hull", "RandomModularHull"}
+MODULAR_PART_GROUPS = (
+    ("_bows", "Bow"),
+    ("_cores", "Core"),
+    ("_sterns", "Stern"),
+)
 
 COMMON_COMPONENT_FIELDS = (
     "_partKey",
@@ -252,6 +259,21 @@ def component_resources(tree: dict[str, Any], key: str) -> list[dict[str, Any]]:
     return resources
 
 
+def component_modifiers(tree: dict[str, Any], key: str = "Modifiers") -> list[dict[str, Any]]:
+    modifiers = []
+    for item in tree.get(key) or []:
+        if isinstance(item, dict):
+            modifiers.append(
+                {
+                    "statName": item.get("_statName"),
+                    "literal": item.get("_literal"),
+                    "modifier": item.get("_modifier"),
+                    "permanent": bool(item.get("_permanent", 0)),
+                }
+            )
+    return modifiers
+
+
 def clean_key(key: str) -> str:
     return key[1:] if key.startswith("_") else key
 
@@ -276,13 +298,48 @@ def socket_component(game_object: Any) -> tuple[Any, Any]:
     return component, tree
 
 
-def extract_sockets(hull_component: Any) -> list[dict[str, Any]]:
+def transform_from_root(root: Any) -> Any | None:
+    if getattr(root.object_reader.type, "name", "") == "Transform":
+        return root
+    if getattr(root.object_reader.type, "name", "") != "GameObject":
+        return None
+    for pointer in getattr(root, "m_Components", []):
+        try:
+            component = pointer.read()
+        except Exception:
+            continue
+        if component.object_reader.type.name == "Transform":
+            return component
+    return None
+
+
+def socket_short_name(
+    tree: dict[str, Any],
+    socket_type_name: str,
+    counters: Counter | None,
+    renumber: bool,
+) -> str:
+    original = tree.get("_shortName") or ""
+    if not renumber:
+        return original
+    prefix = SOCKET_PREFIXES.get(socket_type_name, "SKT")
+    if counters is None:
+        return original or prefix
+    counters[prefix] += 1
+    return f"{prefix}{counters[prefix]}"
+
+
+def socket_records_from_root(
+    root: Any,
+    counters: Counter | None = None,
+    source_part: str | None = None,
+    renumber: bool = False,
+) -> list[dict[str, Any]]:
     sockets = []
-    try:
-        root = hull_component._socketRoot.read()
-    except Exception:
+    transform_root = transform_from_root(root)
+    if transform_root is None:
         return sockets
-    for child_ptr in getattr(root, "m_Children", []):
+    for child_ptr in getattr(transform_root, "m_Children", []):
         try:
             transform = child_ptr.read()
             game_object = transform.m_GameObject.read()
@@ -293,28 +350,72 @@ def extract_sockets(hull_component: Any) -> list[dict[str, Any]]:
         if not tree:
             continue
         socket_type = tree.get("_type")
-        sockets.append(
-            {
-                "name": game_object.m_Name,
-                "key": tree.get("_key"),
-                "shortName": tree.get("_shortName"),
-                "type": socket_type,
-                "typeName": SOCKET_TYPES.get(socket_type, f"unknown-{socket_type}"),
-                "size": simple(tree.get("_size")),
-                "position": vector(transform.m_LocalPosition),
-                "rotation": vector(transform.m_LocalRotation),
-                "scale": vector(transform.m_LocalScale),
-                "interiorOverhangSpace": tree.get("_interiorOverhangSpace"),
-                "attachPoint": simple(tree.get("_attachPoint")),
-                "defaultComponent": tree.get("_defaultComponent") or "",
-                "traverseLimits": simple(tree.get("_traverseLimits")),
-                "forwardLimits": simple(tree.get("_forwardLimits")),
-                "unmaskAxis": tree.get("_unmaskAxis"),
-                "unmaskSide": tree.get("_unmaskSide"),
-                "socketUVMin": simple(tree.get("_socketUVMin")),
-                "socketUVMax": simple(tree.get("_socketUVMax")),
-                "socketUVRot": tree.get("_socketUVRot"),
-            }
+        type_name = SOCKET_TYPES.get(socket_type, f"unknown-{socket_type}")
+        record = {
+            "name": game_object.m_Name,
+            "key": tree.get("_key"),
+            "shortName": socket_short_name(tree, type_name, counters, renumber),
+            "type": socket_type,
+            "typeName": type_name,
+            "size": simple(tree.get("_size")),
+            "position": vector(transform.m_LocalPosition),
+            "rotation": vector(transform.m_LocalRotation),
+            "scale": vector(transform.m_LocalScale),
+            "interiorOverhangSpace": tree.get("_interiorOverhangSpace"),
+            "attachPoint": simple(tree.get("_attachPoint")),
+            "defaultComponent": tree.get("_defaultComponent") or "",
+            "traverseLimits": simple(tree.get("_traverseLimits")),
+            "forwardLimits": simple(tree.get("_forwardLimits")),
+            "unmaskAxis": tree.get("_unmaskAxis"),
+            "unmaskSide": tree.get("_unmaskSide"),
+            "socketUVMin": simple(tree.get("_socketUVMin")),
+            "socketUVMax": simple(tree.get("_socketUVMax")),
+            "socketUVRot": tree.get("_socketUVRot"),
+        }
+        if renumber:
+            record["rawShortName"] = tree.get("_shortName") or ""
+        if source_part:
+            record["sourcePart"] = source_part
+        sockets.append(record)
+    return sockets
+
+
+def extract_sockets(hull_component: Any) -> list[dict[str, Any]]:
+    try:
+        root = hull_component._socketRoot.read()
+    except Exception:
+        return []
+    return socket_records_from_root(root)
+
+
+def extract_modular_part_counts(hull_component: Any) -> dict[str, int]:
+    counts = {}
+    for key in ("_bows", "_cores", "_sterns", "_superstructures"):
+        counts[key[1:]] = len(getattr(hull_component, key, []) or [])
+    return counts
+
+
+def extract_modular_sockets(hull_component: Any) -> list[dict[str, Any]]:
+    sockets: list[dict[str, Any]] = []
+    counters: Counter = Counter()
+    for attr, label in MODULAR_PART_GROUPS:
+        part_pointers = getattr(hull_component, attr, []) or []
+        if not part_pointers:
+            continue
+        try:
+            part = part_pointers[0].read()
+            part_tree = read_tree(part)
+            root = part._socketRoot.read()
+        except Exception:
+            continue
+        part_key = part_tree.get("_key") or f"{label} 1"
+        sockets.extend(
+            socket_records_from_root(
+                root,
+                counters=counters,
+                source_part=f"{label}: {part_key}",
+                renumber=True,
+            )
         )
     return sockets
 
@@ -366,14 +467,22 @@ def extract_hull_geometry(hull_component: Any) -> dict[str, Any]:
     return geometry
 
 
-def extract_hull(path: str, game_object: Any, hull_component: Any, tree: dict[str, Any]) -> dict[str, Any]:
-    sockets = extract_sockets(hull_component)
+def extract_hull(
+    path: str,
+    game_object: Any,
+    hull_component: Any,
+    script: str,
+    tree: dict[str, Any],
+) -> dict[str, Any]:
+    is_modular = script == "RandomModularHull"
+    sockets = extract_modular_sockets(hull_component) if is_modular else extract_sockets(hull_component)
     socket_counts = Counter(socket.get("typeName") for socket in sockets)
     record = {
         "id": tree.get("_className") or game_object.m_Name,
         "name": game_object.m_Name,
         "assetPath": path,
-        "script": "Hull",
+        "script": script,
+        "modular": is_modular,
         "className": tree.get("_className"),
         "typeClassification": tree.get("_typeClassification"),
         "hullClassification": tree.get("_hullClassification"),
@@ -405,6 +514,9 @@ def extract_hull(path: str, game_object: Any, hull_component: Any, tree: dict[st
         "socketSummary": dict(socket_counts),
         "geometry": extract_hull_geometry(hull_component),
     }
+    if is_modular:
+        record["layoutMode"] = "representative-first-variant"
+        record["modularPartCounts"] = extract_modular_part_counts(hull_component)
     try:
         structure = hull_component._structure.read()
         structure_tree = read_tree(structure)
@@ -432,6 +544,7 @@ def extract_component(
         record["typeName"] = COMPONENT_TYPES.get(record["type"], f"unknown-{record['type']}")
     record["resourcesProvided"] = component_resources(tree, "ResourcesProvided")
     record["resourcesRequired"] = component_resources(tree, "ResourcesRequired")
+    record["modifiers"] = component_modifiers(tree)
     return record
 
 
@@ -496,11 +609,11 @@ def extract_catalog(asset_dir: Path, bundle_names: list[str]) -> dict[str, Any]:
 
             if obj.object_reader.type.name == "GameObject":
                 if "/hulls/" in lower:
-                    hull, _script, tree = first_monobehaviour(
-                        obj, lambda _component, name, _tree: name == "Hull"
+                    hull, script, tree = first_monobehaviour(
+                        obj, lambda _component, name, _tree: name in HULL_SCRIPTS
                     )
                     if hull:
-                        catalog["hulls"].append(extract_hull(path, obj, hull, tree))
+                        catalog["hulls"].append(extract_hull(path, obj, hull, script, tree))
                     continue
 
                 if any(segment in lower for segment in ("/components/", "/drives/", "/weapons/")):

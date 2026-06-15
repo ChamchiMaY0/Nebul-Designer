@@ -214,8 +214,7 @@ h3 {
 
 .workspace {
   display: grid;
-  grid-template-rows: auto auto auto;
-  align-content: start;
+  grid-template-rows: auto auto minmax(0, 1fr);
   gap: 14px;
   min-height: 0;
   overflow: auto;
@@ -276,7 +275,7 @@ h3 {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   gap: 10px;
-  height: clamp(300px, 36vh, 380px);
+  height: clamp(260px, 32vh, 340px);
   min-height: 0;
   padding: 14px;
 }
@@ -416,8 +415,9 @@ h3 {
 
 .lower-grid {
   display: grid;
-  grid-template-columns: minmax(220px, 0.7fr) minmax(330px, 0.9fr) minmax(300px, 1fr);
+  grid-template-columns: minmax(210px, 0.7fr) minmax(280px, 0.9fr) minmax(280px, 1.25fr);
   gap: 14px;
+  min-height: 0;
 }
 
 .slot-panel,
@@ -428,7 +428,10 @@ h3 {
 }
 
 .specs-panel {
+  display: flex;
+  flex-direction: column;
   min-height: 0;
+  overflow: hidden;
 }
 
 .installed {
@@ -551,7 +554,7 @@ h3 {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(106px, 1fr));
   gap: 8px;
   padding: 14px;
 }
@@ -604,8 +607,10 @@ h3 {
 
 .spec-list {
   display: grid;
+  align-content: start;
+  flex: 1 1 auto;
   gap: 6px;
-  max-height: 260px;
+  min-height: 0;
   overflow: auto;
   padding: 0 14px 14px;
 }
@@ -684,6 +689,16 @@ select {
   padding: 9px;
 }
 
+.empty-state {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
 .design-panel {
   margin: 8px;
   box-shadow: none;
@@ -754,6 +769,7 @@ textarea {
 
   .specs-panel {
     grid-column: 1 / -1;
+    max-height: min(720px, 62vh);
   }
 
   .parts-panel {
@@ -773,7 +789,7 @@ textarea {
   }
 
   .schematic-area {
-    height: clamp(280px, 42vh, 360px);
+    height: clamp(260px, 38vh, 340px);
   }
 
   .ship-header,

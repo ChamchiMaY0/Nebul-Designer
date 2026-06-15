@@ -17,6 +17,26 @@
     "mass": 4.0,
     "maxHealth": 40.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "continuousweapon-burstduration:emitters"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "continuousweapon-cooldown:emitters"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.10000000149011612,
+        "permanent": false,
+        "statName": "continuousweapon-overheatdamageprob:emitters"
+      }
+    ],
     "name": "Actively Cooled Amplifiers",
     "partKey": "UMAvOaBfW0KgeksDqNp1ZQ",
     "pointCost": 25,
@@ -62,6 +82,32 @@
     "mass": 4.0,
     "maxHealth": 40.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "sensor-sensitivity"
+      },
+      {
+        "literal": -0.699999988079071,
+        "modifier": 0.0,
+        "permanent": false,
+        "statName": "sensor-noisefiltering"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.05000000074505806,
+        "permanent": false,
+        "statName": "sensor-maxposerror"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.02500000037252903,
+        "permanent": false,
+        "statName": "sensor-maxvelerror"
+      }
+    ],
     "name": "Adaptive Radar Receiver",
     "partKey": "7sZgcKxKPkyAyqbupy1FtQ",
     "pointCost": 30,
@@ -107,6 +153,26 @@
     "mass": 30.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "discreteweapon-reload"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "tubelauncher-reload"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-spacecraftarmingspeed"
+      }
+    ],
     "name": "Ammunition Elevators",
     "partKey": "iXak6GUB3Um9qawp-LZdRA",
     "pointCost": 20,
@@ -154,6 +220,20 @@
     "mass": 10.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "intel-effort"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.30000001192092896,
+        "permanent": false,
+        "statName": "intel-accuracy"
+      }
+    ],
     "name": "Analysis Annex",
     "partKey": "7v1qa2ozjkyHl02P9ZolwA",
     "pointCost": 20,
@@ -195,6 +275,7 @@
     "mass": 10.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Auxiliary Steering",
     "partKey": "j4ZlnKOwikCu8RxjVYyolg",
     "pointCost": 10,
@@ -236,6 +317,7 @@
     "mass": 15.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Basic CIC",
     "partKey": "faB-VWdkbUKm1BQ1LYHOOw",
     "pointCost": 10,
@@ -277,6 +359,14 @@
     "mass": 10.0,
     "maxHealth": 125.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.30000001192092896,
+        "permanent": false,
+        "statName": "hull-crewvuln"
+      }
+    ],
     "name": "Battle Dressing Station",
     "partKey": "xf6R3HJv3EG45zEdnX_SqA",
     "pointCost": 20,
@@ -316,6 +406,7 @@
     "mass": 0.5,
     "maxHealth": 50.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Berthing",
     "partKey": "sL6eXmU5JEe8DP_a-I1qPA",
     "pointCost": 1,
@@ -356,6 +447,7 @@
     "mass": 1.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Bulk Internal Hangar",
     "partKey": "xdUlmW4fC0-NUkcQU5kxpQ",
     "pointCost": 10,
@@ -395,6 +487,7 @@
     "mass": 1.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Bulk Magazine",
     "partKey": "_0Ez-W_f0kaMFyuX6-J_Dw",
     "pointCost": 20,
@@ -434,6 +527,7 @@
     "mass": 4.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "CR10 Antenna",
     "partKey": "DkOUJ94T2EeppNy4qRb6eg",
     "pointCost": 5,
@@ -482,6 +576,7 @@
     "mass": 70.0,
     "maxHealth": 400.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Citadel CIC",
     "partKey": "c78wnTxIyEiue3SrnpnfwA",
     "pointCost": 75,
@@ -523,6 +618,20 @@
     "mass": 7.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.5,
+        "permanent": false,
+        "statName": "damagecontrol-movespeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": false,
+        "statName": "damagecontrol-repairspeed"
+      }
+    ],
     "name": "Damage Control Central",
     "partKey": "Z3XIlrpTkk-z8OpNd0StOQ",
     "pointCost": 20,
@@ -571,6 +680,14 @@
     "mass": 2.0,
     "maxHealth": 120.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.5,
+        "permanent": false,
+        "statName": "hull-spacecraftarmingspeed"
+      }
+    ],
     "name": "Deck Gear Locker",
     "partKey": "o-9dwyWAMEm4Y1xgXImSog",
     "pointCost": 30,
@@ -612,6 +729,7 @@
     "mass": 5.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "ES32 'Scryer' Missile ID System",
     "partKey": "AUrVoX_sN0yvDXWOHnm1ig",
     "pointCost": 10,
@@ -658,6 +776,26 @@
     "mass": 30.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "discreteweapon-reload:energy"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "continuousweapon-cooldown:energy"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "continuousweapon-cooldown:beam"
+      }
+    ],
     "name": "Energy Regulator",
     "partKey": "iXak6GUB3Um9qawp-LZdRA",
     "pointCost": 30,
@@ -703,6 +841,26 @@
     "mass": 30.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.5,
+        "permanent": false,
+        "statName": "component-raredebuffchance:cell launcher"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.5,
+        "permanent": false,
+        "statName": "component-raredebuffchance:magazine"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.5,
+        "permanent": false,
+        "statName": "damagecontrol-repairspeed:fire"
+      }
+    ],
     "name": "Fire Suppression System",
     "partKey": "UMAvOaBfW0KgeksDqNp1ZQ",
     "pointCost": 20,
@@ -748,6 +906,14 @@
     "mass": 30.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.30000001192092896,
+        "permanent": false,
+        "statName": "hull-decktraversalspeed"
+      }
+    ],
     "name": "Flight Deck Traversal System",
     "partKey": "pRh3O6YXAkyCyq5Qcst5zw",
     "pointCost": 20,
@@ -793,6 +959,20 @@
     "mass": 45.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "continuousweapon-directdamagemultiplier:beam"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.05000000074505806,
+        "permanent": false,
+        "statName": "continuousweapon-burstduration:beam"
+      }
+    ],
     "name": "Focused Particle Accelerator",
     "partKey": "hmLwD6vnn0agIPQ2PajCoQ",
     "pointCost": 25,
@@ -840,6 +1020,14 @@
     "mass": 7.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.30000001192092896,
+        "permanent": false,
+        "statName": "muzzle-accuracy"
+      }
+    ],
     "name": "Gun Plotting Center",
     "partKey": "6PmR-b1AjUyROjJ6X9O85A",
     "pointCost": 30,
@@ -888,6 +1076,7 @@
     "mass": 25.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Intelligence Center",
     "partKey": "kzXQHFVinkaBf9R3YCGKSg",
     "pointCost": 90,
@@ -929,6 +1118,7 @@
     "mass": 3.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Large DC Locker",
     "partKey": "RmdAVndo7kmGGBMuPOKM2A",
     "pointCost": 45,
@@ -968,6 +1158,14 @@
     "mass": 5.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.3499999940395355,
+        "permanent": false,
+        "statName": "hull-missileprogspeed"
+      }
+    ],
     "name": "Missile Parallel Interface",
     "partKey": "wrzeryP68UW-FRe__jWmdQ",
     "pointCost": 40,
@@ -1013,6 +1211,38 @@
     "mass": 4.0,
     "maxHealth": 40.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.07500000298023224,
+        "permanent": false,
+        "statName": "muzzle-accuracy"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "turret-traverse"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.20000000298023224,
+        "permanent": false,
+        "statName": "turret-elevate"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.15000000596046448,
+        "permanent": false,
+        "statName": "casemate-traverse"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.15000000596046448,
+        "permanent": false,
+        "statName": "casemate-elevate"
+      }
+    ],
     "name": "Mount Gyros",
     "partKey": "kUPe3MbgxkijDKiYG-o5Vw",
     "pointCost": 20,
@@ -1060,6 +1290,14 @@
     "mass": 7.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.20000000298023224,
+        "permanent": false,
+        "statName": "powerplant-prodefficiency"
+      }
+    ],
     "name": "Plant Control Center",
     "partKey": "Z3XIlrpTkk-z8OpNd0StOQ",
     "pointCost": 25,
@@ -1101,6 +1339,7 @@
     "mass": 1.5,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Rapid DC Locker",
     "partKey": "W0UxWtHW8UupEh234h4iDw",
     "pointCost": 10,
@@ -1140,6 +1379,14 @@
     "mass": 30.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.25,
+        "permanent": false,
+        "statName": "discreteweapon-recycle"
+      }
+    ],
     "name": "Rapid-Cycle Cradle",
     "partKey": "iXak6GUB3Um9qawp-LZdRA",
     "pointCost": 20,
@@ -1185,6 +1432,20 @@
     "mass": 5.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.33000001311302185,
+        "permanent": false,
+        "statName": "component-raredebuffchance:reactor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "damagecontrol-repairspeed:overload"
+      }
+    ],
     "name": "Redundant Reactor Failsafes",
     "partKey": "9VwkIp-IckOBOJFMT2vMBQ",
     "pointCost": 10,
@@ -1232,6 +1493,7 @@
     "mass": 35.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Reinforced CIC",
     "partKey": "pRPzfXuuJEym92rKJhV74w",
     "pointCost": 25,
@@ -1273,6 +1535,7 @@
     "mass": 1.5,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Reinforced DC Locker",
     "partKey": "eiNHVbngk0C52X--KaN3OA",
     "pointCost": 45,
@@ -1312,6 +1575,7 @@
     "mass": 2.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Reinforced Magazine",
     "partKey": "grTJgz0bCkqHS6jy9ilq3A",
     "pointCost": 40,
@@ -1350,6 +1614,14 @@
     "mass": 4.0,
     "maxHealth": 50.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-flankdamageprob"
+      }
+    ],
     "name": "Reinforced Thruster Nozzles",
     "partKey": "kUPe3MbgxkijDKiYG-o5Vw",
     "pointCost": 10,
@@ -1388,6 +1660,14 @@
     "mass": 10.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 1.0,
+        "permanent": false,
+        "statName": "hull-crew-cheer"
+      }
+    ],
     "name": "SH12-25 REDACTED",
     "partKey": "0CrdktON5Eul5N60rADxvg",
     "pointCost": 0,
@@ -1426,6 +1706,20 @@
     "mass": 4.0,
     "maxHealth": 50.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 1.0,
+        "permanent": false,
+        "statName": "hull-identificationwork"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.10000000149011612,
+        "permanent": false,
+        "statName": "sensor-sensitivity"
+      }
+    ],
     "name": "Signature Scrambler",
     "partKey": "m-FHISDTHU6H4-m6Cm5phg",
     "pointCost": 35,
@@ -1473,6 +1767,7 @@
     "mass": 1.5,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Small DC Locker",
     "partKey": "WIaR1oD70EqjEX2VrIcprQ",
     "pointCost": 20,
@@ -1512,6 +1807,26 @@
     "mass": 20.0,
     "maxHealth": 75.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.11999999731779099,
+        "permanent": false,
+        "statName": "discreteweapon-reload:energy"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.11999999731779099,
+        "permanent": false,
+        "statName": "continuousweapon-cooldown:energy"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.11999999731779099,
+        "permanent": false,
+        "statName": "continuousweapon-cooldown:beam"
+      }
+    ],
     "name": "Small Energy Regulator",
     "partKey": "hmLwD6vnn0agIPQ2PajCoQ",
     "pointCost": 20,
@@ -1557,6 +1872,20 @@
     "mass": 4.0,
     "maxHealth": 40.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": false,
+        "statName": "powerplant-prodefficiency"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.05000000074505806,
+        "permanent": false,
+        "statName": "hull-sigmult-radar"
+      }
+    ],
     "name": "Small Reactor Booster",
     "partKey": "kUPe3MbgxkijDKiYG-o5Vw",
     "pointCost": 10,
@@ -1597,6 +1926,14 @@
     "mass": 7.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "damagecontrol-repairspeed"
+      }
+    ],
     "name": "Small Workshop",
     "partKey": "ozakdnhI506YZMENniJzCA",
     "pointCost": 20,
@@ -1645,6 +1982,7 @@
     "mass": 5.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Spacecraft Repair Station",
     "partKey": "HDuboaLD-UOqwzalBCKklQ",
     "pointCost": 15,
@@ -1686,6 +2024,7 @@
     "mass": 5.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Spacecraft Strikedown Station",
     "partKey": "HDuboaLD-UOqwzalBCKklQ",
     "pointCost": 75,
@@ -1727,6 +2066,14 @@
     "mass": 10.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.6000000238418579,
+        "permanent": false,
+        "statName": "hull-missileprogspeed"
+      }
+    ],
     "name": "Strike Planning Center",
     "partKey": "aMZiKkH0IEK6Xb6vxabiCg",
     "pointCost": 70,
@@ -1766,6 +2113,14 @@
     "mass": 4.0,
     "maxHealth": 40.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.30000001192092896,
+        "permanent": false,
+        "statName": "sensor-jamminglobaccuracy"
+      }
+    ],
     "name": "Strobe Correlator",
     "partKey": "rbDTRdtAeUiBVFi-RF9t-Q",
     "pointCost": 25,
@@ -1811,6 +2166,14 @@
     "mass": 4.0,
     "maxHealth": 40.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "comms-power"
+      }
+    ],
     "name": "Supplementary Radio Amplifiers",
     "partKey": "u0X9oDGw90K60LX3P7jNzw",
     "pointCost": 20,
@@ -1856,6 +2219,20 @@
     "mass": 4.0,
     "maxHealth": 40.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "sensor-maxposerror"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "sensor-maxvelerror"
+      }
+    ],
     "name": "Track Correlator",
     "partKey": "rbDTRdtAeUiBVFi-RF9t-Q",
     "pointCost": 25,
@@ -1901,6 +2278,7 @@
     "mass": 3.0,
     "maxHealth": 75.0,
     "modId": 0,
+    "modifiers": [],
     "name": "VLS-1-23 Launcher",
     "partKey": "ZTpejyxLBkCUgI8FFKpnGw",
     "pointCost": 5,
@@ -1946,6 +2324,7 @@
     "mass": 10.0,
     "maxHealth": 125.0,
     "modId": 0,
+    "modifiers": [],
     "name": "VLS-1-46 Launcher",
     "partKey": "ZTpejyxLBkCUgI8FFKpnGw",
     "pointCost": 5,
@@ -1991,6 +2370,7 @@
     "mass": 20.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [],
     "name": "CLS-3 Launcher",
     "partKey": "QDq7UbDEbkCIXNit7kxxEw",
     "pointCost": 20,
@@ -2037,6 +2417,7 @@
     "mass": 7.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [],
     "name": "CR70 Antenna",
     "partKey": "DkOUJ94T2EeppNy4qRb6eg",
     "pointCost": 15,
@@ -2083,6 +2464,7 @@
     "mass": 5.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "E15 'Masquerade' Deception Module",
     "partKey": "ssmPmPbdf0aKA107rP414g",
     "pointCost": 20,
@@ -2136,6 +2518,14 @@
     "maxHealth": 75.0,
     "maxRange": 1200.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": true,
+        "statName": "hull-sigmult-radar"
+      }
+    ],
     "name": "E55 'Spotlight' Illuminator",
     "partKey": "cfRjCWP3z0aG6xM57Tp_SA",
     "pdtTargetMethod": 0,
@@ -2196,6 +2586,14 @@
     "maxHealth": 75.0,
     "maxRange": 1000.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": true,
+        "statName": "hull-sigmult-radar"
+      }
+    ],
     "name": "E57 'Floodlight' Illuminator",
     "partKey": "p6R5CNf5Jkmmije9EhepxQ",
     "pdtTargetMethod": 1,
@@ -2255,6 +2653,7 @@
     "maxHealth": 100.0,
     "maxRange": 400.0,
     "modId": 0,
+    "modifiers": [],
     "name": "E70 'Interruption' Jammer",
     "partKey": "rCv2seVJR0u3xl54pTHMCw",
     "pdtTargetMethod": 1,
@@ -2314,6 +2713,7 @@
     "maxHealth": 75.0,
     "maxRange": 2000.0,
     "modId": 0,
+    "modifiers": [],
     "name": "E71 'Hangup' Jammer",
     "partKey": "OY6c2EnCJ0OT8Pk4Ck4P9g",
     "pdtTargetMethod": 1,
@@ -2374,6 +2774,14 @@
     "maxHealth": 75.0,
     "maxRange": 1000.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": true,
+        "statName": "hull-sigmult-radar"
+      }
+    ],
     "name": "E90 'Blanket' Jammer",
     "partKey": "MDAa99PzPkW2CAS3mBYV3Q",
     "pdtTargetMethod": 1,
@@ -2427,6 +2835,7 @@
     "mass": 3.0,
     "maxHealth": 50.0,
     "modId": 0,
+    "modifiers": [],
     "name": "ES22 'Pinard' Electronic Support Module",
     "partKey": "DVLDi9IpQUKFOuf1TRcoIg",
     "pointCost": 30,
@@ -2476,6 +2885,7 @@
     "mass": 35.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [],
     "name": "FM200 Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 10,
@@ -2524,6 +2934,7 @@
     "mass": 35.0,
     "maxHealth": 500.0,
     "modId": 0,
+    "modifiers": [],
     "name": "FM200R Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 20,
@@ -2572,6 +2983,32 @@
     "mass": 35.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-flankdamageprob"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-turnrate"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      }
+    ],
     "name": "FM230 'Whiplash' Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 20,
@@ -2620,6 +3057,26 @@
     "mass": 35.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.07500000298023224,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.4000000059604645,
+        "permanent": false,
+        "statName": "hull-turnrate"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      }
+    ],
     "name": "FM240 'Dragonfly' Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 20,
@@ -2668,6 +3125,32 @@
     "mass": 35.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.5,
+        "permanent": false,
+        "statName": "hull-flankdamageprob"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "hull-linearmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-sigmult-radar"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-sigpower-wake"
+      }
+    ],
     "name": "FM280 'Raider' Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 20,
@@ -2709,6 +3192,32 @@
     "mass": 35.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.10000000149011612,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.25,
+        "permanent": false,
+        "statName": "hull-sigmult-radar"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.33000001311302185,
+        "permanent": false,
+        "statName": "hull-sigpower-wake"
+      }
+    ],
     "name": "FM30X 'Prowler' Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 25,
@@ -2757,6 +3266,7 @@
     "mass": 80.0,
     "maxHealth": 1000.0,
     "modId": 0,
+    "modifiers": [],
     "name": "FM500 Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 15,
@@ -2805,6 +3315,7 @@
     "mass": 80.0,
     "maxHealth": 1500.0,
     "modId": 0,
+    "modifiers": [],
     "name": "FM500R Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 30,
@@ -2853,6 +3364,32 @@
     "mass": 80.0,
     "maxHealth": 1000.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-flankdamageprob"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-turnrate"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      }
+    ],
     "name": "FM530 'Whiplash' Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 30,
@@ -2901,6 +3438,26 @@
     "mass": 80.0,
     "maxHealth": 1000.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.10000000149011612,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.44999998807907104,
+        "permanent": false,
+        "statName": "hull-turnrate"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.4000000059604645,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      }
+    ],
     "name": "FM540 'Dragonfly' Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 30,
@@ -2949,6 +3506,32 @@
     "mass": 80.0,
     "maxHealth": 1000.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.5,
+        "permanent": false,
+        "statName": "hull-flankdamageprob"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "hull-linearmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "hull-sigmult-radar"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "hull-sigpower-wake"
+      }
+    ],
     "name": "FM580 'Raider' Drive",
     "partKey": "j0YSV9nnxEGFXcUaLlHQEg",
     "pointCost": 30,
@@ -2997,6 +3580,7 @@
     "mass": 25.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "FR3300 Micro Reactor",
     "partKey": "3e12lEO8P0OHxToec0oJxQ",
     "pointCost": 10,
@@ -3045,6 +3629,7 @@
     "mass": 40.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "FR4800 Reactor",
     "partKey": "0JAz_LPZwkqDrjBMdxvXYA",
     "pointCost": 10,
@@ -3093,6 +3678,7 @@
     "mass": 0.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Large Mounted Hangar",
     "partKey": "QZ-FT9y-OEKbvaXxyXY3Bw",
     "pointCost": 10,
@@ -3141,6 +3727,7 @@
     "mass": 0.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Medium Mounted Hangar",
     "partKey": "QZ-FT9y-OEKbvaXxyXY3Bw",
     "pointCost": 10,
@@ -3187,6 +3774,14 @@
     "mass": 5.0,
     "maxHealth": 80.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 1.0,
+        "modifier": 0.0,
+        "permanent": false,
+        "statName": "hull-missilechannels"
+      }
+    ],
     "name": "Missile Programming Bus",
     "partKey": "2r-c9kGIn0aW2yahnDMdOQ",
     "pointCost": 30,
@@ -3232,6 +3827,14 @@
     "mass": 5.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 2.0,
+        "modifier": 0.0,
+        "permanent": false,
+        "statName": "hull-missilechannels"
+      }
+    ],
     "name": "Missile Programming Bus Array",
     "partKey": "2r-c9kGIn0aW2yahnDMdOQ",
     "pointCost": 50,
@@ -3288,6 +3891,7 @@
     "mass": 3.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk20 'Defender' PDT",
     "partKey": "unY71geJqEqlR_Vl9dCyUQ",
     "pdtTargetMethod": 0,
@@ -3350,6 +3954,7 @@
     "mass": 3.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk25 'Rebound' PDT",
     "partKey": "1I1EABIZiUuHNTaj8B5UzA",
     "pdtTargetMethod": 0,
@@ -3416,6 +4021,7 @@
     "mass": 7.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk29 'Stonewall' PDT",
     "partKey": "hdhq1PJaO0ClLkD20AYYUg",
     "pdtTargetMethod": 2,
@@ -3482,6 +4088,7 @@
     "mass": 100.0,
     "maxHealth": 450.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk550 Railgun",
     "partKey": "8yDMGl4BHEignJnkYv5pUg",
     "pdtTargetMethod": 0,
@@ -3541,6 +4148,7 @@
     "mass": 100.0,
     "maxHealth": 450.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk600 Beam Cannon",
     "partKey": "jpdYbZIsEUCRD9dQQZ0LXA",
     "pdtTargetMethod": 0,
@@ -3602,6 +4210,7 @@
     "mass": 3.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk61 Cannon",
     "partKey": "BRc_ACJBukuEm4GSM-qsYw",
     "pdtTargetMethod": 0,
@@ -3662,6 +4271,7 @@
     "mass": 50.0,
     "maxHealth": 400.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk610 Beam Turret",
     "partKey": "1sginICnM0yZ7XTJ-0KcDQ",
     "pdtTargetMethod": 0,
@@ -3724,6 +4334,7 @@
     "mass": 6.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk62 Cannon",
     "partKey": "h0yHBVAho0WNkpQwZDsouw",
     "pdtTargetMethod": 0,
@@ -3790,6 +4401,7 @@
     "mass": 3.0,
     "maxHealth": 225.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk64 Cannon",
     "partKey": "MF9QEuTiqUiEd8az4mXYvQ",
     "pdtTargetMethod": 0,
@@ -3860,6 +4472,7 @@
     "mass": 12.0,
     "maxHealth": 450.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk65 Cannon",
     "partKey": "uWsyIdRLrE2uixgg_ZrXcg",
     "pdtTargetMethod": 0,
@@ -3926,6 +4539,7 @@
     "mass": 25.0,
     "maxHealth": 450.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk66 Cannon",
     "partKey": "fZw5ndXlpE2DLvO37cPIoQ",
     "pdtTargetMethod": 0,
@@ -3992,6 +4606,7 @@
     "mass": 40.0,
     "maxHealth": 550.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk68 Cannon",
     "partKey": "fZw5ndXlpE2DLvO37cPIoQ",
     "pdtTargetMethod": 0,
@@ -4058,6 +4673,7 @@
     "mass": 20.0,
     "maxHealth": 125.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk81 Railgun",
     "partKey": "fZw5ndXlpE2DLvO37cPIoQ",
     "pdtTargetMethod": 0,
@@ -4124,6 +4740,7 @@
     "mass": 35.0,
     "maxHealth": 400.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk82 Railgun",
     "partKey": "THENv9FO4Ueo4OJMMykvWQ",
     "pdtTargetMethod": 0,
@@ -4184,6 +4801,7 @@
     "mass": 3.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk90 'Aurora' PDT",
     "partKey": "gfc8FbTAz0KoIPn0A-PJeA",
     "pdtTargetMethod": 0,
@@ -4246,6 +4864,7 @@
     "mass": 7.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Mk95 'Sarissa' PDT",
     "partKey": "BRc_ACJBukuEm4GSM-qsYw",
     "pdtTargetMethod": 2,
@@ -4301,6 +4920,7 @@
     "mass": 2.0,
     "maxHealth": 70.0,
     "modId": 0,
+    "modifiers": [],
     "name": "RF101 'Bullseye' Radar",
     "partKey": "Z-xF4S9ke0-h-bA-9FLEHA",
     "pointCost": 40,
@@ -4356,6 +4976,7 @@
     "maxRange": 950.0,
     "maxVelocityError": 0.009999999776482582,
     "modId": 0,
+    "modifiers": [],
     "name": "RM50 'Parallax' Radar",
     "noiseFiltering": 0.0,
     "partKey": "bAJIDUOI8UiBAhs0TkLXPg",
@@ -4415,6 +5036,7 @@
     "maxRange": 800.0,
     "maxVelocityError": 0.009999999776482582,
     "modId": 0,
+    "modifiers": [],
     "name": "RS35 'Frontline' Radar",
     "noiseFiltering": 0.0,
     "partKey": "bAJIDUOI8UiBAhs0TkLXPg",
@@ -4474,6 +5096,7 @@
     "maxRange": 1150.0,
     "maxVelocityError": 0.05000000074505806,
     "modId": 0,
+    "modifiers": [],
     "name": "RS41 'Spyglass' Radar",
     "noiseFiltering": 0.0,
     "partKey": "bAJIDUOI8UiBAhs0TkLXPg",
@@ -4525,6 +5148,7 @@
     "mass": 25.0,
     "maxHealth": 350.0,
     "modId": 0,
+    "modifiers": [],
     "name": "TLS-3 Launcher",
     "partKey": "8eP0CJx2AEamPGfDa0-dJg",
     "pointCost": 20,
@@ -4571,6 +5195,7 @@
     "mass": 5.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "VLS-2 Launcher",
     "partKey": "WWN_mRY8E0CTde8wSlxbtg",
     "pointCost": 10,
@@ -4616,6 +5241,7 @@
     "mass": 20.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [],
     "name": "VLS-3 Launcher",
     "partKey": "QDq7UbDEbkCIXNit7kxxEw",
     "pointCost": 20,
@@ -4663,6 +5289,7 @@
     "mass": 35.0,
     "maxHealth": 700.0,
     "modId": 0,
+    "modifiers": [],
     "name": "BW1500 Drive",
     "partKey": "UPLyUsXFqUW7F25mXi6hgg",
     "pointCost": 10,
@@ -4711,6 +5338,7 @@
     "mass": 35.0,
     "maxHealth": 1400.0,
     "modId": 0,
+    "modifiers": [],
     "name": "BW1500-R Drive",
     "partKey": "UPLyUsXFqUW7F25mXi6hgg",
     "pointCost": 20,
@@ -4759,6 +5387,32 @@
     "mass": 35.0,
     "maxHealth": 700.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.10000000149011612,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-linearmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.10000000149011612,
+        "permanent": false,
+        "statName": "hull-sigpower-wake"
+      }
+    ],
     "name": "BW2000 Drive",
     "partKey": "UPLyUsXFqUW7F25mXi6hgg",
     "pointCost": 15,
@@ -4807,6 +5461,7 @@
     "mass": 35.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [],
     "name": "BW800 Drive",
     "partKey": "CCk5q9VLakGzV_L-NvRcjA",
     "pointCost": 10,
@@ -4855,6 +5510,7 @@
     "mass": 35.0,
     "maxHealth": 400.0,
     "modId": 0,
+    "modifiers": [],
     "name": "BW800-R Drive",
     "partKey": "CCk5q9VLakGzV_L-NvRcjA",
     "pointCost": 20,
@@ -4903,6 +5559,7 @@
     "mass": 40.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Boosted Reactor",
     "partKey": "Exu6IcbCPUCBXxjKvBe1dQ",
     "pointCost": 10,
@@ -4958,6 +5615,7 @@
     "maxRange": 1000.0,
     "maxVelocityError": 0.014999999664723873,
     "modId": 0,
+    "modifiers": [],
     "name": "Bulwark Huntress",
     "noiseFiltering": 0.0,
     "partKey": "sWt9K8no-0uJYPuGy3cNRg",
@@ -5028,6 +5686,7 @@
     "mass": 15.0,
     "maxHealth": 350.0,
     "modId": 0,
+    "modifiers": [],
     "name": "C30 Cannon",
     "partKey": "bIp19s2WmEaRbnTr5frQpg",
     "pdtTargetMethod": 0,
@@ -5098,6 +5757,7 @@
     "mass": 3.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "C53 Cannon",
     "partKey": "uKZgtZCbqE6s6XlfrEOxnA",
     "pdtTargetMethod": 0,
@@ -5168,6 +5828,7 @@
     "mass": 3.0,
     "maxHealth": 350.0,
     "modId": 0,
+    "modifiers": [],
     "name": "C56 Cannon",
     "partKey": "2fRDnTI4hkGPPqqQyyfDSQ",
     "pdtTargetMethod": 0,
@@ -5234,6 +5895,7 @@
     "mass": 35.0,
     "maxHealth": 500.0,
     "modId": 0,
+    "modifiers": [],
     "name": "C65 Cannon",
     "partKey": "WaPc6eNdmUmIwKkMUygl7A",
     "pdtTargetMethod": 0,
@@ -5300,6 +5962,7 @@
     "mass": 80.0,
     "maxHealth": 500.0,
     "modId": 0,
+    "modifiers": [],
     "name": "C81 Plasma Cannon",
     "partKey": "JBtOZafZqkuZsA-B7P12Zg",
     "pdtTargetMethod": 0,
@@ -5366,6 +6029,7 @@
     "mass": 50.0,
     "maxHealth": 500.0,
     "modId": 0,
+    "modifiers": [],
     "name": "C90 Cannon",
     "partKey": "Ph99HH7Kb0O8MtC_qDMpHQ",
     "pdtTargetMethod": 0,
@@ -5422,6 +6086,38 @@
     "mass": 35.0,
     "maxHealth": 700.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "hull-linearmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.4000000059604645,
+        "permanent": false,
+        "statName": "hull-turnrate"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.3499999940395355,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "hull-sigpower-wake"
+      }
+    ],
     "name": "CHI-7700 Drive",
     "partKey": "CCk5q9VLakGzV_L-NvRcjA",
     "pointCost": 20,
@@ -5470,6 +6166,38 @@
     "mass": 35.0,
     "maxHealth": 250.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": -0.07500000298023224,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.15000000596046448,
+        "permanent": false,
+        "statName": "hull-linearmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.44999998807907104,
+        "permanent": false,
+        "statName": "hull-turnrate"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.4000000059604645,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-sigpower-wake"
+      }
+    ],
     "name": "CHI-777 Yard Drive",
     "partKey": "CCk5q9VLakGzV_L-NvRcjA",
     "pointCost": 20,
@@ -5518,6 +6246,26 @@
     "mass": 35.0,
     "maxHealth": 700.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "hull-flankdamageprob"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.10000000149011612,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      }
+    ],
     "name": "CHI-9100 Long Haul Drive",
     "partKey": "XMFxGDND_0G7zdfWDLETdg",
     "pointCost": 20,
@@ -5564,6 +6312,7 @@
     "mass": 6.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Citadel Magazine",
     "partKey": "pO1ho7LjwUy4TqppuCVhWA",
     "pointCost": 150,
@@ -5604,6 +6353,7 @@
     "mass": 40.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Civilian Reactor",
     "partKey": "lr94L9wPBkGNpADybXmqSA",
     "pointCost": 10,
@@ -5652,6 +6402,7 @@
     "mass": 10.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Container Bank Hangar",
     "partKey": "q133BUCJyUmGJSnz_V8MQA",
     "pointCost": 100,
@@ -5698,6 +6449,14 @@
     "mass": 50.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 1.0,
+        "modifier": 0.0,
+        "permanent": false,
+        "statName": "hull-missilechannels"
+      }
+    ],
     "name": "Container Bank Launcher",
     "partKey": "iu7L-T0SkE-APPaYW7rsMQ",
     "pointCost": 25,
@@ -5745,6 +6504,20 @@
     "mass": 40.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 2.0,
+        "modifier": 0.0,
+        "permanent": false,
+        "statName": "hull-missilechannels"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "hull-missileprogspeed"
+      }
+    ],
     "name": "Container Datalink Array",
     "partKey": "SRt-Pf4K0E2E9XwkqTy95w",
     "pointCost": 200,
@@ -5791,6 +6564,7 @@
     "mass": 3.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Container Stack Launcher",
     "partKey": "xUPMaxE1rE6ZmSYbRo2lTQ",
     "pointCost": 5,
@@ -5838,6 +6612,26 @@
     "mass": 20.0,
     "maxHealth": 600.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.30000001192092896,
+        "permanent": false,
+        "statName": "damagecontrol-movespeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": false,
+        "statName": "damagecontrol-repairspeed"
+      },
+      {
+        "literal": 0.05000000074505806,
+        "modifier": 0.0,
+        "permanent": false,
+        "statName": "hull-component-max-repair"
+      }
+    ],
     "name": "Damage Control Complex",
     "partKey": "3eJU7Nhl3UemeJCxFwYPkA",
     "pointCost": 55,
@@ -5885,6 +6679,14 @@
     "maxHealth": 75.0,
     "maxRange": 1000.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": true,
+        "statName": "hull-sigmult-radar"
+      }
+    ],
     "name": "E20 'Lighthouse' Illuminator",
     "partKey": "_PELLj_D1kKPud76wavpKQ",
     "pdtTargetMethod": 0,
@@ -5945,6 +6747,14 @@
     "maxHealth": 75.0,
     "maxRange": 750.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": true,
+        "statName": "hull-sigmult-radar"
+      }
+    ],
     "name": "E30 Illuminator",
     "partKey": "_PELLj_D1kKPud76wavpKQ",
     "pdtTargetMethod": 1,
@@ -6006,6 +6816,7 @@
     "maxRange": 850.0,
     "maxVelocityError": 0.014999999664723873,
     "modId": 0,
+    "modifiers": [],
     "name": "Ithaca Bridgemaster",
     "noiseFiltering": 0.0,
     "partKey": "sWt9K8no-0uJYPuGy3cNRg",
@@ -6064,6 +6875,14 @@
     "maxHealth": 150.0,
     "maxRange": 1000.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.10000000149011612,
+        "permanent": true,
+        "statName": "hull-sigmult-radar"
+      }
+    ],
     "name": "J15 'Bellbird' Jammer",
     "partKey": "amVth6t-AEaGI9X23GSV9A",
     "pdtTargetMethod": 1,
@@ -6123,6 +6942,7 @@
     "maxHealth": 100.0,
     "maxRange": 400.0,
     "modId": 0,
+    "modifiers": [],
     "name": "J360 'Lyrebird' Jammer",
     "partKey": "yikRHFE2UUyQBMWchID4OA",
     "pdtTargetMethod": 1,
@@ -6181,6 +7001,7 @@
     "maxHealth": 100.0,
     "maxRange": 250.0,
     "modId": 0,
+    "modifiers": [],
     "name": "J75 'Warbler' Jammer",
     "partKey": "162tMXu3q0KzV7g9ekjXGA",
     "pdtTargetMethod": 1,
@@ -6234,6 +7055,14 @@
     "mass": 100.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "discreteweapon-reload:energy"
+      }
+    ],
     "name": "Jury-Rigged Reactor",
     "partKey": "BcZIfS_sSEeqiNbg0ssRRQ",
     "pointCost": 20,
@@ -6288,6 +7117,7 @@
     "maxHealth": 75.0,
     "maxRange": 800.0,
     "modId": 0,
+    "modifiers": [],
     "name": "L50 'Blackjack' Laser Dazzler",
     "partKey": "MDAa99PzPkW2CAS3mBYV3Q",
     "pdtTargetMethod": 1,
@@ -6342,6 +7172,7 @@
     "mass": 7.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Large DC Storage",
     "partKey": "RmdAVndo7kmGGBMuPOKM2A",
     "pointCost": 45,
@@ -6383,6 +7214,7 @@
     "mass": 25.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Light Civilian Reactor",
     "partKey": "9V38Exbm8Ei6Rnrc_BAWqw",
     "pointCost": 10,
@@ -6429,6 +7261,7 @@
     "mass": 7.5,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "ML-9 Mine Launcher",
     "partKey": "VFS9aSsGeUqfDT6-g5mhvA",
     "pointCost": 10,
@@ -6477,6 +7310,7 @@
     "mass": 7.5,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "ML-9 Mine Launcher Old",
     "partKey": "VFS9aSsGeUqfDT6-g5mhvA",
     "pointCost": 10,
@@ -6526,6 +7360,7 @@
     "mass": 7.5,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "MLS-2 Launcher",
     "partKey": "bSPctvaUQUmFC1vwsuPUIQ",
     "pointCost": 15,
@@ -6575,6 +7410,7 @@
     "mass": 15.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "MLS-3 Launcher",
     "partKey": "0vjkzWdYzEG9MeePdZT0rQ",
     "pointCost": 15,
@@ -6632,6 +7468,7 @@
     "mass": 4.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "P11 'Pavise' PDT",
     "partKey": "OXR3dpH5UkOOPemA9Yas0A",
     "pdtTargetMethod": 0,
@@ -6694,6 +7531,7 @@
     "mass": 7.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "P20 'Bastion' PDT",
     "partKey": "3T-lkS038U6uOSdQzZrIiA",
     "pdtTargetMethod": 0,
@@ -6755,6 +7593,7 @@
     "mass": 3.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "P60 'Grazer' PDT",
     "partKey": "qseg_NYDgUuwIsdA813WGw",
     "pdtTargetMethod": 0,
@@ -6819,6 +7658,7 @@
     "maxRange": 1400.0,
     "maxVelocityError": 0.05000000074505806,
     "modId": 0,
+    "modifiers": [],
     "name": "R400 'Bloodhound' LRT Radar",
     "noiseFiltering": 0.0,
     "partKey": "DKUaRGlzuUKPTyxt_nqZvQ",
@@ -6880,6 +7720,7 @@
     "maxRange": 1800.0,
     "maxVelocityError": 1.0,
     "modId": 0,
+    "modifiers": [],
     "name": "R550 Early Warning Radar",
     "noiseFiltering": 0.0,
     "partKey": "y9dnI6k5W0GuZTRqh_sn8g",
@@ -6932,6 +7773,7 @@
     "mass": 2.0,
     "maxHealth": 70.0,
     "modId": 0,
+    "modifiers": [],
     "name": "RF44 'Pinpoint' Radar",
     "partKey": "GvJlrGXig0CJ6xsrvCip1g",
     "pointCost": 10,
@@ -6979,6 +7821,7 @@
     "mass": 8.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "RL18 Launcher",
     "partKey": "TyXF1U3SgEiJiJocDWmC2Q",
     "pointCost": 30,
@@ -7026,6 +7869,7 @@
     "mass": 13.0,
     "maxHealth": 175.0,
     "modId": 0,
+    "modifiers": [],
     "name": "RL36 Launcher",
     "partKey": "PcGjPIeu4UajPBn8AaGeIQ",
     "pointCost": 30,
@@ -7073,6 +7917,7 @@
     "mass": 10.0,
     "maxHealth": 100.0,
     "modId": 0,
+    "modifiers": [],
     "name": "SALS-2 'Ward' Launcher",
     "partKey": "Jr2rAZ3XCU2P7RfTgRRcxw",
     "pointCost": 5,
@@ -7121,6 +7966,7 @@
     "mass": 0.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "Small Mounted Hangar",
     "partKey": "EZcpHAOMMk-Oe3Xp5FIaUg",
     "pointCost": 10,
@@ -7169,6 +8015,32 @@
     "mass": 35.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [
+      {
+        "literal": 0.0,
+        "modifier": 0.25,
+        "permanent": false,
+        "statName": "hull-maxspeed"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.20000000298023224,
+        "permanent": false,
+        "statName": "hull-flankdamageprob"
+      },
+      {
+        "literal": 0.0,
+        "modifier": -0.25,
+        "permanent": false,
+        "statName": "hull-angularmotor"
+      },
+      {
+        "literal": 0.0,
+        "modifier": 0.5,
+        "permanent": false,
+        "statName": "hull-sigpower-wake"
+      }
+    ],
     "name": "Sundrive Racing Pro",
     "partKey": "CCk5q9VLakGzV_L-NvRcjA",
     "pointCost": 20,
@@ -7235,6 +8107,7 @@
     "mass": 3.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "T20 Cannon",
     "partKey": "0jvVXBmPFkKyNBy-UuIeAQ",
     "pdtTargetMethod": 0,
@@ -7309,6 +8182,7 @@
     "mass": 50.0,
     "maxHealth": 200.0,
     "modId": 0,
+    "modifiers": [],
     "name": "T30 Cannon",
     "partKey": "447SbWgC6EycMj7maoUaeg",
     "pdtTargetMethod": 0,
@@ -7375,6 +8249,7 @@
     "mass": 80.0,
     "maxHealth": 300.0,
     "modId": 0,
+    "modifiers": [],
     "name": "T81 Plasma Cannon",
     "partKey": "zG5JrsOa6E6X9pomy3NSow",
     "pdtTargetMethod": 0,
@@ -7430,6 +8305,7 @@
     "mass": 15.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "TALS-2 'Talisman' Launcher",
     "partKey": "yycLdJrBUEi5_wTBbD6vHQ",
     "pointCost": 10,
@@ -7492,6 +8368,7 @@
     "mass": 100.0,
     "maxHealth": 150.0,
     "modId": 0,
+    "modifiers": [],
     "name": "TE45 Mass Driver",
     "partKey": "3lxHhRlrDEGArjoDwBLFEQ",
     "pdtTargetMethod": 0,

@@ -57,6 +57,15 @@ const FACTION_GROUPS = [
   { key: "Stock/Alliance", label: "ANS", name: "Alliance Navy" },
   { key: "Stock/Protectorate", label: "OSP", name: "Outer Systems Protectorate" },
 ];
+const GAMEPLAY_MODIFIER_LABELS = new Map([
+  ["hull-maxspeed", "Max speed"],
+  ["hull-turnrate", "Turn rate"],
+  ["hull-linearmotor", "Linear motor"],
+  ["hull-angularmotor", "Angular motor"],
+  ["hull-sigpower-wake", "Wake signature"],
+  ["hull-sigmult-radar", "Radar signature"],
+  ["hull-missilechannels", "Missile channels"],
+]);
 
 function factionLabel(factionKey) {
   return FACTION_GROUPS.find((group) => group.key === factionKey)?.label ?? factionKey ?? "Other";
@@ -70,6 +79,22 @@ function formatNumber(value, digits = 0) {
   return Number(value ?? 0).toLocaleString(undefined, {
     maximumFractionDigits: digits,
   });
+}
+
+function formatSignedNumber(value, digits = 0) {
+  const number = Number(value ?? 0);
+  const sign = number > 0 ? "+" : "";
+  return `${sign}${formatNumber(number, digits)}`;
+}
+
+function formatSignedPercent(value, digits = 1) {
+  return `${formatSignedNumber(Number(value ?? 0) * 100, digits)}%`;
+}
+
+function formatCurrentStat(stat, digits = 0) {
+  const modifier = Number(stat?.modifier ?? 0);
+  const suffix = Math.abs(modifier) > 0.0001 ? ` ${formatSignedPercent(modifier)}` : "";
+  return `${formatNumber(stat?.value, digits)}${suffix}`;
 }
 
 function sizeLabel(size) {
@@ -209,7 +234,7 @@ function renderHullSelector() {
       button.type = "button";
       button.innerHTML = `
         <span class="hull-row__main">${hull.name}</span>
-        <span class="hull-row__meta">${hull.hullClassification} | ${formatNumber(hull.pointCost)} pts</span>
+        <span class="hull-row__meta">${hull.hullClassification} | ${formatNumber(hull.pointCost)} pts${hull.modular ? " | modular" : ""}</span>
       `;
       button.addEventListener("click", () => {
         state.design = createDefaultDesign(hull, state.indexes);
@@ -217,6 +242,7 @@ function renderHullSelector() {
         state.componentSearch = "";
         state.componentCategory = "all";
         render();
+        showStatus(`${hull.name} selected`);
       });
       section.append(button);
     }
@@ -227,12 +253,12 @@ function renderHullSelector() {
 function renderHeader(summary) {
   const { hull } = summary;
   els.hullName.textContent = hull.name;
-  els.hullMeta.textContent = `${factionLabel(hull.factionKey)} | ${hull.hullClassification} | ${formatNumber(hull.mass)} t`;
+  els.hullMeta.textContent = `${factionLabel(hull.factionKey)} | ${hull.hullClassification} | ${formatNumber(hull.mass)} t${hull.modular ? " | representative modular layout" : ""}`;
   const stats = [
     ["Points", formatNumber(summary.totals.pointCost)],
     ["Power", formatNumber(summary.totals.powerBalance)],
-    ["Installed", `${summary.totals.installedCount}/${summary.totals.socketCount}`],
-    ["Crew", `${formatNumber(summary.totals.crewRequired)}/${formatNumber(summary.totals.crewComplement)}`],
+    ["Speed", formatCurrentStat(summary.mobility.maxSpeed, 2)],
+    ["Turn", formatCurrentStat(summary.mobility.turnRate, 3)],
   ];
   els.headerStats.innerHTML = "";
   for (const [label, value] of stats) {
@@ -298,7 +324,8 @@ function renderSocketDetails() {
   const socket = selectedSocket();
   const installed = componentForSlot(state.design, socket, state.indexes);
   els.socketTitle.textContent = `${socket.shortName} | ${socket.name}`;
-  els.socketMeta.textContent = `${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName} | ${sizeLabel(socket.size)} | pos ${formatNumber(socket.position?.x, 2)}, ${formatNumber(socket.position?.y, 2)}, ${formatNumber(socket.position?.z, 2)}`;
+  const source = socket.sourcePart ? ` | ${socket.sourcePart}` : "";
+  els.socketMeta.textContent = `${SLOT_TYPE_LABELS[socket.typeName] ?? socket.typeName} | ${sizeLabel(socket.size)} | pos ${formatNumber(socket.position?.x, 2)}, ${formatNumber(socket.position?.y, 2)}, ${formatNumber(socket.position?.z, 2)}${source}`;
   els.installedName.textContent = componentDisplayName(installed?.name);
   els.installedMeta.textContent = installed
     ? `${installed.category} | ${formatNumber(installed.pointCost)} pts | ${formatNumber(installed.mass, 1)} t`
@@ -349,9 +376,13 @@ function renderStats(summary) {
   const stats = [
     ["Points", formatNumber(summary.totals.pointCost)],
     ["Mass", formatNumber(summary.totals.mass, 1)],
-    ["Crew req.", formatNumber(summary.totals.crewRequired)],
-    ["Crew base", formatNumber(summary.totals.crewComplement)],
     ["Power", formatNumber(summary.totals.powerBalance)],
+    ["Crew", `${formatNumber(summary.totals.crewRequired)}/${formatNumber(summary.totals.crewComplement)}`],
+    ["Speed", formatCurrentStat(summary.mobility.maxSpeed, 2)],
+    ["Turn", formatCurrentStat(summary.mobility.turnRate, 3)],
+    ["Accel idx", formatNumber(summary.mobility.accelerationIndex * 1000, 2)],
+    ["Turn idx", formatNumber(summary.mobility.turnIndex * 1000, 2)],
+    ["Drives", `${summary.mobility.driveCount} / ${formatNumber(summary.mobility.drivePower)}`],
     ["Installed", `${summary.totals.installedCount}/${summary.totals.socketCount}`],
   ];
   els.statsGrid.innerHTML = "";
@@ -379,11 +410,15 @@ function renderStats(summary) {
 }
 
 function renderComponentFilters() {
-  const categories = componentCategories(state.indexes.components);
-  if (els.categoryFilter.children.length) return;
+  const socket = selectedSocket();
+  const hull = selectedHull();
+  const compatible = compatibleComponents(socket, state.indexes.components, hull);
+  const categories = componentCategories(compatible);
+  const selected = state.componentCategory;
+  els.categoryFilter.innerHTML = "";
   const all = document.createElement("option");
   all.value = "all";
-  all.textContent = "All categories";
+  all.textContent = "All compatible";
   els.categoryFilter.append(all);
   for (const category of categories) {
     const option = document.createElement("option");
@@ -391,6 +426,24 @@ function renderComponentFilters() {
     option.textContent = category;
     els.categoryFilter.append(option);
   }
+  state.componentCategory = selected === "all" || categories.includes(selected) ? selected : "all";
+  els.categoryFilter.value = state.componentCategory;
+}
+
+function componentEffectLabel(component) {
+  const effects = (component.modifiers ?? [])
+    .filter((modifier) => GAMEPLAY_MODIFIER_LABELS.has(modifier.statName))
+    .map((modifier) => {
+      const label = GAMEPLAY_MODIFIER_LABELS.get(modifier.statName);
+      const percent = Math.abs(Number(modifier.modifier ?? 0)) > 0.0001
+        ? formatSignedPercent(modifier.modifier)
+        : "";
+      const literal = Math.abs(Number(modifier.literal ?? 0)) > 0.0001
+        ? formatSignedNumber(modifier.literal, 1)
+        : "";
+      return `${label} ${percent || literal}`.trim();
+    });
+  return effects.slice(0, 3).join(" | ");
 }
 
 function renderComponentList() {
@@ -422,57 +475,58 @@ function renderComponentList() {
     button.innerHTML = `
       <span class="component-row__name">${component.name}</span>
       <span class="component-row__meta">${component.category} | ${sizeLabel(component.size)} | ${formatNumber(component.pointCost)} pts</span>
-      <span class="component-row__meta">${formatNumber(component.mass, 1)} t | HP ${formatNumber(component.maxHealth)}</span>
+      <span class="component-row__meta">${componentEffectLabel(component) || `${formatNumber(component.mass, 1)} t | HP ${formatNumber(component.maxHealth)}`}</span>
     `;
     button.addEventListener("click", () => {
       state.design = setSlotComponent(state.design, socket, component);
       render();
+      showStatus(`${component.name} installed in ${socket.shortName}`);
     });
     els.componentList.append(button);
   }
+  if (!compatible.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-state";
+    empty.textContent = "No compatible components for this socket.";
+    els.componentList.append(empty);
+  }
 }
 
-function vectorLabel(vector, digits = 2) {
-  if (!vector) return "-";
-  return `x ${formatNumber(vector.x, digits)}, y ${formatNumber(vector.y, digits)}, z ${formatNumber(vector.z, digits)}`;
+function socketSummaryLabel(hull) {
+  return Object.entries(hull.socketSummary ?? {})
+    .map(([key, value]) => `${key} ${value}`)
+    .join(" / ");
 }
 
-function boxLabel(box) {
-  if (!box) return "-";
-  return `center ${vectorLabel(box.center)} / extent ${vectorLabel(box.extent)}`;
-}
-
-function scalarSpecRows(hull) {
+function scalarSpecRows(summary) {
+  const { hull } = summary;
   const structure = hull.structure ?? {};
   const armor = hull.armorAspect ?? {};
-  const geometry = hull.geometry ?? {};
   return [
     ["Faction", hull.factionKey],
     ["Equipment", hull.overrideEquipmentFactionKey || hull.factionKey],
-    ["Class name", hull.className],
-    ["Hull class", hull.hullClassification],
-    ["Intel class", hull.typeClassification],
-    ["Point cost", formatNumber(hull.pointCost)],
-    ["Mass", `${formatNumber(hull.mass, 1)} t`],
-    ["Weight class", hull.weightClass],
+    ["Class", `${hull.className} ${hull.hullClassification ? `(${hull.hullClassification})` : ""}`],
+    ["Layout", hull.modular ? "Representative modular bow/core/stern" : "Fixed hull"],
+    ["Point total", `${formatNumber(summary.totals.pointCost)} (${formatNumber(hull.pointCost)} hull)`],
+    ["Mass total", `${formatNumber(summary.totals.mass, 1)} t`],
+    ["Crew", `${formatNumber(summary.totals.crewRequired)} required / ${formatNumber(summary.totals.crewComplement)} base`],
+    ["Power balance", formatNumber(summary.totals.powerBalance)],
+    ["Current max speed", formatCurrentStat(summary.mobility.maxSpeed, 2)],
+    ["Current turn rate", formatCurrentStat(summary.mobility.turnRate, 3)],
+    ["Linear motor force", formatCurrentStat(summary.mobility.linearMotor, 1)],
+    ["Angular motor force", formatCurrentStat(summary.mobility.angularMotor, 1)],
+    ["Acceleration index", formatNumber(summary.mobility.accelerationIndex * 1000, 2)],
+    ["Turn index", formatNumber(summary.mobility.turnIndex * 1000, 2)],
+    ["Drive output", `${summary.mobility.driveCount} drives / ${formatNumber(summary.mobility.drivePower)} power`],
+    ["Drive names", summary.mobility.driveNames.join(" / ")],
     ["Base integrity", formatNumber(structure.baseIntegrity, 1)],
-    ["Min damage count", formatNumber(structure.minDamageToCount, 1)],
-    ["Max speed", formatNumber(hull.maxSpeed, 2)],
-    ["Max turn speed", formatNumber(hull.maxTurnSpeed, 3)],
-    ["Linear motor force", formatNumber(hull.linearMotorForce, 1)],
-    ["Angular motor force", formatNumber(hull.angularMotorForce, 1)],
-    ["Crew complement", formatNumber(hull.crewComplement)],
-    ["Crew vulnerability", formatNumber(hull.crewVulnerability, 3)],
     ["Component DR", formatNumber(hull.componentDamageReduction, 3)],
     ["Interior armor eq.", formatNumber(hull.interiorDensityArmorEquivalent, 3)],
-    ["Vision distance", formatNumber(hull.visionDistance, 1)],
-    ["Identity work", formatNumber(hull.identityWorkRequired, 1)],
-    ["Wake signature", formatNumber(hull.wakeSignatureStrength, 1)],
+    ["Wake signature", formatCurrentStat(summary.mobility.wakeSignature, 1)],
     ["Fuel capacity", formatNumber(hull.fuelUnitCapacity, 1)],
     ["Storage transfer", formatNumber(hull.storageTransferRate, 3)],
     ["Craft repair slots", formatNumber(hull.baseCraftRepairSlots)],
-    ["Tank facing", hull.tankFacing],
-    ["Sockets", Object.entries(hull.socketSummary ?? {}).map(([key, value]) => `${key} ${value}`).join(" / ")],
+    ["Sockets", socketSummaryLabel(hull)],
     ["Armor front angle", formatNumber(armor.FrontAngle, 1)],
     ["Armor rear angle", formatNumber(armor.RearAngle, 1)],
     ["Armor top angle", formatNumber(armor.TopAngle, 1)],
@@ -480,27 +534,40 @@ function scalarSpecRows(hull) {
     ["Armor side mult", formatNumber(armor.SideArmorMult, 3)],
     ["Armor rear mult", formatNumber(armor.RearArmorMult, 3)],
     ["Armor top mult", formatNumber(armor.TopArmorMult, 3)],
-    ["Hull volume boxes", formatNumber(geometry.volumes?.length)],
-    ["Hull line Z", `${formatNumber(geometry.lineBackZ, 2)} to ${formatNumber(geometry.lineForwardZ, 2)}`],
-    ["Radar signature", boxLabel(geometry.radarSignature)],
-    ["Select volume center", vectorLabel(geometry.selectVolume?.center)],
-    ["Select volume size", vectorLabel(geometry.selectVolume?.size)],
   ];
 }
 
+function gameplayModifierRows(modifiers) {
+  const totals = new Map();
+  for (const modifier of modifiers ?? []) {
+    if (!GAMEPLAY_MODIFIER_LABELS.has(modifier.statName)) continue;
+    const row = totals.get(modifier.statName) ?? { literal: 0, modifier: 0 };
+    row.literal += Number(modifier.literal ?? 0);
+    row.modifier += Number(modifier.modifier ?? 0);
+    totals.set(modifier.statName, row);
+  }
+  return [...totals.entries()]
+    .filter(([, value]) => Math.abs(value.literal) > 0.0001 || Math.abs(value.modifier) > 0.0001)
+    .map(([statName, value]) => {
+      const parts = [];
+      if (Math.abs(value.modifier) > 0.0001) parts.push(formatSignedPercent(value.modifier));
+      if (Math.abs(value.literal) > 0.0001) parts.push(formatSignedNumber(value.literal, 1));
+      return [`Active ${GAMEPLAY_MODIFIER_LABELS.get(statName)}`, parts.join(" / ")];
+    });
+}
+
 function renderHullSpecs(summary) {
-  const hull = summary.hull;
   els.hullSpecs.innerHTML = "";
-  for (const [label, value] of scalarSpecRows(hull)) {
+  for (const [label, value] of scalarSpecRows(summary)) {
     const row = document.createElement("div");
     row.className = "spec-row";
     row.innerHTML = `<span>${label}</span><strong>${value ?? "-"}</strong>`;
     els.hullSpecs.append(row);
   }
-  for (const modifier of hull.baseModifiers ?? []) {
+  for (const [label, value] of gameplayModifierRows(summary.mobility.modifiers)) {
     const row = document.createElement("div");
     row.className = "spec-row spec-row--modifier";
-    row.innerHTML = `<span>${modifier._statName ?? "Modifier"}</span><strong>${formatNumber(modifier._modifier, 3)} / ${formatNumber(modifier._literal, 3)}</strong>`;
+    row.innerHTML = `<span>${label}</span><strong>${value}</strong>`;
     els.hullSpecs.append(row);
   }
 }
