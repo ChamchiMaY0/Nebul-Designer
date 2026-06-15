@@ -1,0 +1,1139 @@
+[
+  {
+    "armorDamageRadius": 0.4000000059604645,
+    "armorPenetration": 45.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/120mm ap shell.asset",
+    "componentDamage": 30.0,
+    "crewVulnerabilityMultiplier": 0.5,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "",
+    "flightSpeed": 80.0,
+    "heatPower": 0.0,
+    "id": "f80d97c5-05b5-49e1-a619-4c2b35f35849",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 9.0,
+    "maxPenetrationDistance": -1.0,
+    "munitionKey": "f80d97c5-05b5-49e1-a619-4c2b35f35849",
+    "munitionName": "",
+    "name": "120mm AP Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 100,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightKineticShell",
+    "storageVolume": 0.05000000074505806,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "120mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.4000000059604645,
+    "armorPenetration": 30.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/120mm he shell.asset",
+    "componentDamage": 50.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "explosionRadius": 0.5,
+    "factionKey": "",
+    "flightSpeed": 80.0,
+    "heatPower": 200.0,
+    "id": "c38a05b5-864d-40d7-a632-965070d8ded8",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 9.0,
+    "maxPenetrationDistance": 1.5,
+    "munitionKey": "c38a05b5-864d-40d7-a632-965070d8ded8",
+    "munitionName": "",
+    "name": "120mm HE Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 100,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightExplosiveShell",
+    "storageVolume": 0.05000000074505806,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "120mm"
+    }
+  },
+  {
+    "armorDamageRadius": 1.0,
+    "armorPenetration": 0.2750000059604645,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/15mm sandshot.asset",
+    "componentDamage": 75.0,
+    "crewVulnerabilityMultiplier": 0.05000000074505806,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "",
+    "flightSpeed": 250.0,
+    "heatPower": 1500.0,
+    "id": "01baab8a-7e60-459d-bc42-7328aee6d0d3",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 3.200000047683716,
+    "maxPenetrationDistance": -1.0,
+    "munitionKey": "01baab8a-7e60-459d-bc42-7328aee6d0d3",
+    "munitionName": "",
+    "name": "15mm Sandshot",
+    "overpenDamageMultiplier": 0.15000000596046448,
+    "pointCost": 1,
+    "pointDivision": 50,
+    "recommendedTargetTypes": [
+      2,
+      3
+    ],
+    "repoolDelay": 0.0,
+    "role": 2,
+    "script": "LightweightClusterShell",
+    "storageVolume": 0.0024999999441206455,
+    "tags": {
+      "Class": "Ballistic/Magnetic",
+      "Subclass": "15mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.10000000149011612,
+    "armorPenetration": 0.30000001192092896,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/20mm slug.asset",
+    "componentDamage": 15.0,
+    "crewVulnerabilityMultiplier": 0.009999999776482582,
+    "factionKey": "",
+    "flightSpeed": 70.0,
+    "heatPower": 0.0,
+    "id": "0a57bc1f-802c-46d5-8f6c-e1fc21a399c5",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 2.5,
+    "maxPenetrationDistance": 0.10000000149011612,
+    "munitionKey": "0a57bc1f-802c-46d5-8f6c-e1fc21a399c5",
+    "munitionName": "",
+    "name": "20mm Slug",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 2000,
+    "recommendedTargetTypes": [
+      2,
+      3
+    ],
+    "repoolDelay": 1.0,
+    "role": 2,
+    "script": "NonphysicalMunition",
+    "storageVolume": 0.0024999999441206455,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "20mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.800000011920929,
+    "armorPenetration": 60.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/250mm ap shell.asset",
+    "componentDamage": 70.0,
+    "crewVulnerabilityMultiplier": 0.75,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "",
+    "flightSpeed": 80.0,
+    "heatPower": 0.0,
+    "id": "b3f80a81-d77b-48e6-bca4-7482ee287de5",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.0,
+    "maxPenetrationDistance": -1.0,
+    "munitionKey": "b3f80a81-d77b-48e6-bca4-7482ee287de5",
+    "munitionName": "",
+    "name": "250mm AP Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 50,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightKineticShell",
+    "storageVolume": 0.15000000596046448,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "250mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.800000011920929,
+    "armorPenetration": 40.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/250mm he shell.asset",
+    "componentDamage": 80.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "explosionRadius": 0.8999999761581421,
+    "factionKey": "",
+    "flightSpeed": 80.0,
+    "heatPower": 350.0,
+    "id": "c8467e72-412a-4fd6-ba5e-990ac6ec6d8f",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.0,
+    "maxPenetrationDistance": 2.5,
+    "munitionKey": "c8467e72-412a-4fd6-ba5e-990ac6ec6d8f",
+    "munitionName": "",
+    "name": "250mm HE Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 50,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightExplosiveShell",
+    "storageVolume": 0.15000000596046448,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "250mm"
+    }
+  },
+  {
+    "armorDamageRadius": 1.0,
+    "armorPenetration": 200.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/300mm ap rail sabot.asset",
+    "componentDamage": 80.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "",
+    "flightSpeed": 200.0,
+    "heatPower": 1500.0,
+    "id": "8b469d65-2e36-44b6-9eac-e61cf290ab62",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.5,
+    "maxPenetrationDistance": -1.0,
+    "munitionKey": "8b469d65-2e36-44b6-9eac-e61cf290ab62",
+    "munitionName": "",
+    "name": "300mm AP Rail Sabot",
+    "overpenDamageMultiplier": 0.5,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightKineticShell",
+    "storageVolume": 0.75,
+    "tags": {
+      "Class": "Ballistic/Magnetic",
+      "Subclass": "300mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.10000000149011612,
+    "armorPenetration": 4.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/35mm slug.asset",
+    "componentDamage": 15.0,
+    "crewVulnerabilityMultiplier": 0.009999999776482582,
+    "factionKey": "",
+    "flightSpeed": 70.0,
+    "heatPower": 0.0,
+    "id": "16080993-a42b-44dc-9040-18db383e84d1",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 2.5,
+    "maxPenetrationDistance": 0.10000000149011612,
+    "munitionKey": "16080993-a42b-44dc-9040-18db383e84d1",
+    "munitionName": "",
+    "name": "35mm Slug",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 1000,
+    "recommendedTargetTypes": [
+      2,
+      3,
+      1
+    ],
+    "repoolDelay": 1.0,
+    "role": 2,
+    "script": "NonphysicalMunition",
+    "storageVolume": 0.004999999888241291,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "35mm"
+    }
+  },
+  {
+    "armorDamageRadius": 1.25,
+    "armorPenetration": 120.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/450mm ap shell.asset",
+    "componentDamage": 100.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "",
+    "flightSpeed": 80.0,
+    "heatPower": 0.0,
+    "id": "1bd5d43e-8218-4e87-87fb-650c2079e230",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 14.050000190734863,
+    "maxPenetrationDistance": -1.0,
+    "munitionKey": "1bd5d43e-8218-4e87-87fb-650c2079e230",
+    "munitionName": "",
+    "name": "450mm AP Shell",
+    "overpenDamageMultiplier": 0.30000001192092896,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightKineticShell",
+    "storageVolume": 0.800000011920929,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "450mm"
+    }
+  },
+  {
+    "armorDamageRadius": 1.25,
+    "armorPenetration": 65.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/450mm he shell.asset",
+    "componentDamage": 150.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "explosionRadius": 1.5,
+    "factionKey": "",
+    "flightSpeed": 80.0,
+    "heatPower": 500.0,
+    "id": "2e5dbfb3-700c-498e-881c-8dfbb3b4b257",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 14.050000190734863,
+    "maxPenetrationDistance": 3.0,
+    "munitionKey": "2e5dbfb3-700c-498e-881c-8dfbb3b4b257",
+    "munitionName": "",
+    "name": "450mm HE Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightExplosiveShell",
+    "storageVolume": 0.800000011920929,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "450mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.20000000298023224,
+    "armorPenetration": 0.17599999904632568,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/50mm flak shell.asset",
+    "componentDamage": 15.0,
+    "crewVulnerabilityMultiplier": 0.10000000149011612,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "",
+    "flightSpeed": 65.0,
+    "heatPower": 0.0,
+    "id": "0b0a613d-6545-4f41-a6db-a2c91ba77ef6",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 3.0799999237060547,
+    "maxPenetrationDistance": 0.20000000298023224,
+    "munitionKey": "0b0a613d-6545-4f41-a6db-a2c91ba77ef6",
+    "munitionName": "",
+    "name": "50mm Flak Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 75,
+    "recommendedTargetTypes": [
+      2,
+      3
+    ],
+    "repoolDelay": 1.0,
+    "role": 2,
+    "script": "LightweightAirburstShell",
+    "storageVolume": 0.009999999776482582,
+    "tags": {
+      "Class": "Ballistic/Chemical/Timed",
+      "Subclass": "50mm"
+    }
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/blast fragmentation.asset",
+    "componentDamage": {
+      "_amountPerIncrement": 70.0,
+      "_falloff": 3,
+      "_falloffFactor": 0.6600000262260437
+    },
+    "factionKey": "",
+    "id": "Blast Fragmentation",
+    "name": "Blast Fragmentation",
+    "pointCost": 0.25,
+    "recommendedTargetTypes": [
+      2,
+      3
+    ],
+    "script": "FragmentationWarheadDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/blast fragmentation el.asset",
+    "componentDamage": {
+      "_amountPerIncrement": 70.0,
+      "_falloff": 3,
+      "_falloffFactor": 0.6600000262260437
+    },
+    "factionKey": "",
+    "id": "Blast Fragmentation EL",
+    "name": "Blast Fragmentation EL",
+    "pointCost": 3.5,
+    "recommendedTargetTypes": [
+      2,
+      3
+    ],
+    "script": "FragmentationWarheadDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/boosted self-screening jammer.asset",
+    "factionKey": "",
+    "id": "Boosted Self-Screening Jammer",
+    "name": "Boosted Self-Screening Jammer",
+    "pointCost": 10.0,
+    "script": "JammerSupportDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/cluster decoy launcher.asset",
+    "factionKey": "",
+    "id": "Cluster Decoy Launcher",
+    "name": "Cluster Decoy Launcher",
+    "pointCost": 30.0,
+    "script": "DecoyLaunchingSupportDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/cold gas bottle.asset",
+    "factionKey": "",
+    "id": "Cold Gas Bottle",
+    "name": "Cold Gas Bottle",
+    "pointCost": 1.0,
+    "script": "BaseSupportDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/command receiver.asset",
+    "factionKey": "",
+    "id": "Command Receiver",
+    "name": "Command Receiver",
+    "pointCost": 3.5,
+    "script": "CommandSeekerDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/cruise guidance.asset",
+    "factionKey": "",
+    "id": "Cruise Guidance",
+    "name": "Cruise Guidance",
+    "pointCost": 2.0,
+    "role": 1,
+    "script": "CruiseGuidanceDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/decoy launcher.asset",
+    "factionKey": "",
+    "id": "Decoy Launcher",
+    "name": "Decoy Launcher",
+    "pointCost": 12.0,
+    "script": "DecoyLaunchingSupportDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/direct guidance.asset",
+    "factionKey": "",
+    "id": "Direct Guidance",
+    "name": "Direct Guidance",
+    "pointCost": 0.0,
+    "role": 1,
+    "script": "DirectGuidanceDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/fast startup module.asset",
+    "factionKey": "",
+    "id": "Fast Startup Module",
+    "name": "Fast Startup Module",
+    "pointCost": 3.0,
+    "script": "BaseSupportDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/fixed active radar seeker.asset",
+    "factionKey": "",
+    "id": "Fixed Active Radar Seeker",
+    "name": "Fixed Active Radar Seeker",
+    "pointCost": 1.0,
+    "script": "ActiveSeekerDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/fixed anti-radiation seeker.asset",
+    "factionKey": "",
+    "id": "Fixed Anti-Radiation Seeker",
+    "name": "Fixed Anti-Radiation Seeker",
+    "pointCost": 0.5,
+    "script": "PassiveARHSeekerDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/fixed semi-active radar seeker.asset",
+    "factionKey": "",
+    "id": "Fixed Semi-Active Radar Seeker",
+    "name": "Fixed Semi-Active Radar Seeker",
+    "pointCost": 0.5,
+    "script": "ActiveSeekerDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/he impact.asset",
+    "componentDamage": {
+      "_amountPerIncrement": 240.0,
+      "_falloff": 0,
+      "_falloffFactor": 0.0
+    },
+    "crewVulnerabilityMultiplier": 1.5,
+    "factionKey": "",
+    "heatPower": 1500.0,
+    "id": "HE Impact",
+    "name": "HE Impact",
+    "pointCost": 0.25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "script": "ImpactConeWarheadDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/hardened skin.asset",
+    "factionKey": "",
+    "id": "Hardened Skin",
+    "name": "Hardened Skin",
+    "pointCost": 5.0,
+    "script": "BaseSupportDescriptor"
+  },
+  {
+    "armorDamageRadius": 1.0,
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/kinetic kill mass.asset",
+    "componentDamage": {
+      "_amountPerIncrement": 7.5,
+      "_falloff": 3,
+      "_falloffFactor": 0.33000001311302185
+    },
+    "factionKey": "",
+    "id": "Kinetic Kill Mass",
+    "name": "Kinetic Kill Mass",
+    "pointCost": 0.0,
+    "recommendedTargetTypes": [
+      2,
+      3
+    ],
+    "script": "SimpleKineticWarheadDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/radar absorbent coating.asset",
+    "factionKey": "",
+    "id": "Radar Absorbent Coating",
+    "name": "Radar Absorbent Coating",
+    "pointCost": 4.0,
+    "script": "BaseSupportDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/self-screening jammer.asset",
+    "factionKey": "",
+    "id": "Self-Screening Jammer",
+    "name": "Self-Screening Jammer",
+    "pointCost": 5.0,
+    "script": "JammerSupportDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/steerable active radar seeker.asset",
+    "factionKey": "",
+    "id": "Steerable Active Radar Seeker",
+    "name": "Steerable Active Radar Seeker",
+    "pointCost": 1.5,
+    "script": "ActiveSeekerDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/steerable extended active radar seeker.asset",
+    "factionKey": "",
+    "id": "Steerable Extended Active Radar Seeker",
+    "name": "Steerable Extended Active Radar Seeker",
+    "pointCost": 3.0,
+    "script": "ActiveSeekerDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/wake-homing seeker.asset",
+    "factionKey": "",
+    "id": "Wake-Homing Seeker",
+    "name": "Wake-Homing Seeker",
+    "pointCost": 0.25,
+    "script": "PassiveSeekerDescriptor"
+  },
+  {
+    "armorDamageRadius": 0.20000000298023224,
+    "armorPenetration": 10.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/120mm he-rpf shell.asset",
+    "componentDamage": 8.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Alliance",
+    "flightSpeed": 80.0,
+    "heatPower": 0.0,
+    "id": "865db216-983a-466d-80b6-baf9828b811b",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 9.0,
+    "maxPenetrationDistance": 1.0,
+    "munitionKey": "865db216-983a-466d-80b6-baf9828b811b",
+    "munitionName": "",
+    "name": "120mm HE-RPF Shell",
+    "overpenDamageMultiplier": 1.0,
+    "pointCost": 1,
+    "pointDivision": 100,
+    "recommendedTargetTypes": [
+      1,
+      3,
+      2
+    ],
+    "repoolDelay": 5.0,
+    "role": -1,
+    "script": "LightweightProximityShell",
+    "storageVolume": 0.05000000074505806,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "120mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.30000001192092896,
+    "armorPenetration": 20.0,
+    "assetPath": "assets/#bundles/stock-f1/f1/munitions/250mm he-rpf shell.asset",
+    "componentDamage": 16.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Alliance",
+    "flightSpeed": 80.0,
+    "heatPower": 0.0,
+    "id": "81b8bfd4-a365-4e0b-ae8e-d125a368289f",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.0,
+    "maxPenetrationDistance": 1.0,
+    "munitionKey": "81b8bfd4-a365-4e0b-ae8e-d125a368289f",
+    "munitionName": "",
+    "name": "250mm HE-RPF Shell",
+    "overpenDamageMultiplier": 1.0,
+    "pointCost": 1,
+    "pointDivision": 50,
+    "recommendedTargetTypes": [
+      1,
+      3,
+      2
+    ],
+    "repoolDelay": 5.0,
+    "role": -1,
+    "script": "LightweightProximityShell",
+    "storageVolume": 0.15000000596046448,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "250mm"
+    }
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/electro-optical seeker.asset",
+    "factionKey": "Stock/Alliance",
+    "id": "Electro-Optical Seeker",
+    "name": "Electro-Optical Seeker",
+    "pointCost": 8.0,
+    "script": "PassiveSeekerDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/he kinetic penetrator.asset",
+    "factionKey": "Stock/Alliance",
+    "id": "HE Kinetic Penetrator",
+    "maxPenetrationDistance": 17.5,
+    "name": "HE Kinetic Penetrator",
+    "pointCost": 1.75,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "script": "KineticPenetratorWarheadDescriptor"
+  },
+  {
+    "armorDamageRadius": 0.4000000059604645,
+    "armorPenetration": 45.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/100mm ap shell.asset",
+    "componentDamage": 25.0,
+    "crewVulnerabilityMultiplier": 0.5,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 90.0,
+    "heatPower": 0.0,
+    "id": "8d732e9c-a4c8-43db-93ee-0a3f539ddbca",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 8.0,
+    "maxPenetrationDistance": -1.0,
+    "munitionKey": "8d732e9c-a4c8-43db-93ee-0a3f539ddbca",
+    "munitionName": "",
+    "name": "100mm AP Shell",
+    "overpenDamageMultiplier": 0.10000000149011612,
+    "pointCost": 1,
+    "pointDivision": 250,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightKineticShell",
+    "storageVolume": 0.05000000074505806,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "100mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.4000000059604645,
+    "armorPenetration": 16.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/100mm grape.asset",
+    "componentDamage": 25.0,
+    "crewVulnerabilityMultiplier": 5.0,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 110.0,
+    "heatPower": 0.0,
+    "id": "0355110d-f9f0-4d8a-8213-2a3016baa282",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 7.269999980926514,
+    "maxPenetrationDistance": -1.0,
+    "munitionKey": "0355110d-f9f0-4d8a-8213-2a3016baa282",
+    "munitionName": "",
+    "name": "100mm Grape",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 250,
+    "recommendedTargetTypes": [
+      1,
+      2,
+      3
+    ],
+    "repoolDelay": 0.0,
+    "role": 3,
+    "script": "LightweightClusterShell",
+    "storageVolume": 0.05000000074505806,
+    "tags": {
+      "Class": "Ballistic/Cannister",
+      "Subclass": "100mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.4000000059604645,
+    "armorPenetration": 30.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/100mm he shell.asset",
+    "componentDamage": 45.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "explosionRadius": 0.5,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 90.0,
+    "heatPower": 200.0,
+    "id": "1a6dc419-3663-40ca-92b7-399ba84f3c43",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 8.0,
+    "maxPenetrationDistance": 1.5,
+    "munitionKey": "1a6dc419-3663-40ca-92b7-399ba84f3c43",
+    "munitionName": "",
+    "name": "100mm HE Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 250,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightExplosiveShell",
+    "storageVolume": 0.05000000074505806,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "100mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.4000000059604645,
+    "armorPenetration": 8.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/100mm he-hc shell.asset",
+    "componentDamage": 70.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "explosionRadius": 1.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 90.0,
+    "heatPower": 200.0,
+    "id": "c0c913cb-c125-4d4e-afcf-768b0f681f43",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 8.0,
+    "maxPenetrationDistance": 3.0,
+    "munitionKey": "c0c913cb-c125-4d4e-afcf-768b0f681f43",
+    "munitionName": "",
+    "name": "100mm HE-HC Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 250,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightExplosiveShell",
+    "storageVolume": 0.05000000074505806,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "100mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.5,
+    "armorPenetration": 30.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/250mm bomb shell.asset",
+    "componentDamage": 12.0,
+    "crewVulnerabilityMultiplier": 0.10000000149011612,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 80.0,
+    "heatPower": 5.0,
+    "id": "95115bd4-854f-4a2a-9cc1-d3f374f514e3",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.0,
+    "maxPenetrationDistance": 0.20000000298023224,
+    "munitionKey": "95115bd4-854f-4a2a-9cc1-d3f374f514e3",
+    "munitionName": "",
+    "name": "250mm Bomb Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 50,
+    "recommendedTargetTypes": [
+      2,
+      3,
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 3,
+    "script": "LightweightAirburstFragShell",
+    "storageVolume": 0.15000000596046448,
+    "tags": {
+      "Class": "Ballistic/Chemical/Timed",
+      "Subclass": "250mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.20000000298023224,
+    "armorPenetration": 0.10000000149011612,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/250mm flak shell.asset",
+    "componentDamage": 30.0,
+    "crewVulnerabilityMultiplier": 0.10000000149011612,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 80.0,
+    "heatPower": 0.0,
+    "id": "57fd4268-6ffd-4e3b-9b0e-a7a9fc4cf566",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.0,
+    "maxPenetrationDistance": 0.20000000298023224,
+    "munitionKey": "57fd4268-6ffd-4e3b-9b0e-a7a9fc4cf566",
+    "munitionName": "",
+    "name": "250mm Flak Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 100,
+    "recommendedTargetTypes": [
+      2,
+      3
+    ],
+    "repoolDelay": 5.0,
+    "role": 2,
+    "script": "LightweightAirburstShell",
+    "storageVolume": 0.15000000596046448,
+    "tags": {
+      "Class": "Ballistic/Chemical/Timed",
+      "Subclass": "250mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.800000011920929,
+    "armorPenetration": 15.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/250mm he-hc shell.asset",
+    "componentDamage": 120.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "explosionRadius": 1.5,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 80.0,
+    "heatPower": 350.0,
+    "id": "70b2d226-eaf9-4a8a-a766-d7dccda883b6",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.0,
+    "maxPenetrationDistance": 2.5,
+    "munitionKey": "70b2d226-eaf9-4a8a-a766-d7dccda883b6",
+    "munitionName": "",
+    "name": "250mm HE-HC Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 50,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightExplosiveShell",
+    "storageVolume": 0.15000000596046448,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "250mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.10000000149011612,
+    "armorPenetration": 0.10000000149011612,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/35mm flechette.asset",
+    "componentDamage": 15.0,
+    "crewVulnerabilityMultiplier": 0.009999999776482582,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 70.0,
+    "heatPower": 0.0,
+    "id": "4905ba6c-e77b-4868-8646-507f4a0d09ae",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 2.5,
+    "maxPenetrationDistance": 0.10000000149011612,
+    "munitionKey": "4905ba6c-e77b-4868-8646-507f4a0d09ae",
+    "munitionName": "",
+    "name": "35mm Flechette",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 500,
+    "recommendedTargetTypes": [
+      2,
+      3
+    ],
+    "repoolDelay": 1.0,
+    "role": 2,
+    "script": "NonphysicalMunition",
+    "storageVolume": 0.004999999888241291,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "35mm"
+    }
+  },
+  {
+    "armorDamageRadius": 10.0,
+    "armorPenetration": 60.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/400mm plasma ampoule.asset",
+    "componentDamage": 60.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 60.0,
+    "heatPower": 500.0,
+    "id": "94590fc6-5f4d-4f20-98c9-cc4eadbdabe9",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 13.0,
+    "maxPenetrationDistance": 0.0,
+    "munitionKey": "94590fc6-5f4d-4f20-98c9-cc4eadbdabe9",
+    "munitionName": "",
+    "name": "400mm Plasma Ampoule",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightSplashingShell",
+    "storageVolume": 0.800000011920929,
+    "tags": {
+      "Class": "Ballistic/Magnetic",
+      "Subclass": "400mm Ampoule"
+    }
+  },
+  {
+    "armorDamageRadius": 1.5,
+    "armorPenetration": 120.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/500mm fracturing block.asset",
+    "componentDamage": 300.0,
+    "crewVulnerabilityMultiplier": 0.05000000074505806,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 200.0,
+    "heatPower": 1500.0,
+    "id": "01844b1c-3d4d-473b-a2c2-0f76200742a3",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.5,
+    "maxPenetrationDistance": 3.0,
+    "munitionKey": "01844b1c-3d4d-473b-a2c2-0f76200742a3",
+    "munitionName": "",
+    "name": "500mm Fracturing Block",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightKineticSplashDamageShell",
+    "storageVolume": 0.75,
+    "tags": {
+      "Class": "Ballistic/Magnetic",
+      "Subclass": "500mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.5,
+    "armorPenetration": 30.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/500mm fragmentation block.asset",
+    "componentDamage": 40.0,
+    "crewVulnerabilityMultiplier": 0.10000000149011612,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 200.0,
+    "heatPower": 5.0,
+    "id": "c36e6c40-ef98-4758-bdf4-c086cd89b9a8",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 10.5,
+    "maxPenetrationDistance": 5.0,
+    "munitionKey": "c36e6c40-ef98-4758-bdf4-c086cd89b9a8",
+    "munitionName": "",
+    "name": "500mm Fragmentation Block",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightAirburstFragShell",
+    "storageVolume": 0.75,
+    "tags": {
+      "Class": "Ballistic/Magnetic/Timed",
+      "Subclass": "500mm"
+    }
+  },
+  {
+    "armorDamageRadius": 0.5,
+    "armorPenetration": 30.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/600mm bomb shell.asset",
+    "componentDamage": 40.0,
+    "crewVulnerabilityMultiplier": 0.10000000149011612,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 70.0,
+    "heatPower": 5.0,
+    "id": "7b61a0ba-d1f9-4db0-a4ad-784a1e0b5a83",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 14.0,
+    "maxPenetrationDistance": 5.0,
+    "munitionKey": "7b61a0ba-d1f9-4db0-a4ad-784a1e0b5a83",
+    "munitionName": "",
+    "name": "600mm Bomb Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightAirburstFragShell",
+    "storageVolume": 0.800000011920929,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "600mm"
+    }
+  },
+  {
+    "armorDamageRadius": 1.75,
+    "armorPenetration": 75.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/600mm he shell.asset",
+    "componentDamage": 200.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "explosionRadius": 2.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 70.0,
+    "heatPower": 500.0,
+    "id": "dde5cca4-23fd-4b32-9dc3-4b3ac52ca672",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 14.0,
+    "maxPenetrationDistance": 5.0,
+    "munitionKey": "dde5cca4-23fd-4b32-9dc3-4b3ac52ca672",
+    "munitionName": "",
+    "name": "600mm HE Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightExplosiveShell",
+    "storageVolume": 0.800000011920929,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "600mm"
+    }
+  },
+  {
+    "armorDamageRadius": 1.75,
+    "armorPenetration": 85.0,
+    "assetPath": "assets/#bundles/stock-f2/f2/munitions/600mm he-sh shell.asset",
+    "componentDamage": 420.0,
+    "crewVulnerabilityMultiplier": 1.0,
+    "dedicatedStructureDamage": 0.0,
+    "factionKey": "Stock/Protectorate",
+    "flightSpeed": 70.0,
+    "heatPower": 500.0,
+    "id": "dde5cca4-23fd-4b32-9dc3-4b3ac52ca672",
+    "magazineMonitorType": 0,
+    "maxFlightTime": 14.0,
+    "maxPenetrationDistance": 5.0,
+    "munitionKey": "dde5cca4-23fd-4b32-9dc3-4b3ac52ca672",
+    "munitionName": "",
+    "name": "600mm HE-SH Shell",
+    "overpenDamageMultiplier": 0.20000000298023224,
+    "pointCost": 1,
+    "pointDivision": 25,
+    "recommendedTargetTypes": [
+      1
+    ],
+    "repoolDelay": 5.0,
+    "role": 1,
+    "script": "LightweightKineticShell",
+    "storageVolume": 0.800000011920929,
+    "tags": {
+      "Class": "Ballistic/Chemical",
+      "Subclass": "600mm"
+    }
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/submunition dispenser.asset",
+    "factionKey": "Stock/Protectorate",
+    "id": "Submunition Dispenser",
+    "name": "Submunition Dispenser",
+    "pointCost": 0.3333300054073334,
+    "recommendedTargetTypes": [],
+    "script": "SelectableSubmunitionWarheadDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/test mine submunition.asset",
+    "factionKey": "Stock/Protectorate",
+    "id": "Test Mine Submunition",
+    "name": "Test Mine Submunition",
+    "pointCost": 0.0,
+    "recommendedTargetTypes": [],
+    "script": "FixedSubmunitionWarheadDescriptor"
+  },
+  {
+    "assetPath": "assets/#bundles/stock/common/munitions/missile components/wake-thermal seeker.asset",
+    "factionKey": "Stock/Protectorate",
+    "id": "Wake-Thermal Seeker",
+    "name": "Wake-Thermal Seeker",
+    "pointCost": 0.25,
+    "script": "PassiveSeekerDescriptor"
+  }
+]

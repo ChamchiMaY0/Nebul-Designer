@@ -1,0 +1,20 @@
+{
+  "bundles": [
+    "stock",
+    "stock-f1",
+    "stock-f2"
+  ],
+  "counts": {
+    "components": 148,
+    "hulls": 14,
+    "missiles": 10,
+    "munitions": 53,
+    "skipped": 0
+  },
+  "formatVersion": 1,
+  "notes": [
+    "Generated from local Unity AssetBundles.",
+    "Long prose descriptions are intentionally omitted; localization keys are preserved."
+  ],
+  "source": "NEBULOUS Fleet Command local AssetBundles"
+}
